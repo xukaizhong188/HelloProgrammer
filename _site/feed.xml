@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/HelloProgrammer/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/HelloProgrammer/" rel="alternate" type="text/html" /><updated>2019-07-01T19:30:20+08:00</updated><id>http://localhost:4000/HelloProgrammer/</id><title type="html">XKZ</title><subtitle>XKZ的博客</subtitle><entry><title type="html">LOFFER文档</title><link href="http://localhost:4000/HelloProgrammer/document/" rel="alternate" type="text/html" title="LOFFER文档" /><published>2019-06-02T00:00:00+08:00</published><updated>2019-06-02T00:00:00+08:00</updated><id>http://localhost:4000/HelloProgrammer/document</id><content type="html" xml:base="http://localhost:4000/HelloProgrammer/document/">&lt;p&gt;LOFFER是个可以帮助你get off from LOFTER的软件（我知道这个pun很烂）。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/HelloProgrammer/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/HelloProgrammer/" rel="alternate" type="text/html" /><updated>2019-07-01T20:03:24+08:00</updated><id>http://localhost:4000/HelloProgrammer/</id><title type="html">XKZ</title><subtitle>XKZ的博客</subtitle><entry><title type="html">Document</title><link href="http://localhost:4000/HelloProgrammer/document/" rel="alternate" type="text/html" title="Document" /><published>2019-06-02T00:00:00+08:00</published><updated>2019-06-02T00:00:00+08:00</updated><id>http://localhost:4000/HelloProgrammer/document</id><content type="html" xml:base="http://localhost:4000/HelloProgrammer/document/">&lt;p&gt;LOFFER是个可以帮助你get off from LOFTER的软件（我知道这个pun很烂）。&lt;/p&gt;
 
 &lt;p&gt;这是一个可以通过Fork直接发布在GitHub的Jekyll博客，你不需要编写代码或使用命令行即可获得一个部署在GitHub的博客。&lt;/p&gt;
 
@@ -138,7 +138,210 @@ comments: true
 
 &lt;p&gt;最后，回到&lt;a href=&quot;https://github.com/FromEndWorld/LOFFER&quot;&gt;LOFFER&lt;/a&gt;，给我点一个☆吧！&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FromEndWorld/LOFFER/master/images/givemefive.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="sample" /><category term="document" /><summary type="html">LOFFER是个可以帮助你get off from LOFTER的软件（我知道这个pun很烂）。 这是一个可以通过Fork直接发布在GitHub的Jekyll博客，你不需要编写代码或使用命令行即可获得一个部署在GitHub的博客。 当你看到不认识的术语，请忽略它，我知道程序员不说人话，我都不是程序员但是我已经开始意识到这是因为我们不知道这些概念用人话怎么说。 以下我会尽量用人话解说如何使用这个……LOFFER。 注意 LOFFER是一个博客模板，使用GitHub Pages发布个人博客是没有任何问题的。 但是: 请勿发布成人向内容 不要将大量图片上传到GitHub 如有疑问，请阅读GitHub Pages官方说明。 另外，同人作品更好的发布平台是AO3，你想你发在AO3还有tag还有kudos还有人看，是吧？ 如何使用 首先，这个博客主题适应手机阅读，但是，要使用它建立你自己的博客，你需要上电脑操作。 第一步 Fork到你的GitHub 请点击GitHub，注册一个GitHub账户。我们可以理解Git就是个文件版本管理系统，本身并不需要会代码即可使用。 现在你看到的LOFFER，是作为一个GitHub上的Repository（代码库）存在的，你可以把这个代码库复制到你自己的GitHub账户中，这个操作叫做Fork。 点击LOFFER，进入LOFFER的GitHub Repository页面，然后点Fork： 然后你立刻就可以看到LOFFER再次出现，这次它已经属于你了，这里我建议你重命名它，点击settings，给你的博客起个名字（请尽量使用字母而非中文）。 然后，向下拉页面，你会看到“GitHub Pages”，这是GitHub内置的网站host服务，选择master，如图所示： 在几秒钟后，刷新此页面，你通常会看到这个绿色的东西（如果没看到，多等一会），你的网站已经发布成功，点击这个链接，即可查看： 你可能会看到网站长得很丑，请继续下一步. 第二步 设置站点信息 在你的博客的GitHub代码库页面里，选择Code，文件列表里选择_config.yml，点击打开，点击右上角笔形图标修改文档。 修改完成后，点击“Commit changes”。每次修改过代码库并且commit后，GitHub Pages都会自动重新发布网站，只要等上几分钟，再次刷新你的博客页面，就会看到你的修改了。 还有一点，LOFFER使用的是MIT协议，大意就是全部开源随意使用，如果你要保留自己博文的权利，请编辑LICENSE文件，写上类似“_posts中的文档作者保留权利”这样的内容。 第三步 发布博文 在你的博客的GitHub代码库页面里，点开_posts文件夹，这里面就是你的博客文章。 这些文章使用的格式是Markdown，文件后缀名是md，这是一种非常简单易用的有格式文本标记语言，你应该已经注意到，在LOFFER自带的示例性博文中有一篇中文的Markdown语法介绍。 更简单的办法是使用Typora，这是一个全图形化界面，全实时预览的Markdown写作软件，非常轻量，而且免费。 在发布博文前，你需要在文章的头部添加这样的内容，包括你的文章标题，发布日期，作者名，和tag等。</summary></entry><entry><title type="html">Jekyll搭建博客之路之最简单的博客!</title><link href="http://localhost:4000/HelloProgrammer/Jekyll%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/" rel="alternate" type="text/html" title="Jekyll搭建博客之路之最简单的博客!" /><published>2018-08-13T00:00:00+08:00</published><updated>2018-08-13T00:00:00+08:00</updated><id>http://localhost:4000/HelloProgrammer/Jekyll%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF</id><content type="html" xml:base="http://localhost:4000/HelloProgrammer/Jekyll%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/">&lt;p&gt;      使用Jekyll搭建博客的详细步骤现在已经很多，所以这里不再赘述，本文主要讲解搭建博客过程中我遇到的一些问题，并提供相应的解决方式，方便大家共同交流，此文处于不断更新中。。。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/FromEndWorld/LOFFER/master/images/givemefive.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><summary type="html">LOFFER是个可以帮助你get off from LOFTER的软件（我知道这个pun很烂）。 这是一个可以通过Fork直接发布在GitHub的Jekyll博客，你不需要编写代码或使用命令行即可获得一个部署在GitHub的博客。 当你看到不认识的术语，请忽略它，我知道程序员不说人话，我都不是程序员但是我已经开始意识到这是因为我们不知道这些概念用人话怎么说。 以下我会尽量用人话解说如何使用这个……LOFFER。 注意 LOFFER是一个博客模板，使用GitHub Pages发布个人博客是没有任何问题的。 但是: 请勿发布成人向内容 不要将大量图片上传到GitHub 如有疑问，请阅读GitHub Pages官方说明。 另外，同人作品更好的发布平台是AO3，你想你发在AO3还有tag还有kudos还有人看，是吧？ 如何使用 首先，这个博客主题适应手机阅读，但是，要使用它建立你自己的博客，你需要上电脑操作。 第一步 Fork到你的GitHub 请点击GitHub，注册一个GitHub账户。我们可以理解Git就是个文件版本管理系统，本身并不需要会代码即可使用。 现在你看到的LOFFER，是作为一个GitHub上的Repository（代码库）存在的，你可以把这个代码库复制到你自己的GitHub账户中，这个操作叫做Fork。 点击LOFFER，进入LOFFER的GitHub Repository页面，然后点Fork： 然后你立刻就可以看到LOFFER再次出现，这次它已经属于你了，这里我建议你重命名它，点击settings，给你的博客起个名字（请尽量使用字母而非中文）。 然后，向下拉页面，你会看到“GitHub Pages”，这是GitHub内置的网站host服务，选择master，如图所示： 在几秒钟后，刷新此页面，你通常会看到这个绿色的东西（如果没看到，多等一会），你的网站已经发布成功，点击这个链接，即可查看： 你可能会看到网站长得很丑，请继续下一步. 第二步 设置站点信息 在你的博客的GitHub代码库页面里，选择Code，文件列表里选择_config.yml，点击打开，点击右上角笔形图标修改文档。 修改完成后，点击“Commit changes”。每次修改过代码库并且commit后，GitHub Pages都会自动重新发布网站，只要等上几分钟，再次刷新你的博客页面，就会看到你的修改了。 还有一点，LOFFER使用的是MIT协议，大意就是全部开源随意使用，如果你要保留自己博文的权利，请编辑LICENSE文件，写上类似“_posts中的文档作者保留权利”这样的内容。 第三步 发布博文 在你的博客的GitHub代码库页面里，点开_posts文件夹，这里面就是你的博客文章。 这些文章使用的格式是Markdown，文件后缀名是md，这是一种非常简单易用的有格式文本标记语言，你应该已经注意到，在LOFFER自带的示例性博文中有一篇中文的Markdown语法介绍。 更简单的办法是使用Typora，这是一个全图形化界面，全实时预览的Markdown写作软件，非常轻量，而且免费。 在发布博文前，你需要在文章的头部添加这样的内容，包括你的文章标题，发布日期，作者名，和tag等。</summary></entry><entry><title type="html">设计模式之简单工厂模式!</title><link href="http://localhost:4000/HelloProgrammer/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/" rel="alternate" type="text/html" title="设计模式之简单工厂模式!" /><published>2018-09-20T00:00:00+08:00</published><updated>2018-09-20T00:00:00+08:00</updated><id>http://localhost:4000/HelloProgrammer/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F</id><content type="html" xml:base="http://localhost:4000/HelloProgrammer/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%AE%80%E5%8D%95%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F/">&lt;p&gt;      很多初学者都会遇到一个问题，对于问题的解决都会直接采用计算机能够理解的逻辑来表述和表达待解决的问题，但是这样的方式只是能够解决当前你问题，程序不容易维护也不容易扩展，更不容易复用。从达不到高质量的代码的效果。活字印刷就是一个很好的例子。通过活字印刷实现了文字的复用。&lt;/p&gt;
+&lt;h2&gt;一、面向对象的好处&lt;/h2&gt;
+&lt;p&gt;      面向对象的的编程思想就是要让我们通过利用封装、继承、多态把程序的耦合性降低。我们可以通过设计模式来使我们的程序更加的灵活，容易修改并且容易复用。&lt;/p&gt;
+&lt;h2&gt;二、简单工厂模式&lt;/h2&gt;
+&lt;blockquote&gt;
+
+  &lt;p&gt;&lt;img src=&quot;https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2018-09-08/pic5.jpg&quot; width=&quot;100%&quot; height=&quot;50%&quot; /&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="设计模式" /><summary type="html">      很多初学者都会遇到一个问题，对于问题的解决都会直接采用计算机能够理解的逻辑来表述和表达待解决的问题，但是这样的方式只是能够解决当前你问题，程序不容易维护也不容易扩展，更不容易复用。从达不到高质量的代码的效果。活字印刷就是一个很好的例子。通过活字印刷实现了文字的复用。 一、面向对象的好处       面向对象的的编程思想就是要让我们通过利用封装、继承、多态把程序的耦合性降低。我们可以通过设计模式来使我们的程序更加的灵活，容易修改并且容易复用。 二、简单工厂模式</summary></entry><entry><title type="html">微服务学习之微服务开发!</title><link href="http://localhost:4000/HelloProgrammer/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/" rel="alternate" type="text/html" title="微服务学习之微服务开发!" /><published>2018-09-08T00:00:00+08:00</published><updated>2018-09-08T00:00:00+08:00</updated><id>http://localhost:4000/HelloProgrammer/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91</id><content type="html" xml:base="http://localhost:4000/HelloProgrammer/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%BC%80%E5%8F%91/">&lt;h2&gt;一、微服务之间如何进行通讯&lt;/h2&gt;
+&lt;p&gt;      从通讯协议上来讲可以选择REST API 、RPC、mq&lt;/p&gt;
+&lt;h2&gt;二、如何选择RPC框架&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;      1、需要考虑I/O 线程调度模型：到底是同步I/O,还是非阻塞的异步I/O  NIO，是长连接还是短连接。是单线程还是多线程
+&lt;br /&gt;      2、序列化方式：是可读的还是二进制，可读的例如xml/json二进制的就是一种不可见的例如jdk自带的序列化就是二进制的。序列化的方式直接影响了rpc通讯之间的效率。
+&lt;br /&gt;      3、多语言支持
+&lt;br /&gt;      4、服务治理：例如是否有服务的发现，服务的监控。&lt;/p&gt;
+&lt;h2&gt;三、流行的RPC框架&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;      1、Dubbo
+&lt;br /&gt;      2、Motan
+&lt;br /&gt;      3、Thrift
+&lt;br /&gt;      4、Dubbo&lt;/p&gt;
+&lt;h2&gt;四、服务的发现&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;      服务发现的本质就是让服务的消费者知道服务的提供者的ip和端口号
+&lt;br /&gt;      传统的服务就是在nginx中将我们的服务的提供者的ip和端口号写死；
+&lt;br /&gt;      微服务的发现方式有两种一种是客户端的发现一种是服务端的发现，客服端的发现就是客服端通过向注册中心订阅服务，订阅中心返回服务提供者的ip和端口；服务端的发现就是服务注册到注册中心，客户端会访问一个具体的ip和端口，访问一个具有服务发现和负载均衡的服务。这个服务端其实就是维护了注册中心中的服务列表。&lt;/p&gt;
+&lt;h2&gt;五、服务编排&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;      服务的编排就是为了解决微服务的发现、部署、更新、扩缩容等。
+&lt;br /&gt;      流行的服务编排工具：Mesos/Docker Swarm/Kubernetes&lt;/p&gt;
+&lt;h2&gt;六、SpringBoot与微服务&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;      1、SpringBoot的使命：化繁为简
+&lt;br /&gt;      2、SpringBoot的核心功能：
+&lt;br /&gt;      独立运行：传统的Spring项目的运行是通过一个web服务器，例如：TomcatSpringBoot是通过一个java命令将服务运行起来，是通过 java -jar xxx.jar是将服务以一个jar包的形式运行起来；
+&lt;br /&gt;      内嵌web服务器：SpringBoot内嵌了一个web服务器例如：tomcat，通过将web服务器和应用的包都打到一起并协调位置，他们之间的目录的读取关系，使我们不用关心细节，只需要运行一个命令就可以启动服务。
+&lt;br /&gt;      简化配置：尽可能的自动化配置Spring
+&lt;br /&gt;      准生产的应用监控：
+&lt;br /&gt;      3、SpringBoot与微服务的关系
+&lt;br /&gt;      java的润滑剂&lt;/p&gt;
+&lt;h2&gt;七、SpringCloud与微服务&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;      1、Springcloud的使命：简化java的分布式系统
+&lt;br /&gt;      2、深入理解：Springcloud是一系列框架的集合。springcloud是利用springboot的简化能力来简化分布式系统的基础服务的开发。
+&lt;br /&gt;      2、SpringBoot意在简化，是一种开发、配置的风格。springcloud是意在简化分布式，是功能的统一，风格的统一。
+&lt;br /&gt;      3、SpringCloud和微服务的关心：java的微服务。是一种微服务的解决方案，但并不是完整的方案，是偏向微服务的开发，没有提供服务的管理和治理等。侧重开发侧重功能。
+&lt;br /&gt;      4、SpringCloud核心组件
+&lt;br /&gt;      Netflix Eureka 服务发现组件
+&lt;img src=&quot;https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2018-09-08/pic1.jpg&quot; width=&quot;100%&quot; height=&quot;50%&quot; /&gt;
+&lt;br /&gt;      Netflix Ribbon 客户端负载均衡组件
+&lt;img src=&quot;https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2018-09-08/pic2.jpg&quot; width=&quot;100%&quot; height=&quot;50%&quot; /&gt;
+&lt;br /&gt;      Netflix Hystrix 断路器
+&lt;img src=&quot;https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2018-09-08/pic3.jpg&quot; width=&quot;100%&quot; height=&quot;50%&quot; /&gt;
+&lt;br /&gt;      Netflix Zuul 服务网关
+&lt;img src=&quot;https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2018-09-08/pic4.jpg&quot; width=&quot;100%&quot; height=&quot;50%&quot; /&gt;
+&lt;br /&gt;      SpringCloud Config 分布式配置
+&lt;img src=&quot;https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2018-09-08/pic5.jpg&quot; width=&quot;100%&quot; height=&quot;50%&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="微服务" /><summary type="html">一、微服务之间如何进行通讯       从通讯协议上来讲可以选择REST API 、RPC、mq 二、如何选择RPC框架       1、需要考虑I/O 线程调度模型：到底是同步I/O,还是非阻塞的异步I/O NIO，是长连接还是短连接。是单线程还是多线程       2、序列化方式：是可读的还是二进制，可读的例如xml/json二进制的就是一种不可见的例如jdk自带的序列化就是二进制的。序列化的方式直接影响了rpc通讯之间的效率。       3、多语言支持       4、服务治理：例如是否有服务的发现，服务的监控。 三、流行的RPC框架       1、Dubbo       2、Motan       3、Thrift       4、Dubbo 四、服务的发现       服务发现的本质就是让服务的消费者知道服务的提供者的ip和端口号       传统的服务就是在nginx中将我们的服务的提供者的ip和端口号写死；       微服务的发现方式有两种一种是客户端的发现一种是服务端的发现，客服端的发现就是客服端通过向注册中心订阅服务，订阅中心返回服务提供者的ip和端口；服务端的发现就是服务注册到注册中心，客户端会访问一个具体的ip和端口，访问一个具有服务发现和负载均衡的服务。这个服务端其实就是维护了注册中心中的服务列表。 五、服务编排       服务的编排就是为了解决微服务的发现、部署、更新、扩缩容等。       流行的服务编排工具：Mesos/Docker Swarm/Kubernetes 六、SpringBoot与微服务       1、SpringBoot的使命：化繁为简       2、SpringBoot的核心功能：       独立运行：传统的Spring项目的运行是通过一个web服务器，例如：TomcatSpringBoot是通过一个java命令将服务运行起来，是通过 java -jar xxx.jar是将服务以一个jar包的形式运行起来；       内嵌web服务器：SpringBoot内嵌了一个web服务器例如：tomcat，通过将web服务器和应用的包都打到一起并协调位置，他们之间的目录的读取关系，使我们不用关心细节，只需要运行一个命令就可以启动服务。       简化配置：尽可能的自动化配置Spring       准生产的应用监控：       3、SpringBoot与微服务的关系       java的润滑剂 七、SpringCloud与微服务       1、Springcloud的使命：简化java的分布式系统       2、深入理解：Springcloud是一系列框架的集合。springcloud是利用springboot的简化能力来简化分布式系统的基础服务的开发。       2、SpringBoot意在简化，是一种开发、配置的风格。springcloud是意在简化分布式，是功能的统一，风格的统一。       3、SpringCloud和微服务的关心：java的微服务。是一种微服务的解决方案，但并不是完整的方案，是偏向微服务的开发，没有提供服务的管理和治理等。侧重开发侧重功能。       4、SpringCloud核心组件       Netflix Eureka 服务发现组件       Netflix Ribbon 客户端负载均衡组件       Netflix Hystrix 断路器       Netflix Zuul 服务网关       SpringCloud Config 分布式配置</summary></entry><entry><title type="html">微服务学习之微服务入门!</title><link href="http://localhost:4000/HelloProgrammer/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%85%A5%E9%97%A8/" rel="alternate" type="text/html" title="微服务学习之微服务入门!" /><published>2018-09-08T00:00:00+08:00</published><updated>2018-09-08T00:00:00+08:00</updated><id>http://localhost:4000/HelloProgrammer/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%85%A5%E9%97%A8</id><content type="html" xml:base="http://localhost:4000/HelloProgrammer/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%85%A5%E9%97%A8/">&lt;h2&gt;一、微服务之间如何进行通讯&lt;/h2&gt;
+&lt;p&gt;      从通讯协议上来讲可以选择REST API 、RPC、mq&lt;/p&gt;
+&lt;h2&gt;二、如何选择RPC框架&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;      1、需要考虑I/O 线程调度模型：到底是同步I/O,还是非阻塞的异步I/O  NIO，是长连接还是短连接。是单线程还是多线程
+&lt;br /&gt;      2、序列化方式：是可读的还是二进制，可读的例如xml/json二进制的就是一种不可见的例如jdk自带的序列化就是二进制的。序列化的方式直接影响了rpc通讯之间的效率。
+&lt;br /&gt;      3、多语言支持
+&lt;br /&gt;      4、服务治理：例如是否有服务的发现，服务的监控。&lt;/p&gt;
+&lt;h2&gt;三、流行的RPC框架&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;      1、Dubbo
+&lt;br /&gt;      2、Motan
+&lt;br /&gt;      3、Thrift
+&lt;br /&gt;      4、Dubbo&lt;/p&gt;
+&lt;h2&gt;四、服务的发现&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;      服务发现的本质就是让服务的消费者知道服务的提供者的ip和端口号
+&lt;br /&gt;      传统的服务就是在nginx中将我们的服务的提供者的ip和端口号写死；
+&lt;br /&gt;      微服务的发现方式有两种一种是客户端的发现一种是服务端的发现，客服端的发现就是客服端通过向注册中心订阅服务，订阅中心返回服务提供者的ip和端口；服务端的发现就是服务注册到注册中心，客户端会访问一个具体的ip和端口，访问一个具有服务发现和负载均衡的服务。这个服务端其实就是维护了注册中心中的服务列表。&lt;/p&gt;
+&lt;h2&gt;五、服务编排&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;      服务的编排就是为了解决微服务的发现、部署、更新、扩缩容等。
+&lt;br /&gt;      流行的服务编排工具：Mesos/Docker Swarm/Kubernetes&lt;/p&gt;
+&lt;h2&gt;六、SpringBoot与微服务&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;      1、SpringBoot的使命：化繁为简
+&lt;br /&gt;      2、SpringBoot的核心功能：
+&lt;br /&gt;      独立运行：传统的Spring项目的运行是通过一个web服务器，例如：TomcatSpringBoot是通过一个java命令将服务运行起来，是通过 java -jar xxx.jar是将服务以一个jar包的形式运行起来；
+&lt;br /&gt;      内嵌web服务器：SpringBoot内嵌了一个web服务器例如：tomcat，通过将web服务器和应用的包都打到一起并协调位置，他们之间的目录的读取关系，使我们不用关心细节，只需要运行一个命令就可以启动服务。
+&lt;br /&gt;      简化配置：尽可能的自动化配置Spring
+&lt;br /&gt;      准生产的应用监控：
+&lt;br /&gt;      3、SpringBoot与微服务的关系
+&lt;br /&gt;      java的润滑剂&lt;/p&gt;
+&lt;h2&gt;七、SpringCloud与微服务&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;      1、Springcloud的使命：简化java的分布式系统
+&lt;br /&gt;      2、深入理解：Springcloud是一系列框架的集合。springcloud是利用springboot的简化能力来简化分布式系统的基础服务的开发。
+&lt;br /&gt;      2、SpringBoot意在简化，是一种开发、配置的风格。springcloud是意在简化分布式，是功能的统一，风格的统一。
+&lt;br /&gt;      3、SpringCloud和微服务的关心：java的微服务。是一种微服务的解决方案，但并不是完整的方案，是偏向微服务的开发，没有提供服务的管理和治理等。侧重开发侧重功能。
+&lt;br /&gt;      4、SpringCloud核心组件
+&lt;br /&gt;      Netflix Eureka 服务发现组件
+&lt;img src=&quot;https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2018-09-08/pic1.jpg&quot; width=&quot;100%&quot; height=&quot;50%&quot; /&gt;
+&lt;br /&gt;      Netflix Ribbon 客户端负载均衡组件
+&lt;img src=&quot;https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2018-09-08/pic2.jpg&quot; width=&quot;100%&quot; height=&quot;50%&quot; /&gt;
+&lt;br /&gt;      Netflix Hystrix 断路器
+&lt;img src=&quot;https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2018-09-08/pic3.jpg&quot; width=&quot;100%&quot; height=&quot;50%&quot; /&gt;
+&lt;br /&gt;      Netflix Zuul 服务网关
+&lt;img src=&quot;https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2018-09-08/pic4.jpg&quot; width=&quot;100%&quot; height=&quot;50%&quot; /&gt;
+&lt;br /&gt;      SpringCloud Config 分布式配置
+&lt;img src=&quot;https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2018-09-08/pic5.jpg&quot; width=&quot;100%&quot; height=&quot;50%&quot; /&gt;&lt;/p&gt;</content><author><name></name></author><category term="微服务" /><summary type="html">一、微服务之间如何进行通讯       从通讯协议上来讲可以选择REST API 、RPC、mq 二、如何选择RPC框架       1、需要考虑I/O 线程调度模型：到底是同步I/O,还是非阻塞的异步I/O NIO，是长连接还是短连接。是单线程还是多线程       2、序列化方式：是可读的还是二进制，可读的例如xml/json二进制的就是一种不可见的例如jdk自带的序列化就是二进制的。序列化的方式直接影响了rpc通讯之间的效率。       3、多语言支持       4、服务治理：例如是否有服务的发现，服务的监控。 三、流行的RPC框架       1、Dubbo       2、Motan       3、Thrift       4、Dubbo 四、服务的发现       服务发现的本质就是让服务的消费者知道服务的提供者的ip和端口号       传统的服务就是在nginx中将我们的服务的提供者的ip和端口号写死；       微服务的发现方式有两种一种是客户端的发现一种是服务端的发现，客服端的发现就是客服端通过向注册中心订阅服务，订阅中心返回服务提供者的ip和端口；服务端的发现就是服务注册到注册中心，客户端会访问一个具体的ip和端口，访问一个具有服务发现和负载均衡的服务。这个服务端其实就是维护了注册中心中的服务列表。 五、服务编排       服务的编排就是为了解决微服务的发现、部署、更新、扩缩容等。       流行的服务编排工具：Mesos/Docker Swarm/Kubernetes 六、SpringBoot与微服务       1、SpringBoot的使命：化繁为简       2、SpringBoot的核心功能：       独立运行：传统的Spring项目的运行是通过一个web服务器，例如：TomcatSpringBoot是通过一个java命令将服务运行起来，是通过 java -jar xxx.jar是将服务以一个jar包的形式运行起来；       内嵌web服务器：SpringBoot内嵌了一个web服务器例如：tomcat，通过将web服务器和应用的包都打到一起并协调位置，他们之间的目录的读取关系，使我们不用关心细节，只需要运行一个命令就可以启动服务。       简化配置：尽可能的自动化配置Spring       准生产的应用监控：       3、SpringBoot与微服务的关系       java的润滑剂 七、SpringCloud与微服务       1、Springcloud的使命：简化java的分布式系统       2、深入理解：Springcloud是一系列框架的集合。springcloud是利用springboot的简化能力来简化分布式系统的基础服务的开发。       2、SpringBoot意在简化，是一种开发、配置的风格。springcloud是意在简化分布式，是功能的统一，风格的统一。       3、SpringCloud和微服务的关心：java的微服务。是一种微服务的解决方案，但并不是完整的方案，是偏向微服务的开发，没有提供服务的管理和治理等。侧重开发侧重功能。       4、SpringCloud核心组件       Netflix Eureka 服务发现组件       Netflix Ribbon 客户端负载均衡组件       Netflix Hystrix 断路器       Netflix Zuul 服务网关       SpringCloud Config 分布式配置</summary></entry><entry><title type="html">2018-09-07-NetFlix Conductor学习之官方样例搭建!</title><link href="http://localhost:4000/HelloProgrammer/NetFlix-Conductor%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%98%E6%96%B9%E6%A0%B7%E4%BE%8B%E6%90%AD%E5%BB%BA/" rel="alternate" type="text/html" title="2018-09-07-NetFlix Conductor学习之官方样例搭建!" /><published>2018-09-07T10:00:00+08:00</published><updated>2018-09-07T10:00:00+08:00</updated><id>http://localhost:4000/HelloProgrammer/NetFlix%20Conductor%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%98%E6%96%B9%E6%A0%B7%E4%BE%8B%E6%90%AD%E5%BB%BA</id><content type="html" xml:base="http://localhost:4000/HelloProgrammer/NetFlix-Conductor%E5%AD%A6%E4%B9%A0%E4%B9%8B%E5%AE%98%E6%96%B9%E6%A0%B7%E4%BE%8B%E6%90%AD%E5%BB%BA/">&lt;p&gt;      这个系列的文章主要是老大让本人学校微服务编排，将之运用到我们现有的一个项目中，由于本人初接触，对其中的一些内容没有深入了解，所以在学习之初，先将官网的样例进行运行。下面就介绍下NetFlix Conductor官方样例搭建过程。&lt;/p&gt;
+&lt;h2&gt;一、下载源码&lt;/h2&gt;
+&lt;p&gt;      首先我们到NetFlix Conductor的git官网将源码下载下来，下载地址：https://github.com/Netflix/conductor&lt;/p&gt;
+&lt;h2&gt;二、安装Swagger API&lt;/h2&gt;
+&lt;p&gt;      首先进入到我们的安装路径下，运行ce server 进入server目录，接着运行../gradlew server命令开始安装过程，整个安装过程比较耗时。
+&lt;img src=&quot;https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2018-09-07/pic1.jpg&quot; width=&quot;100%&quot; height=&quot;50%&quot; /&gt;&lt;/p&gt;
+&lt;h2&gt;三、安装UI&lt;/h2&gt;
+&lt;p&gt;      注意一下：安装UI要求先node.js 8.0以上因为运行glup命令是需要node.js。安装完node.js需要安装gulp
+&lt;br /&gt;      安装步骤：
+&lt;br /&gt;      执行cd ui 进入ui目录，
+&lt;br /&gt;      再执行 gulp watch等待构建完成即可。&lt;/p&gt;</content><author><name></name></author><summary type="html">      这个系列的文章主要是老大让本人学校微服务编排，将之运用到我们现有的一个项目中，由于本人初接触，对其中的一些内容没有深入了解，所以在学习之初，先将官网的样例进行运行。下面就介绍下NetFlix Conductor官方样例搭建过程。 一、下载源码       首先我们到NetFlix Conductor的git官网将源码下载下来，下载地址：https://github.com/Netflix/conductor 二、安装Swagger API       首先进入到我们的安装路径下，运行ce server 进入server目录，接着运行../gradlew server命令开始安装过程，整个安装过程比较耗时。 三、安装UI       注意一下：安装UI要求先node.js 8.0以上因为运行glup命令是需要node.js。安装完node.js需要安装gulp       安装步骤：       执行cd ui 进入ui目录，       再执行 gulp watch等待构建完成即可。</summary></entry><entry><title type="html">Linux学习!</title><link href="http://localhost:4000/HelloProgrammer/LInux%E5%AD%A6%E4%B9%A0/" rel="alternate" type="text/html" title="Linux学习!" /><published>2018-08-26T00:00:00+08:00</published><updated>2018-08-26T00:00:00+08:00</updated><id>http://localhost:4000/HelloProgrammer/LInux%E5%AD%A6%E4%B9%A0</id><content type="html" xml:base="http://localhost:4000/HelloProgrammer/LInux%E5%AD%A6%E4%B9%A0/">&lt;p&gt;      本篇主要记录的是Linux的文件权限和目录配置&lt;/p&gt;
+&lt;h2&gt;一、用户与用户组&lt;/h2&gt;
+&lt;p&gt;      首先Linux是一个多用户多任务的系统，所以为了考虑安全等方面，文件的所有者的角色就显得尤为重要。
+&lt;br /&gt;      用户组的存在是为了将文件共享给团队。
+&lt;br /&gt;      
+&lt;br /&gt;      
+&lt;br /&gt;      
+&lt;br /&gt;      &lt;/p&gt;
+&lt;h2&gt;二、表达式&lt;/h2&gt;
+&lt;p&gt;      1、中缀表达式：java使用的是中缀表达式，也就是一个字面量或者一个表达式，紧接着是一个运算符，再接着是字面量或者是表达式。
+&lt;br /&gt;      2、运算符的优先级：*、/、%优先于+、-；！ &amp;gt;  &amp;amp;&amp;amp;  &amp;gt;  ||&lt;/p&gt;
+&lt;h2&gt;三、类型转换&lt;/h2&gt;
+&lt;p&gt;      1、类型提升：如果不会损失信息，那么数值会被自动提升为更高级的数据类型，例如：1+1.5其中1会类型提升为1.0，所以结果为2.5。
+&lt;br /&gt;      2、浮点数转化为整型的时候是采用的截取小数部分，而不是四舍五入。&lt;/p&gt;
+&lt;h2&gt;四、原始数据类型&lt;/h2&gt;
+&lt;p&gt;      原始的数据类型：
+&lt;br /&gt;      1、8位整数：byte
+&lt;br /&gt;      2、16位整数：short
+&lt;br /&gt;      3、16位字符：char
+&lt;br /&gt;      4、32位单精度实数：float
+&lt;br /&gt;      5、32位整数：int
+&lt;br /&gt;      6、64位双精度实数：double
+&lt;br /&gt;      7、布尔类型：boolean&lt;/p&gt;
+&lt;h2&gt;四、书写&lt;/h2&gt;
+&lt;p&gt;      1、声明并初始化：可以将声明语句和赋值语句相结合，在声明（创建）一个变量的同时将他初始化。
+&lt;br /&gt;      2、隐式赋值:递增、递减运算符，复合运算符（i+=1）
+&lt;br /&gt;      3、单语句代码段:如果条件或者魂环语句的代码段只有一条语句，可以将代码段的花括号省略&lt;/p&gt;</content><author><name></name></author><category term="Linux" /><summary type="html">      本篇主要记录的是Linux的文件权限和目录配置 一、用户与用户组       首先Linux是一个多用户多任务的系统，所以为了考虑安全等方面，文件的所有者的角色就显得尤为重要。       用户组的存在是为了将文件共享给团队。                             二、表达式       1、中缀表达式：java使用的是中缀表达式，也就是一个字面量或者一个表达式，紧接着是一个运算符，再接着是字面量或者是表达式。       2、运算符的优先级：*、/、%优先于+、-；！ &amp;gt; &amp;amp;&amp;amp; &amp;gt; || 三、类型转换       1、类型提升：如果不会损失信息，那么数值会被自动提升为更高级的数据类型，例如：1+1.5其中1会类型提升为1.0，所以结果为2.5。       2、浮点数转化为整型的时候是采用的截取小数部分，而不是四舍五入。 四、原始数据类型       原始的数据类型：       1、8位整数：byte       2、16位整数：short       3、16位字符：char       4、32位单精度实数：float       5、32位整数：int       6、64位双精度实数：double       7、布尔类型：boolean 四、书写       1、声明并初始化：可以将声明语句和赋值语句相结合，在声明（创建）一个变量的同时将他初始化。       2、隐式赋值:递增、递减运算符，复合运算符（i+=1）       3、单语句代码段:如果条件或者魂环语句的代码段只有一条语句，可以将代码段的花括号省略</summary></entry><entry><title type="html">log4J日志配置详解!</title><link href="http://localhost:4000/HelloProgrammer/log4J%E6%97%A5%E5%BF%97%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/" rel="alternate" type="text/html" title="log4J日志配置详解!" /><published>2018-08-24T00:00:00+08:00</published><updated>2018-08-24T00:00:00+08:00</updated><id>http://localhost:4000/HelloProgrammer/log4J%E6%97%A5%E5%BF%97%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3</id><content type="html" xml:base="http://localhost:4000/HelloProgrammer/log4J%E6%97%A5%E5%BF%97%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/">&lt;p&gt;      在之前经历的项目中都是前人栽树后人乘凉，大多数配置都是由大佬配置好，近期由于自己需要单独部署一套系统，日志便是必不可少的，所以今天有时间来对Log4j的配置文件进行一个详细的总结。&lt;/p&gt;
+&lt;h2&gt;一、运算符&lt;/h2&gt;
+&lt;p&gt;      Java中有算术运算符和逻辑运算符，其中算术运算符包括：+、-、*、/、%等；逻辑运算符有&amp;amp;&amp;amp;、||、！、^等。这里需要注意的是算术运算符都是被重载的（根据上下文，针对不同的数据类型执行不同的操作。）&lt;/p&gt;
+&lt;h2&gt;二、表达式&lt;/h2&gt;
+&lt;p&gt;      1、中缀表达式：java使用的是中缀表达式，也就是一个字面量或者一个表达式，紧接着是一个运算符，再接着是字面量或者是表达式。
+&lt;br /&gt;      2、运算符的优先级：*、/、%优先于+、-；！ &amp;gt;  &amp;amp;&amp;amp;  &amp;gt;  ||&lt;/p&gt;
+&lt;h2&gt;三、类型转换&lt;/h2&gt;
+&lt;p&gt;      1、类型提升：如果不会损失信息，那么数值会被自动提升为更高级的数据类型，例如：1+1.5其中1会类型提升为1.0，所以结果为2.5。
+&lt;br /&gt;      2、浮点数转化为整型的时候是采用的截取小数部分，而不是四舍五入。&lt;/p&gt;
+&lt;h2&gt;四、原始数据类型&lt;/h2&gt;
+&lt;p&gt;      原始的数据类型：
+&lt;br /&gt;      1、8位整数：byte
+&lt;br /&gt;      2、16位整数：short
+&lt;br /&gt;      3、16位字符：char
+&lt;br /&gt;      4、32位单精度实数：float
+&lt;br /&gt;      5、32位整数：int
+&lt;br /&gt;      6、64位双精度实数：double
+&lt;br /&gt;      7、布尔类型：boolean&lt;/p&gt;
+&lt;h2&gt;四、书写&lt;/h2&gt;
+&lt;p&gt;      1、声明并初始化：可以将声明语句和赋值语句相结合，在声明（创建）一个变量的同时将他初始化。
+&lt;br /&gt;      2、隐式赋值:递增、递减运算符，复合运算符（i+=1）
+&lt;br /&gt;      3、单语句代码段:如果条件或者魂环语句的代码段只有一条语句，可以将代码段的花括号省略&lt;/p&gt;</content><author><name></name></author><category term="日志" /><summary type="html">      在之前经历的项目中都是前人栽树后人乘凉，大多数配置都是由大佬配置好，近期由于自己需要单独部署一套系统，日志便是必不可少的，所以今天有时间来对Log4j的配置文件进行一个详细的总结。 一、运算符       Java中有算术运算符和逻辑运算符，其中算术运算符包括：+、-、*、/、%等；逻辑运算符有&amp;amp;&amp;amp;、||、！、^等。这里需要注意的是算术运算符都是被重载的（根据上下文，针对不同的数据类型执行不同的操作。） 二、表达式       1、中缀表达式：java使用的是中缀表达式，也就是一个字面量或者一个表达式，紧接着是一个运算符，再接着是字面量或者是表达式。       2、运算符的优先级：*、/、%优先于+、-；！ &amp;gt; &amp;amp;&amp;amp; &amp;gt; || 三、类型转换       1、类型提升：如果不会损失信息，那么数值会被自动提升为更高级的数据类型，例如：1+1.5其中1会类型提升为1.0，所以结果为2.5。       2、浮点数转化为整型的时候是采用的截取小数部分，而不是四舍五入。 四、原始数据类型       原始的数据类型：       1、8位整数：byte       2、16位整数：short       3、16位字符：char       4、32位单精度实数：float       5、32位整数：int       6、64位双精度实数：double       7、布尔类型：boolean 四、书写       1、声明并初始化：可以将声明语句和赋值语句相结合，在声明（创建）一个变量的同时将他初始化。       2、隐式赋值:递增、递减运算符，复合运算符（i+=1）       3、单语句代码段:如果条件或者魂环语句的代码段只有一条语句，可以将代码段的花括号省略</summary></entry><entry><title type="html">零散知识点总结!</title><link href="http://localhost:4000/HelloProgrammer/%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/" rel="alternate" type="text/html" title="零散知识点总结!" /><published>2018-08-17T00:00:00+08:00</published><updated>2018-08-17T00:00:00+08:00</updated><id>http://localhost:4000/HelloProgrammer/%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93</id><content type="html" xml:base="http://localhost:4000/HelloProgrammer/%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">&lt;p&gt;      此文处于不断更新中。。。&lt;/p&gt;
+&lt;h2&gt;一、运算符&lt;/h2&gt;
+&lt;p&gt;      Java中有算术运算符和逻辑运算符，其中算术运算符包括：+、-、*、/、%等；逻辑运算符有&amp;amp;&amp;amp;、||、！、^等。这里需要注意的是算术运算符都是被重载的（根据上下文，针对不同的数据类型执行不同的操作。）&lt;/p&gt;
+&lt;h2&gt;二、表达式&lt;/h2&gt;
+&lt;p&gt;      1、中缀表达式：java使用的是中缀表达式，也就是一个字面量或者一个表达式，紧接着是一个运算符，再接着是字面量或者是表达式。
+&lt;br /&gt;      2、运算符的优先级：*、/、%优先于+、-；！ &amp;gt;  &amp;amp;&amp;amp;  &amp;gt;  ||&lt;/p&gt;
+&lt;h2&gt;三、类型转换&lt;/h2&gt;
+&lt;p&gt;      1、类型提升：如果不会损失信息，那么数值会被自动提升为更高级的数据类型，例如：1+1.5其中1会类型提升为1.0，所以结果为2.5。
+&lt;br /&gt;      2、浮点数转化为整型的时候是采用的截取小数部分，而不是四舍五入。&lt;/p&gt;
+&lt;h2&gt;四、原始数据类型&lt;/h2&gt;
+&lt;p&gt;      原始的数据类型：
+&lt;br /&gt;      1、8位整数：byte
+&lt;br /&gt;      2、16位整数：short
+&lt;br /&gt;      3、16位字符：char
+&lt;br /&gt;      4、32位单精度实数：float
+&lt;br /&gt;      5、32位整数：int
+&lt;br /&gt;      6、64位双精度实数：double
+&lt;br /&gt;      7、布尔类型：boolean&lt;/p&gt;
+&lt;h2&gt;四、书写&lt;/h2&gt;
+&lt;p&gt;      1、声明并初始化：可以将声明语句和赋值语句相结合，在声明（创建）一个变量的同时将他初始化。
+&lt;br /&gt;      2、隐式赋值:递增、递减运算符，复合运算符（i+=1）
+&lt;br /&gt;      3、单语句代码段:如果条件或者魂环语句的代码段只有一条语句，可以将代码段的花括号省略&lt;/p&gt;</content><author><name></name></author><category term="其他" /><summary type="html">      此文处于不断更新中。。。 一、运算符       Java中有算术运算符和逻辑运算符，其中算术运算符包括：+、-、*、/、%等；逻辑运算符有&amp;amp;&amp;amp;、||、！、^等。这里需要注意的是算术运算符都是被重载的（根据上下文，针对不同的数据类型执行不同的操作。） 二、表达式       1、中缀表达式：java使用的是中缀表达式，也就是一个字面量或者一个表达式，紧接着是一个运算符，再接着是字面量或者是表达式。       2、运算符的优先级：*、/、%优先于+、-；！ &amp;gt; &amp;amp;&amp;amp; &amp;gt; || 三、类型转换       1、类型提升：如果不会损失信息，那么数值会被自动提升为更高级的数据类型，例如：1+1.5其中1会类型提升为1.0，所以结果为2.5。       2、浮点数转化为整型的时候是采用的截取小数部分，而不是四舍五入。 四、原始数据类型       原始的数据类型：       1、8位整数：byte       2、16位整数：short       3、16位字符：char       4、32位单精度实数：float       5、32位整数：int       6、64位双精度实数：double       7、布尔类型：boolean 四、书写       1、声明并初始化：可以将声明语句和赋值语句相结合，在声明（创建）一个变量的同时将他初始化。       2、隐式赋值:递增、递减运算符，复合运算符（i+=1）       3、单语句代码段:如果条件或者魂环语句的代码段只有一条语句，可以将代码段的花括号省略</summary></entry><entry><title type="html">命令总结!</title><link href="http://localhost:4000/HelloProgrammer/%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/" rel="alternate" type="text/html" title="命令总结!" /><published>2018-08-14T00:00:00+08:00</published><updated>2018-08-14T00:00:00+08:00</updated><id>http://localhost:4000/HelloProgrammer/%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93</id><content type="html" xml:base="http://localhost:4000/HelloProgrammer/%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/">&lt;p&gt;      此文处于不断更新中。。。&lt;/p&gt;
+&lt;h2&gt;一、MAC 操作命名&lt;/h2&gt;
+&lt;p&gt;      1.defaults write com.apple.finder AppleShowAllFiles FALSE   设置隐藏文件不可见	
+&lt;br /&gt;      2.defaults write com.apple.finder AppleShowAllFiles TRUE   设置隐藏文件可见
+&lt;br /&gt;      3.killall Finder  重启Finder 
+&lt;br /&gt;      4.ls -al 查看所有文件的权限以及属性。 
+&lt;img src=&quot;https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2018-0814/pic1.jpg&quot; width=&quot;100%&quot; height=&quot;50%&quot; /&gt;
+&lt;br /&gt;      如上图显示，第一列代表的是文件的权限，这里一个有10个字符，第一个字符代表的是文件是目录、文件或者链接等，d:目录；-：文件;l:连接文件；b:设备文件里面的可供存储的接口设备;c:文件里面的串行端口设备，例如鼠标键盘等;接下来的字符是每三个字符是一组，而且均为rwx的组合，r代表可读；w代表可写；x代表可执行.注意：这3个权限的位置是不可变的，如果没有权限则是-。第一组代表的是文件所有者的权限，第二组代表的是同用户组的用户的权限，第三组代表的其他非本组的用户的权限。
+&lt;br /&gt;      第二列代表的是有多少文件名连接到此节点。
+&lt;br /&gt;      第三列代表的是文件所有者的账号。
+&lt;br /&gt;      第四列代表的是文件所有者所在用户组
+&lt;br /&gt;      第五列代表的是这个文件的大小，默认单位是B。
+&lt;br /&gt;      第六列代表的这个文件的创建时间或者是最近的修改时间。如果想要显示完整的时间格式，可以使用ls -l –full-time.
+&lt;br /&gt;      第七列代表的是该文件的文件名。注意，如果这个文件前面有一个.代表的是这个文件是一个隐藏文件。
+&lt;br /&gt;      5.ls -a 查看当前路径下的所有文件（包括隐藏文件）。&lt;/p&gt;
+&lt;h2&gt;二、Git命令&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;      git init 在现有目录初始化仓库，该命令会常见一个名为.git的子目录，这个子目录包含初始化git仓库的所有必须文件。此时项目的文件还没有跟踪。
+&lt;br /&gt;      
+git add 实现对指定文件的跟踪/将已经跟踪的文件放到暂存区/在合并时将冲突的文件标记为已解决状态等。
+&lt;br /&gt;      git commit -m “” 提交
+&lt;br /&gt;      git clone 地址 克隆git仓库。
+&lt;br /&gt;      git statis 检查当前文件的状态
+&lt;br /&gt;      
+git diff 尚未暂存的文件更新了那些部分
+&lt;br /&gt;      git diff –staged(git diff –cached)已经暂存的将要添加到下次提交的内容。
+&lt;br /&gt;      
+git commit 提交更新
+&lt;br /&gt;      git commit -a 跳过暂存群自动吧所有已经跟踪的文件暂存起来并一并提交。跳过git add 步骤
+&lt;br /&gt;      git rm 从已经跟踪的文件清单中移除文件并能够从工作目录中删除指定的文件。
+&lt;br /&gt;      git rm –cached 只删除git仓库的文件
+&lt;br /&gt;      &lt;/p&gt;
+&lt;h2&gt;三、Jekyll命令&lt;/h2&gt;
+&lt;p&gt;      jekyll s jekyll服务启动&lt;/p&gt;</content><author><name></name></author><category term="其他" /><summary type="html">      此文处于不断更新中。。。 一、MAC 操作命名       1.defaults write com.apple.finder AppleShowAllFiles FALSE 设置隐藏文件不可见       2.defaults write com.apple.finder AppleShowAllFiles TRUE 设置隐藏文件可见       3.killall Finder 重启Finder       4.ls -al 查看所有文件的权限以及属性。       如上图显示，第一列代表的是文件的权限，这里一个有10个字符，第一个字符代表的是文件是目录、文件或者链接等，d:目录；-：文件;l:连接文件；b:设备文件里面的可供存储的接口设备;c:文件里面的串行端口设备，例如鼠标键盘等;接下来的字符是每三个字符是一组，而且均为rwx的组合，r代表可读；w代表可写；x代表可执行.注意：这3个权限的位置是不可变的，如果没有权限则是-。第一组代表的是文件所有者的权限，第二组代表的是同用户组的用户的权限，第三组代表的其他非本组的用户的权限。       第二列代表的是有多少文件名连接到此节点。       第三列代表的是文件所有者的账号。       第四列代表的是文件所有者所在用户组       第五列代表的是这个文件的大小，默认单位是B。       第六列代表的这个文件的创建时间或者是最近的修改时间。如果想要显示完整的时间格式，可以使用ls -l –full-time.       第七列代表的是该文件的文件名。注意，如果这个文件前面有一个.代表的是这个文件是一个隐藏文件。       5.ls -a 查看当前路径下的所有文件（包括隐藏文件）。 二、Git命令       git init 在现有目录初始化仓库，该命令会常见一个名为.git的子目录，这个子目录包含初始化git仓库的所有必须文件。此时项目的文件还没有跟踪。        git add 实现对指定文件的跟踪/将已经跟踪的文件放到暂存区/在合并时将冲突的文件标记为已解决状态等。       git commit -m “” 提交       git clone 地址 克隆git仓库。       git statis 检查当前文件的状态        git diff 尚未暂存的文件更新了那些部分       git diff –staged(git diff –cached)已经暂存的将要添加到下次提交的内容。        git commit 提交更新       git commit -a 跳过暂存群自动吧所有已经跟踪的文件暂存起来并一并提交。跳过git add 步骤       git rm 从已经跟踪的文件清单中移除文件并能够从工作目录中删除指定的文件。       git rm –cached 只删除git仓库的文件        三、Jekyll命令       jekyll s jekyll服务启动</summary></entry><entry><title type="html">Jekyll搭建博客之路之最简单的博客!</title><link href="http://localhost:4000/HelloProgrammer/Jekyll%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/" rel="alternate" type="text/html" title="Jekyll搭建博客之路之最简单的博客!" /><published>2018-08-13T00:00:00+08:00</published><updated>2018-08-13T00:00:00+08:00</updated><id>http://localhost:4000/HelloProgrammer/Jekyll%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF</id><content type="html" xml:base="http://localhost:4000/HelloProgrammer/Jekyll%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/">&lt;p&gt;      使用Jekyll搭建博客的详细步骤现在已经很多，所以这里不再赘述，本文主要讲解搭建博客过程中我遇到的一些问题，并提供相应的解决方式，方便大家共同交流，此文处于不断更新中。。。&lt;/p&gt;
 &lt;h2&gt;一、搭建起因&lt;/h2&gt;
 &lt;p&gt;      作为一名程序员，要学习的东西越来越多，对于刚刚工作的我，着实需要将自己所掌握的和所需要掌握的知识统一进行整理归纳，所以便拥有了搭建一个属于自己的博客的需求。&lt;/p&gt;
 &lt;h2&gt;二、前期准备&lt;/h2&gt;
@@ -196,249 +399,4 @@ comments: true
 &amp;lt; img src=”https://xxx/xxx/xxx/xxjpg” width = “50%” height = “25%”  /&amp;gt;
 &lt;br /&gt;&lt;/p&gt;
 &lt;h4&gt;3.3.5、文本编辑后样式出现变化&lt;/h4&gt;
-&lt;p&gt;      在编写博客的时候，发现自己编写的内容在阅览过程中发生了样式的变化，后来发现，在编辑的时候，多了很多的空格，尤其是开头，删掉空格后问题解决。&lt;/p&gt;</content><author><name></name></author><category term="Jekyll" /><summary type="html">      使用Jekyll搭建博客的详细步骤现在已经很多，所以这里不再赘述，本文主要讲解搭建博客过程中我遇到的一些问题，并提供相应的解决方式，方便大家共同交流，此文处于不断更新中。。。 一、搭建起因       作为一名程序员，要学习的东西越来越多，对于刚刚工作的我，着实需要将自己所掌握的和所需要掌握的知识统一进行整理归纳，所以便拥有了搭建一个属于自己的博客的需求。 二、前期准备 2.1、搭建博客的技术       目前实现个人博客的建设的方式有很多，对于一些懂技术的大牛来说，完全可以使用JavaWeb实现一个博客，只不过这样的实现方式相对比较麻烦，对技术的要求也比较高。而对技术了解不是很深的小白来说，便需要借助一些工具了。一个个人博客网站，其动态交互相对较少，所以我们可以借助Hexo、Jekyll等来通过解析文章自动生成一些静态页面，然后将这些静态页面托管到服务器上的方式，达到实现个人博客的目的。 2.2、GitHub Pages       GitHub Pages是一种静态站点托管服务，旨在直接从GitHub存储库托管您的个人，组织或项目页面。可以直接从您的GitHub存储库托管。只需编辑，推送，您的更改即可生效。其他的用户只需要通过访问相应的域名，便可以直接浏览你的项目。 2.3、Jekyll       Jekyll是一个简单的生成静态网站的工具，通过Jekyll,可以将纯文本转化为静态网站和博客。使用Jekyll搭建的博客只需要用到MarkDown或者Textile、Liquid、Html、CSS就可以实现博客的建设， 2.4、总结       由于个人在最初对这些博客搭建的技术并不是十分了解，在做了一些了解之后，便开始了自己的搭建之旅。       我将自己的搭建过程整体分为两个步骤，第一步，首先是将博客项目在本地运行起来，这里包括环境的安装、对博客的发布编辑等的熟悉以及本地运行。第二步便是博客的发布，这里主要是将自己本地的项目发布到git上，并通过进行设置，绑定域名等，实现博客的发布。对于第一步，我们主要需要学习的就是jekyll的一些命令、配置、markdown文件的编辑以及最主要的便是项目的开发过程中，各个文件的调用以及解析等。对于博客的发布，这里主要需要关注学习的便是git命令。 三、搭建历程 3.1、成果展示       废话不多说，直接上图。       出于学习的目的，所以作为博客小白的我决定从零做起，不采用任何主题，后续将更新自己的博客搭建之路，让自己的博客逐渐丰富起来。 3.2、开始搭建       对于使用Jekyll搭建博客的教程，现在网上有很多，这里只介绍自己的开发及思考过程， 3.2.1、项目分析       作为一名程序员，习惯性的先跑了一个Demo,这个项目便是Jekyll自动生成的博客，接下来便是入口的查找，在对Jekyll项目的文件目录分析，发现Jekyll正常的工程目录为：       _config.yml Jekyll的配置文件       _posts 博客内容       _layouts 网页排版模板       _includes 被模板包含的HTML片段，可在_config.yml中修改位置       assets 辅助资源 css布局 js脚本 图片等       _data 动态数据       _sites 最终生成的静态网页       index.html 博客首页       而对于一个静态网站，首先我们要有的便是整个网站的整体结构框架，通过编辑_layouts目录下的default.html文件，定义了整个博客的模板框架，其样式布局定义在assets文件下的default.css中。       有了整体的模板布局，接下来便是首页的制定了，通过编辑项目中的index.html文件来编写博客的首页。       完成以上步骤，我们便可以看到自己的博客首页了，接下来我们要做的便是发布自己的博客。我们的博客的编写是在_posts目录下的.markdown文件，这里要注意该这些博客文件的命名规则为xxxx-xxx-xx-xxxxxxx.markdown。里面的具体的语法不在详述。       到此，我们的简单的博客变搭建完成，接下来通过，提交到git，便可以发布我们的博客，发布过程不在详述。 3.3、遇到的问题 3.3.1、代码提交到git但是无法正常访问，提示404       在一些教程中，当我们将代码提交到git上后，需要我们直接访问一个地址，此时可能会不能如愿，页面提示我们404错误。如图：       可以看到提示There isn’t a GitHub Pages site here.这里是说没有GitHub Pags站点，这是因为我们需要主动在git的setting下找到GitHub Pages将Source设置成maseter branch即可。如图: 3.3.2、博客托管到git上，但是样式出现了错误       这类错误主要是样式加载出错造成的，例如：我们通过jekyll生成的本地博客，发布到git上，可能会发现我们的样式出错，通过查看代码可以看到，git上面的样式布局文件等都为空，本地的样式文件也是空，但是在本地查看博客没有问题，这是由于现在的jekyll生成的博客的一些默认配置并不在我们生成的项目文件中，而是在我们的根目录下。在本地解析的时候将会加载这些文件，但是git上并没有这些，所以导致样式出现问题。如果遇到类似的问题，可以详细查看我们的git是否存在要加载的文件，其次我们还要检查代码里面的路径和文件实际路径是否一致。 3.3.3、点击博客无法进入访问此网站       在首页中点击我们的博客，提示无法访问此网站.如图       这样的错误发生在了本地，但是在git上并没有这样的错误。通过比较本地和git的url地址发现，本地地址：http://jekyll/update/2018/…缺少了IP地址和端口号,所以访问不到。这样在我们的首页加载博客地址的a标签，重新修改即可。 3.3.4、添加图片       在书写第一篇博客的时，也就是本文，给我最大的困扰之一便是如何在博客文章中插入图片，通过查阅资料可知，MarkDown支持嵌入html标签，那么有了html标签对于插入图片便十分简单了。我们只需要通过以下代码便可插入相应的图片，这里要注意图片的路径问题。 &amp;lt; img src=”https://xxx/xxx/xxx/xxjpg” width = “50%” height = “25%” /&amp;gt; 3.3.5、文本编辑后样式出现变化       在编写博客的时候，发现自己编写的内容在阅览过程中发生了样式的变化，后来发现，在编辑的时候，多了很多的空格，尤其是开头，删掉空格后问题解决。</summary></entry><entry><title type="html">Markdown语法简介</title><link href="http://localhost:4000/HelloProgrammer/chinese-markdown-cheatsheet/" rel="alternate" type="text/html" title="Markdown语法简介" /><published>2013-07-16T00:00:00+08:00</published><updated>2013-07-16T00:00:00+08:00</updated><id>http://localhost:4000/HelloProgrammer/chinese-markdown-cheatsheet</id><content type="html" xml:base="http://localhost:4000/HelloProgrammer/chinese-markdown-cheatsheet/">&lt;p&gt;本中文版Markdown语法简介来自博客 &lt;a href=&quot;https://blog.shengbin.me/posts/markdown-syntax&quot;&gt;https://blog.shengbin.me/posts/markdown-syntax&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Markdown语法的完整介绍在这里：&lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot;&gt;http://daringfireball.net/projects/markdown/syntax&lt;/a&gt;。下面整理的这些为了方便写博客时参考。&lt;/p&gt;
-
-&lt;h3 id=&quot;分段与分行&quot;&gt;分段与分行&lt;/h3&gt;
-
-&lt;p&gt;以一个或多个空行来隔开段落；以两个或多个空格来段内换行。&lt;/p&gt;
-
-&lt;h3 id=&quot;标题&quot;&gt;标题&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;This is an H1
-=============
-
-This is an H2
--------------
-
-# This is an H1
-
-##  This is an H2
-
-######  This is an H6
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;引用&quot;&gt;引用&lt;/h3&gt;
-
-&lt;p&gt;在每一行前面写一个&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt;：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-&amp;gt; consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-&amp;gt; Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-&amp;gt;
-&amp;gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-&amp;gt; id sem consectetuer libero luctus adipiscing.
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/p&gt;
-
-  &lt;p&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse id sem consectetuer libero luctus adipiscing.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;或者在每一段前面写一个&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt;：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-
-&amp;gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-id sem consectetuer libero luctus adipiscing.
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;多重引用&quot;&gt;多重引用&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; This is the first level of quoting.
-&amp;gt;
-&amp;gt; &amp;gt; This is nested blockquote.
-&amp;gt;
-&amp;gt; Back to the first level.
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;This is the first level of quoting.&lt;/p&gt;
-
-  &lt;blockquote&gt;
-    &lt;p&gt;This is nested blockquote.&lt;/p&gt;
-  &lt;/blockquote&gt;
-
-  &lt;p&gt;Back to the first level.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;列表&quot;&gt;列表&lt;/h3&gt;
-
-&lt;p&gt;列表项占一行，以*、+、-开头即可：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*   Red
-*   Green
-*   Blue
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Red&lt;/li&gt;
-  &lt;li&gt;Green&lt;/li&gt;
-  &lt;li&gt;Blue&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;有序列表只需要将上述标记符换成数字加句点。而且顺序由书写顺序决定，与数字无关，但数字需要从1开始。例如：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1\.  Bird
-3.  McHale
-2.  Parish
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Bird&lt;/li&gt;
-  &lt;li&gt;McHale&lt;/li&gt;
-  &lt;li&gt;Parish&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;每一个列表项可以多行：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
-viverra nec, fringilla in, laoreet vitae, risus.
-*   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
-Suspendisse id sem consectetuer libero luctus adipiscing.
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.&lt;/li&gt;
-  &lt;li&gt;Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse id sem consectetuer libero luctus adipiscing.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;代码块&quot;&gt;代码块&lt;/h3&gt;
-
-&lt;p&gt;每一行前面缩进四个或以上个空格，就认为是开始了一段代码块。代码块内原样输出。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;This is a normal paragraph:
-
-    This is a code block.
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;p&gt;This is a normal paragraph:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;This is a code block.
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;横线&quot;&gt;横线&lt;/h3&gt;
-
-&lt;p&gt;三个或更多个&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt;（它们之间可以有空格）会产生横线：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* * *
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h3 id=&quot;链接&quot;&gt;链接&lt;/h3&gt;
-
-&lt;p&gt;内嵌链接：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;I get 10 times more traffic from [Google](http://google.com/ &quot;Google&quot;)
-than from [Yahoo](http://search.yahoo.com/ &quot;Yahoo Search&quot;) or
-[MSN](http://search.msn.com/ &quot;MSN Search&quot;).
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;或参考文献式链接（缺省的链接标记认为与文本一致）：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;I get 10 times more traffic from [Google] [1] than from
-[Yahoo] [2] or [MSN] [3].
-
-  [1]: http://google.com/        &quot;Google&quot;
-  [2]: http://search.yahoo.com/  &quot;Yahoo Search&quot;
-  [3]: http://search.msn.com/    &quot;MSN Search&quot;
-
-I get 10 times more traffic from [Google][] than from
-[Yahoo][] or [MSN][].
-
-  [google]: http://google.com/        &quot;Google&quot;
-  [yahoo]:  http://search.yahoo.com/  &quot;Yahoo Search&quot;
-  [msn]:    http://search.msn.com/    &quot;MSN Search&quot;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;p&gt;I get 10 times more traffic from &lt;a href=&quot;http://google.com/&quot; title=&quot;Google&quot;&gt;Google&lt;/a&gt; than from &lt;a href=&quot;http://search.yahoo.com/&quot; title=&quot;Yahoo Search&quot;&gt;Yahoo&lt;/a&gt; or &lt;a href=&quot;http://search.msn.com/&quot; title=&quot;MSN Search&quot;&gt;MSN&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;如果直接以链接地址作为链接文本，可以用如下快捷写法：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;http://www.shengbin.me&amp;gt; 效果：
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.shengbin.me/&quot;&gt;http://www.shengbin.me&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;强调&quot;&gt;强调&lt;/h3&gt;
-
-&lt;p&gt;单个&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;或&lt;code class=&quot;highlighter-rouge&quot;&gt;_&lt;/code&gt;产生斜体，两个（&lt;code class=&quot;highlighter-rouge&quot;&gt;**&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;__&lt;/code&gt;）则产生粗体。例如：&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*like* _this_
-
-**like** **this**
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;like&lt;/em&gt; &lt;em&gt;this&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;like&lt;/strong&gt; &lt;strong&gt;this&lt;/strong&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;内嵌代码&quot;&gt;内嵌代码&lt;/h3&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;code: `echo hello`
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;效果：&lt;/p&gt;
-
-&lt;p&gt;code: &lt;code class=&quot;highlighter-rouge&quot;&gt;echo hello&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;图片&quot;&gt;图片&lt;/h3&gt;
-
-&lt;p&gt;图片与链接类似，只需在文本前面加上感叹号&lt;code class=&quot;highlighter-rouge&quot;&gt;!&lt;/code&gt;即可。图片位置和大小无法通过Markdown来指定。&lt;/p&gt;
-
-&lt;h3 id=&quot;转义字符&quot;&gt;转义字符&lt;/h3&gt;
-
-&lt;p&gt;以下特殊字符需要用&lt;code class=&quot;highlighter-rouge&quot;&gt;\&lt;/code&gt;转义得到。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;\   backslash
-`   backtick
-*   asterisk
-_   underscore
-{}  curly braces
-[]  square brackets
-()  parentheses
-#   hash mark
-+   plus sign
--   minus sign (hyphen)
-.   dot
-!   exclamation mark
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><category term="sample" /><category term="markdown" /><summary type="html">本中文版Markdown语法简介来自博客 https://blog.shengbin.me/posts/markdown-syntax Markdown语法的完整介绍在这里：http://daringfireball.net/projects/markdown/syntax。下面整理的这些为了方便写博客时参考。 分段与分行 以一个或多个空行来隔开段落；以两个或多个空格来段内换行。 标题 ``` This is an H1 ============= This is an H2</summary></entry></feed>
+&lt;p&gt;      在编写博客的时候，发现自己编写的内容在阅览过程中发生了样式的变化，后来发现，在编辑的时候，多了很多的空格，尤其是开头，删掉空格后问题解决。&lt;/p&gt;</content><author><name></name></author><category term="Jekyll" /><summary type="html">      使用Jekyll搭建博客的详细步骤现在已经很多，所以这里不再赘述，本文主要讲解搭建博客过程中我遇到的一些问题，并提供相应的解决方式，方便大家共同交流，此文处于不断更新中。。。 一、搭建起因       作为一名程序员，要学习的东西越来越多，对于刚刚工作的我，着实需要将自己所掌握的和所需要掌握的知识统一进行整理归纳，所以便拥有了搭建一个属于自己的博客的需求。 二、前期准备 2.1、搭建博客的技术       目前实现个人博客的建设的方式有很多，对于一些懂技术的大牛来说，完全可以使用JavaWeb实现一个博客，只不过这样的实现方式相对比较麻烦，对技术的要求也比较高。而对技术了解不是很深的小白来说，便需要借助一些工具了。一个个人博客网站，其动态交互相对较少，所以我们可以借助Hexo、Jekyll等来通过解析文章自动生成一些静态页面，然后将这些静态页面托管到服务器上的方式，达到实现个人博客的目的。 2.2、GitHub Pages       GitHub Pages是一种静态站点托管服务，旨在直接从GitHub存储库托管您的个人，组织或项目页面。可以直接从您的GitHub存储库托管。只需编辑，推送，您的更改即可生效。其他的用户只需要通过访问相应的域名，便可以直接浏览你的项目。 2.3、Jekyll       Jekyll是一个简单的生成静态网站的工具，通过Jekyll,可以将纯文本转化为静态网站和博客。使用Jekyll搭建的博客只需要用到MarkDown或者Textile、Liquid、Html、CSS就可以实现博客的建设， 2.4、总结       由于个人在最初对这些博客搭建的技术并不是十分了解，在做了一些了解之后，便开始了自己的搭建之旅。       我将自己的搭建过程整体分为两个步骤，第一步，首先是将博客项目在本地运行起来，这里包括环境的安装、对博客的发布编辑等的熟悉以及本地运行。第二步便是博客的发布，这里主要是将自己本地的项目发布到git上，并通过进行设置，绑定域名等，实现博客的发布。对于第一步，我们主要需要学习的就是jekyll的一些命令、配置、markdown文件的编辑以及最主要的便是项目的开发过程中，各个文件的调用以及解析等。对于博客的发布，这里主要需要关注学习的便是git命令。 三、搭建历程 3.1、成果展示       废话不多说，直接上图。       出于学习的目的，所以作为博客小白的我决定从零做起，不采用任何主题，后续将更新自己的博客搭建之路，让自己的博客逐渐丰富起来。 3.2、开始搭建       对于使用Jekyll搭建博客的教程，现在网上有很多，这里只介绍自己的开发及思考过程， 3.2.1、项目分析       作为一名程序员，习惯性的先跑了一个Demo,这个项目便是Jekyll自动生成的博客，接下来便是入口的查找，在对Jekyll项目的文件目录分析，发现Jekyll正常的工程目录为：       _config.yml Jekyll的配置文件       _posts 博客内容       _layouts 网页排版模板       _includes 被模板包含的HTML片段，可在_config.yml中修改位置       assets 辅助资源 css布局 js脚本 图片等       _data 动态数据       _sites 最终生成的静态网页       index.html 博客首页       而对于一个静态网站，首先我们要有的便是整个网站的整体结构框架，通过编辑_layouts目录下的default.html文件，定义了整个博客的模板框架，其样式布局定义在assets文件下的default.css中。       有了整体的模板布局，接下来便是首页的制定了，通过编辑项目中的index.html文件来编写博客的首页。       完成以上步骤，我们便可以看到自己的博客首页了，接下来我们要做的便是发布自己的博客。我们的博客的编写是在_posts目录下的.markdown文件，这里要注意该这些博客文件的命名规则为xxxx-xxx-xx-xxxxxxx.markdown。里面的具体的语法不在详述。       到此，我们的简单的博客变搭建完成，接下来通过，提交到git，便可以发布我们的博客，发布过程不在详述。 3.3、遇到的问题 3.3.1、代码提交到git但是无法正常访问，提示404       在一些教程中，当我们将代码提交到git上后，需要我们直接访问一个地址，此时可能会不能如愿，页面提示我们404错误。如图：       可以看到提示There isn’t a GitHub Pages site here.这里是说没有GitHub Pags站点，这是因为我们需要主动在git的setting下找到GitHub Pages将Source设置成maseter branch即可。如图: 3.3.2、博客托管到git上，但是样式出现了错误       这类错误主要是样式加载出错造成的，例如：我们通过jekyll生成的本地博客，发布到git上，可能会发现我们的样式出错，通过查看代码可以看到，git上面的样式布局文件等都为空，本地的样式文件也是空，但是在本地查看博客没有问题，这是由于现在的jekyll生成的博客的一些默认配置并不在我们生成的项目文件中，而是在我们的根目录下。在本地解析的时候将会加载这些文件，但是git上并没有这些，所以导致样式出现问题。如果遇到类似的问题，可以详细查看我们的git是否存在要加载的文件，其次我们还要检查代码里面的路径和文件实际路径是否一致。 3.3.3、点击博客无法进入访问此网站       在首页中点击我们的博客，提示无法访问此网站.如图       这样的错误发生在了本地，但是在git上并没有这样的错误。通过比较本地和git的url地址发现，本地地址：http://jekyll/update/2018/…缺少了IP地址和端口号,所以访问不到。这样在我们的首页加载博客地址的a标签，重新修改即可。 3.3.4、添加图片       在书写第一篇博客的时，也就是本文，给我最大的困扰之一便是如何在博客文章中插入图片，通过查阅资料可知，MarkDown支持嵌入html标签，那么有了html标签对于插入图片便十分简单了。我们只需要通过以下代码便可插入相应的图片，这里要注意图片的路径问题。 &amp;lt; img src=”https://xxx/xxx/xxx/xxjpg” width = “50%” height = “25%” /&amp;gt; 3.3.5、文本编辑后样式出现变化       在编写博客的时候，发现自己编写的内容在阅览过程中发生了样式的变化，后来发现，在编辑的时候，多了很多的空格，尤其是开头，删掉空格后问题解决。</summary></entry></feed>

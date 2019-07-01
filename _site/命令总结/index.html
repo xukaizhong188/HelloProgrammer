@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>Markdown语法简介 – XKZ – XKZ的博客</title>
+  <title>命令总结! – XKZ – XKZ的博客</title>
 
       <meta charset="utf-8" />
     <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
@@ -9,46 +9,82 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
 
     
-    <meta name="description" content="本中文版Markdown语法简介来自博客 https://blog.shengbin.me/posts/markdown-syntax
+    <meta name="description" content="      此文处于不断更新中。。。
+一、MAC 操作命名
+      1.defaults write com.apple.finder AppleShowAllFiles FALSE   设置隐藏文件不可见	
+      2.defaults write com.apple.finder AppleShowAllFiles TRUE   设置隐藏文件可见
+      3.killall Finder  重启Finder 
+      4.ls -al 查看所有文件的权限以及属性。 
 
-Markdown语法的完整介绍在这里：http://daringfireball.net/projects/markdown/syntax。下面整理的这些为了方便写博客时参考。
-
-分段与分行
-
-以一个或多个空行来隔开段落；以两个或多个空格来段内换行。
-
-标题
-
-```
-This is an H1
-=============
-
-This is an H2
+      如上图显示，第一列代表的是文件的权限，这里一个有10个字符，第一个字符代表的是文件是目录、文件或者链接等，d:目录；-：文件;l:连接文件；b:设备文件里面的可供存储的接口设备;c:文件里面的串行端口设备，例如鼠标键盘等;接下来的字符是每三个字符是一组，而且均为rwx的组合，r代表可读；w代表可写；x代表可执行.注意：这3个权限的位置是不可变的，如果没有权限则是-。第一组代表的是文件所有者的权限，第二组代表的是同用户组的用户的权限，第三组代表的其他非本组的用户的权限。
+      第二列代表的是有多少文件名连接到此节点。
+      第三列代表的是文件所有者的账号。
+      第四列代表的是文件所有者所在用户组
+      第五列代表的是这个文件的大小，默认单位是B。
+      第六列代表的这个文件的创建时间或者是最近的修改时间。如果想要显示完整的时间格式，可以使用ls -l –full-time.
+      第七列代表的是该文件的文件名。注意，如果这个文件前面有一个.代表的是这个文件是一个隐藏文件。
+      5.ls -a 查看当前路径下的所有文件（包括隐藏文件）。
+二、Git命令
+      git init 在现有目录初始化仓库，该命令会常见一个名为.git的子目录，这个子目录包含初始化git仓库的所有必须文件。此时项目的文件还没有跟踪。
+      
+git add 实现对指定文件的跟踪/将已经跟踪的文件放到暂存区/在合并时将冲突的文件标记为已解决状态等。
+      git commit -m “” 提交
+      git clone 地址 克隆git仓库。
+      git statis 检查当前文件的状态
+      
+git diff 尚未暂存的文件更新了那些部分
+      git diff –staged(git diff –cached)已经暂存的将要添加到下次提交的内容。
+      
+git commit 提交更新
+      git commit -a 跳过暂存群自动吧所有已经跟踪的文件暂存起来并一并提交。跳过git add 步骤
+      git rm 从已经跟踪的文件清单中移除文件并能够从工作目录中删除指定的文件。
+      git rm –cached 只删除git仓库的文件
+      
+三、Jekyll命令
+      jekyll s jekyll服务启动
 
 " />
-    <meta property="og:description" content="本中文版Markdown语法简介来自博客 https://blog.shengbin.me/posts/markdown-syntax
+    <meta property="og:description" content="      此文处于不断更新中。。。
+一、MAC 操作命名
+      1.defaults write com.apple.finder AppleShowAllFiles FALSE   设置隐藏文件不可见	
+      2.defaults write com.apple.finder AppleShowAllFiles TRUE   设置隐藏文件可见
+      3.killall Finder  重启Finder 
+      4.ls -al 查看所有文件的权限以及属性。 
 
-Markdown语法的完整介绍在这里：http://daringfireball.net/projects/markdown/syntax。下面整理的这些为了方便写博客时参考。
-
-分段与分行
-
-以一个或多个空行来隔开段落；以两个或多个空格来段内换行。
-
-标题
-
-```
-This is an H1
-=============
-
-This is an H2
+      如上图显示，第一列代表的是文件的权限，这里一个有10个字符，第一个字符代表的是文件是目录、文件或者链接等，d:目录；-：文件;l:连接文件；b:设备文件里面的可供存储的接口设备;c:文件里面的串行端口设备，例如鼠标键盘等;接下来的字符是每三个字符是一组，而且均为rwx的组合，r代表可读；w代表可写；x代表可执行.注意：这3个权限的位置是不可变的，如果没有权限则是-。第一组代表的是文件所有者的权限，第二组代表的是同用户组的用户的权限，第三组代表的其他非本组的用户的权限。
+      第二列代表的是有多少文件名连接到此节点。
+      第三列代表的是文件所有者的账号。
+      第四列代表的是文件所有者所在用户组
+      第五列代表的是这个文件的大小，默认单位是B。
+      第六列代表的这个文件的创建时间或者是最近的修改时间。如果想要显示完整的时间格式，可以使用ls -l –full-time.
+      第七列代表的是该文件的文件名。注意，如果这个文件前面有一个.代表的是这个文件是一个隐藏文件。
+      5.ls -a 查看当前路径下的所有文件（包括隐藏文件）。
+二、Git命令
+      git init 在现有目录初始化仓库，该命令会常见一个名为.git的子目录，这个子目录包含初始化git仓库的所有必须文件。此时项目的文件还没有跟踪。
+      
+git add 实现对指定文件的跟踪/将已经跟踪的文件放到暂存区/在合并时将冲突的文件标记为已解决状态等。
+      git commit -m “” 提交
+      git clone 地址 克隆git仓库。
+      git statis 检查当前文件的状态
+      
+git diff 尚未暂存的文件更新了那些部分
+      git diff –staged(git diff –cached)已经暂存的将要添加到下次提交的内容。
+      
+git commit 提交更新
+      git commit -a 跳过暂存群自动吧所有已经跟踪的文件暂存起来并一并提交。跳过git add 步骤
+      git rm 从已经跟踪的文件清单中移除文件并能够从工作目录中删除指定的文件。
+      git rm –cached 只删除git仓库的文件
+      
+三、Jekyll命令
+      jekyll s jekyll服务启动
 
 " />
     
     <meta name="author" content="XKZ" />
 
     
-    <meta property="og:title" content="Markdown语法简介" />
-    <meta property="twitter:title" content="Markdown语法简介" />
+    <meta property="og:title" content="命令总结!" />
+    <meta property="twitter:title" content="命令总结!" />
     
   <!-- Async font loading -->
 <script>
@@ -166,18 +202,18 @@ This is an H2
 
     <div id="main" role="main" class="wrapper-content">
       <article class="posts">
-  <h1>Markdown语法简介</h1>
+  <h1>命令总结!</h1>
 
   <div clsss="meta">
     <span class="date">
-      2013-07-16
+      2018-08-14
     </span>
 
     <ul class="tag">
       
       <li>
-        <a href="http://localhost:4000/HelloProgrammer/tags#markdown">
-          markdown
+        <a href="http://localhost:4000/HelloProgrammer/tags#其他">
+          其他
         </a>
       </li>
       
@@ -185,252 +221,40 @@ This is an H2
   </div>
 
   <div class="entry">
-    <p>本中文版Markdown语法简介来自博客 <a href="https://blog.shengbin.me/posts/markdown-syntax">https://blog.shengbin.me/posts/markdown-syntax</a></p>
+    <p>      此文处于不断更新中。。。</p>
+<h2>一、MAC 操作命名</h2>
+<p>      1.defaults write com.apple.finder AppleShowAllFiles FALSE   设置隐藏文件不可见	
+<br />      2.defaults write com.apple.finder AppleShowAllFiles TRUE   设置隐藏文件可见
+<br />      3.killall Finder  重启Finder 
+<br />      4.ls -al 查看所有文件的权限以及属性。 
+<img src="https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2018-0814/pic1.jpg" width="100%" height="50%" />
+<br />      如上图显示，第一列代表的是文件的权限，这里一个有10个字符，第一个字符代表的是文件是目录、文件或者链接等，d:目录；-：文件;l:连接文件；b:设备文件里面的可供存储的接口设备;c:文件里面的串行端口设备，例如鼠标键盘等;接下来的字符是每三个字符是一组，而且均为rwx的组合，r代表可读；w代表可写；x代表可执行.注意：这3个权限的位置是不可变的，如果没有权限则是-。第一组代表的是文件所有者的权限，第二组代表的是同用户组的用户的权限，第三组代表的其他非本组的用户的权限。
+<br />      第二列代表的是有多少文件名连接到此节点。
+<br />      第三列代表的是文件所有者的账号。
+<br />      第四列代表的是文件所有者所在用户组
+<br />      第五列代表的是这个文件的大小，默认单位是B。
+<br />      第六列代表的这个文件的创建时间或者是最近的修改时间。如果想要显示完整的时间格式，可以使用ls -l –full-time.
+<br />      第七列代表的是该文件的文件名。注意，如果这个文件前面有一个.代表的是这个文件是一个隐藏文件。
+<br />      5.ls -a 查看当前路径下的所有文件（包括隐藏文件）。</p>
+<h2>二、Git命令</h2>
+<p><br />      git init 在现有目录初始化仓库，该命令会常见一个名为.git的子目录，这个子目录包含初始化git仓库的所有必须文件。此时项目的文件还没有跟踪。
+<br />      
+git add 实现对指定文件的跟踪/将已经跟踪的文件放到暂存区/在合并时将冲突的文件标记为已解决状态等。
+<br />      git commit -m “” 提交
+<br />      git clone 地址 克隆git仓库。
+<br />      git statis 检查当前文件的状态
+<br />      
+git diff 尚未暂存的文件更新了那些部分
+<br />      git diff –staged(git diff –cached)已经暂存的将要添加到下次提交的内容。
+<br />      
+git commit 提交更新
+<br />      git commit -a 跳过暂存群自动吧所有已经跟踪的文件暂存起来并一并提交。跳过git add 步骤
+<br />      git rm 从已经跟踪的文件清单中移除文件并能够从工作目录中删除指定的文件。
+<br />      git rm –cached 只删除git仓库的文件
+<br />      </p>
+<h2>三、Jekyll命令</h2>
+<p>      jekyll s jekyll服务启动</p>
 
-<p>Markdown语法的完整介绍在这里：<a href="http://daringfireball.net/projects/markdown/syntax">http://daringfireball.net/projects/markdown/syntax</a>。下面整理的这些为了方便写博客时参考。</p>
-
-<h3 id="分段与分行">分段与分行</h3>
-
-<p>以一个或多个空行来隔开段落；以两个或多个空格来段内换行。</p>
-
-<h3 id="标题">标题</h3>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This is an H1
-=============
-
-This is an H2
--------------
-
-# This is an H1
-
-##  This is an H2
-
-######  This is an H6
-
-</code></pre></div></div>
-
-<h3 id="引用">引用</h3>
-
-<p>在每一行前面写一个<code class="highlighter-rouge">&gt;</code>：</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-&gt; consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-&gt; Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-&gt;
-&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-&gt; id sem consectetuer libero luctus adipiscing.
-
-</code></pre></div></div>
-
-<p>效果：</p>
-
-<blockquote>
-  <p>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</p>
-
-  <p>Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse id sem consectetuer libero luctus adipiscing.</p>
-</blockquote>
-
-<p>或者在每一段前面写一个<code class="highlighter-rouge">&gt;</code>：</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-
-&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-id sem consectetuer libero luctus adipiscing.
-
-</code></pre></div></div>
-
-<h3 id="多重引用">多重引用</h3>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&gt; This is the first level of quoting.
-&gt;
-&gt; &gt; This is nested blockquote.
-&gt;
-&gt; Back to the first level.
-
-</code></pre></div></div>
-
-<p>效果：</p>
-
-<blockquote>
-  <p>This is the first level of quoting.</p>
-
-  <blockquote>
-    <p>This is nested blockquote.</p>
-  </blockquote>
-
-  <p>Back to the first level.</p>
-</blockquote>
-
-<h3 id="列表">列表</h3>
-
-<p>列表项占一行，以*、+、-开头即可：</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*   Red
-*   Green
-*   Blue
-
-</code></pre></div></div>
-
-<p>效果：</p>
-
-<ul>
-  <li>Red</li>
-  <li>Green</li>
-  <li>Blue</li>
-</ul>
-
-<p>有序列表只需要将上述标记符换成数字加句点。而且顺序由书写顺序决定，与数字无关，但数字需要从1开始。例如：</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1\.  Bird
-3.  McHale
-2.  Parish
-
-</code></pre></div></div>
-
-<p>效果：</p>
-
-<ol>
-  <li>Bird</li>
-  <li>McHale</li>
-  <li>Parish</li>
-</ol>
-
-<p>每一个列表项可以多行：</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,
-viverra nec, fringilla in, laoreet vitae, risus.
-*   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.
-Suspendisse id sem consectetuer libero luctus adipiscing.
-
-</code></pre></div></div>
-
-<p>效果：</p>
-
-<ul>
-  <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</li>
-  <li>Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse id sem consectetuer libero luctus adipiscing.</li>
-</ul>
-
-<h3 id="代码块">代码块</h3>
-
-<p>每一行前面缩进四个或以上个空格，就认为是开始了一段代码块。代码块内原样输出。</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This is a normal paragraph:
-
-    This is a code block.
-
-</code></pre></div></div>
-
-<p>效果：</p>
-
-<p>This is a normal paragraph:</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This is a code block.
-
-</code></pre></div></div>
-
-<h3 id="横线">横线</h3>
-
-<p>三个或更多个<code class="highlighter-rouge">*</code>、<code class="highlighter-rouge">-</code>（它们之间可以有空格）会产生横线：</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>* * *
-
-</code></pre></div></div>
-
-<p>效果：</p>
-
-<hr />
-
-<h3 id="链接">链接</h3>
-
-<p>内嵌链接：</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I get 10 times more traffic from [Google](http://google.com/ "Google")
-than from [Yahoo](http://search.yahoo.com/ "Yahoo Search") or
-[MSN](http://search.msn.com/ "MSN Search").
-
-</code></pre></div></div>
-
-<p>或参考文献式链接（缺省的链接标记认为与文本一致）：</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>I get 10 times more traffic from [Google] [1] than from
-[Yahoo] [2] or [MSN] [3].
-
-  [1]: http://google.com/        "Google"
-  [2]: http://search.yahoo.com/  "Yahoo Search"
-  [3]: http://search.msn.com/    "MSN Search"
-
-I get 10 times more traffic from [Google][] than from
-[Yahoo][] or [MSN][].
-
-  [google]: http://google.com/        "Google"
-  [yahoo]:  http://search.yahoo.com/  "Yahoo Search"
-  [msn]:    http://search.msn.com/    "MSN Search"
-
-</code></pre></div></div>
-
-<p>效果：</p>
-
-<p>I get 10 times more traffic from <a href="http://google.com/" title="Google">Google</a> than from <a href="http://search.yahoo.com/" title="Yahoo Search">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search">MSN</a>.</p>
-
-<p>如果直接以链接地址作为链接文本，可以用如下快捷写法：</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;http://www.shengbin.me&gt; 效果：
-
-</code></pre></div></div>
-
-<p><a href="http://www.shengbin.me/">http://www.shengbin.me</a></p>
-
-<h3 id="强调">强调</h3>
-
-<p>单个<code class="highlighter-rouge">*</code>或<code class="highlighter-rouge">_</code>产生斜体，两个（<code class="highlighter-rouge">**</code>、<code class="highlighter-rouge">__</code>）则产生粗体。例如：</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>*like* _this_
-
-**like** **this**
-
-</code></pre></div></div>
-
-<p>效果：</p>
-
-<p><em>like</em> <em>this</em></p>
-
-<p><strong>like</strong> <strong>this</strong></p>
-
-<h3 id="内嵌代码">内嵌代码</h3>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>code: `echo hello`
-
-</code></pre></div></div>
-
-<p>效果：</p>
-
-<p>code: <code class="highlighter-rouge">echo hello</code></p>
-
-<h3 id="图片">图片</h3>
-
-<p>图片与链接类似，只需在文本前面加上感叹号<code class="highlighter-rouge">!</code>即可。图片位置和大小无法通过Markdown来指定。</p>
-
-<h3 id="转义字符">转义字符</h3>
-
-<p>以下特殊字符需要用<code class="highlighter-rouge">\</code>转义得到。</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>\   backslash
-`   backtick
-*   asterisk
-_   underscore
-{}  curly braces
-[]  square brackets
-()  parentheses
-#   hash mark
-+   plus sign
--   minus sign (hyphen)
-.   dot
-!   exclamation mark
-</code></pre></div></div>
 
   </div>
 
@@ -455,9 +279,15 @@ _   underscore
 
 <div class="pagination">
   
+    <span class="prev" >
+      <a href="http://localhost:4000/HelloProgrammer/Jekyll%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/">
+        ← 上一篇
+      </a>
+    </span>
+  
   
     <span class="next" >
-      <a href="http://localhost:4000/HelloProgrammer/Jekyll%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E4%B9%8B%E8%B7%AF/">
+      <a href="http://localhost:4000/HelloProgrammer/%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/">
         下一篇 →
       </a>
     </span>
