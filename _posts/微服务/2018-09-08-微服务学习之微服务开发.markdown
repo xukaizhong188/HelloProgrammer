@@ -18,7 +18,6 @@ comments: true
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、Dubbo
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、Motan
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、Thrift
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、Dubbo
 <h2>四、服务的发现</h2>
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;服务发现的本质就是让服务的消费者知道服务的提供者的ip和端口号
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;传统的服务就是在nginx中将我们的服务的提供者的ip和端口号写死；
