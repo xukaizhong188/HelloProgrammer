@@ -1,8 +1,11 @@
 ---
-layout: default
-title:  "log4J日志配置详解!"
-date:   2018-08-24 15:00:00 +0800
+layout: post
+title: log4J日志配置详解!
+date:  2018-08-24
+Author: XKZ
 categories: jekyll update
+tags: [日志]
+comments: true
 ---
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在之前经历的项目中都是前人栽树后人乘凉，大多数配置都是由大佬配置好，近期由于自己需要单独部署一套系统，日志便是必不可少的，所以今天有时间来对Log4j的配置文件进行一个详细的总结。
 <h2>一、运算符</h2>

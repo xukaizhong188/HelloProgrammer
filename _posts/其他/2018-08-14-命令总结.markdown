@@ -1,8 +1,11 @@
 ---
-layout: default
-title:  "命令总结!"
-date:   2018-08-14 09:00:00 +0800
+layout: post
+title: 命令总结!
+date:  2018-08-14
+Author: XKZ
 categories: jekyll update
+tags: [其他]
+comments: true
 ---
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此文处于不断更新中。。。
 <h2>一、MAC 操作命名</h2>
