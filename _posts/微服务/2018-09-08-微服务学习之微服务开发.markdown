@@ -1,0 +1,51 @@
+---
+layout: default
+title:  "微服务学习之微服务开发!"
+date:   2018-09-08 10:00:00 +0800
+categories: jekyll update
+---
+<h2>一、微服务之间如何进行通讯</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;从通讯协议上来讲可以选择REST API 、RPC、mq
+<h2>二、如何选择RPC框架</h2>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、需要考虑I/O 线程调度模型：到底是同步I/O,还是非阻塞的异步I/O  NIO，是长连接还是短连接。是单线程还是多线程
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、序列化方式：是可读的还是二进制，可读的例如xml/json二进制的就是一种不可见的例如jdk自带的序列化就是二进制的。序列化的方式直接影响了rpc通讯之间的效率。
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、多语言支持
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、服务治理：例如是否有服务的发现，服务的监控。
+<h2>三、流行的RPC框架</h2>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、Dubbo
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、Motan
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、Thrift
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、Dubbo
+<h2>四、服务的发现</h2>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;服务发现的本质就是让服务的消费者知道服务的提供者的ip和端口号
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;传统的服务就是在nginx中将我们的服务的提供者的ip和端口号写死；
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;微服务的发现方式有两种一种是客户端的发现一种是服务端的发现，客服端的发现就是客服端通过向注册中心订阅服务，订阅中心返回服务提供者的ip和端口；服务端的发现就是服务注册到注册中心，客户端会访问一个具体的ip和端口，访问一个具有服务发现和负载均衡的服务。这个服务端其实就是维护了注册中心中的服务列表。
+<h2>五、服务编排</h2>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;服务的编排就是为了解决微服务的发现、部署、更新、扩缩容等。
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;流行的服务编排工具：Mesos/Docker Swarm/Kubernetes
+<h2>六、SpringBoot与微服务</h2>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、SpringBoot的使命：化繁为简
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、SpringBoot的核心功能：
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;独立运行：传统的Spring项目的运行是通过一个web服务器，例如：TomcatSpringBoot是通过一个java命令将服务运行起来，是通过 java -jar xxx.jar是将服务以一个jar包的形式运行起来；
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;内嵌web服务器：SpringBoot内嵌了一个web服务器例如：tomcat，通过将web服务器和应用的包都打到一起并协调位置，他们之间的目录的读取关系，使我们不用关心细节，只需要运行一个命令就可以启动服务。
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;简化配置：尽可能的自动化配置Spring
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;准生产的应用监控：
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、SpringBoot与微服务的关系
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;java的润滑剂
+<h2>七、SpringCloud与微服务</h2>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、Springcloud的使命：简化java的分布式系统
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、深入理解：Springcloud是一系列框架的集合。springcloud是利用springboot的简化能力来简化分布式系统的基础服务的开发。
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、SpringBoot意在简化，是一种开发、配置的风格。springcloud是意在简化分布式，是功能的统一，风格的统一。
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、SpringCloud和微服务的关心：java的微服务。是一种微服务的解决方案，但并不是完整的方案，是偏向微服务的开发，没有提供服务的管理和治理等。侧重开发侧重功能。
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、SpringCloud核心组件
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Netflix Eureka 服务发现组件
+<img src="https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2018-09-08/pic1.jpg" width = "100%" height = "50%"  />
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Netflix Ribbon 客户端负载均衡组件
+<img src="https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2018-09-08/pic2.jpg" width = "100%" height = "50%"  />
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Netflix Hystrix 断路器
+<img src="https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2018-09-08/pic3.jpg" width = "100%" height = "50%"  />
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Netflix Zuul 服务网关
+<img src="https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2018-09-08/pic4.jpg" width = "100%" height = "50%"  />
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SpringCloud Config 分布式配置
+<img src="https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2018-09-08/pic5.jpg" width = "100%" height = "50%"  />
+

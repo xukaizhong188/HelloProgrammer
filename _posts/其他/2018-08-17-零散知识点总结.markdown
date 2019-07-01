@@ -1,0 +1,28 @@
+---
+layout: default
+title:  "零散知识点总结!"
+date:   2018-08-17 15:00:00 +0800
+categories: jekyll update
+---
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;此文处于不断更新中。。。
+<h2>一、运算符</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Java中有算术运算符和逻辑运算符，其中算术运算符包括：+、-、*、/、%等；逻辑运算符有&&、||、！、^等。这里需要注意的是算术运算符都是被重载的（根据上下文，针对不同的数据类型执行不同的操作。）
+<h2>二、表达式</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、中缀表达式：java使用的是中缀表达式，也就是一个字面量或者一个表达式，紧接着是一个运算符，再接着是字面量或者是表达式。
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、运算符的优先级：*、/、%优先于+、-；！ >  &&  >  ||
+<h2>三、类型转换</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、类型提升：如果不会损失信息，那么数值会被自动提升为更高级的数据类型，例如：1+1.5其中1会类型提升为1.0，所以结果为2.5。
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、浮点数转化为整型的时候是采用的截取小数部分，而不是四舍五入。
+<h2>四、原始数据类型</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;原始的数据类型：
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、8位整数：byte
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、16位整数：short
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、16位字符：char
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4、32位单精度实数：float
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5、32位整数：int
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6、64位双精度实数：double
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7、布尔类型：boolean
+<h2>四、书写</h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1、声明并初始化：可以将声明语句和赋值语句相结合，在声明（创建）一个变量的同时将他初始化。
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、隐式赋值:递增、递减运算符，复合运算符（i+=1）
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、单语句代码段:如果条件或者魂环语句的代码段只有一条语句，可以将代码段的花括号省略
