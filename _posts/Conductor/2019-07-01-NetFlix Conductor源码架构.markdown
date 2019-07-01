@@ -7,7 +7,7 @@ categories: jekyll update
 tags: [Conductor]
 comments: true
 ---
-<img src="https://xukaizhong188.github.io/HelloProgrammer/images/209-07-01/pic1.png" width = "100%" height = "50%"  />
+![img](https://xukaizhong188.github.io/HelloProgrammer/images/209-07-01/pic1.png)
 <h2>一、client</h2>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;和conductor通信的客户端。
 <h2>二、common</h2>
