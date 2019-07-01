@@ -25,7 +25,7 @@ comments: true
 <h2>三、搭建历程</h2>
 <h3>3.1、成果展示</h3>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;废话不多说，直接上图。
-<img src="https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/pic1.jpg" width = "100%" height = "50%"  />
+![img](https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/pic1.jpg)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;出于学习的目的，所以作为博客小白的我决定从零做起，不采用任何主题，后续将更新自己的博客搭建之路，让自己的博客逐渐丰富起来。
 <h3>3.2、开始搭建</h3>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对于使用Jekyll搭建博客的教程，现在网上有很多，这里只介绍自己的开发及思考过程，

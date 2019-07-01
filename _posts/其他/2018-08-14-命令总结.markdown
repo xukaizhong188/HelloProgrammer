@@ -13,8 +13,7 @@ comments: true
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.defaults write com.apple.finder AppleShowAllFiles TRUE   设置隐藏文件可见
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.killall Finder  重启Finder 
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.ls -al 查看所有文件的权限以及属性。 
-<img src="https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2018-0814/pic1.jpg" width = "100%" height = "50%"  />
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如上图显示，第一列代表的是文件的权限，这里一个有10个字符，第一个字符代表的是文件是目录、文件或者链接等，d:目录；-：文件;l:连接文件；b:设备文件里面的可供存储的接口设备;c:文件里面的串行端口设备，例如鼠标键盘等;接下来的字符是每三个字符是一组，而且均为rwx的组合，r代表可读；w代表可写；x代表可执行.注意：这3个权限的位置是不可变的，如果没有权限则是-。第一组代表的是文件所有者的权限，第二组代表的是同用户组的用户的权限，第三组代表的其他非本组的用户的权限。
+![img](https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2018-0814/pic1.jpg)
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第二列代表的是有多少文件名连接到此节点。
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第三列代表的是文件所有者的账号。
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;第四列代表的是文件所有者所在用户组

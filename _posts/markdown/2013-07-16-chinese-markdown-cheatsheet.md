@@ -2,7 +2,7 @@
 layout: post
 title: Markdown语法简介
 date: 2013-07-16
-Author: Shengbin
+Author: xukaizhong
 categories: 
 tags: [markdown]
 comments: true
