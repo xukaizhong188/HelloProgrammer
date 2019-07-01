@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>NetFlix Conductor源码架构! – XKZ – XKZ的博客</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="
+一、client
+      和conductor通信的客户端。
+二、common
+      主要涉及task任务和workflow工作流的元数据和请求参数定义同时还包括一些工具类。
+三、core
+      核心类，包括事件、队列功能类。还包括任务类型定义。每种类型任务的具体实现逻辑和映射关系。
+四、jersey
+      主要提供swagger接口展示层，通过启动这个模块来看到接口列表。
+五、es-persistence
+      这一层主要是持久层，根据请求版本不同包括es5和es2二个模块，作用主要包括将任务和工作流元数据保存到es中，还有就是将任务运行时数据进行保存，比如任务执行的状态，执行时间等等。
+六、mysql-persistence
+      mysql持久层，存储任务和工作流定义的元数据。
+七、redis-persistence
+      redis持久层，存储任务和工作流定义的元数据。
+八、server
+      负责conductor server端的启动、工作流任务的启动，由server层调用core层实现分布式状态机控制和任务的调度。
+九、UI
+      可视化任务管理界面，通过该界面能够看到任务和工作流定义的元数据和图形展现，以及工作流执行的状态情况。
+
+" />
+    <meta property="og:description" content="
+一、client
+      和conductor通信的客户端。
+二、common
+      主要涉及task任务和workflow工作流的元数据和请求参数定义同时还包括一些工具类。
+三、core
+      核心类，包括事件、队列功能类。还包括任务类型定义。每种类型任务的具体实现逻辑和映射关系。
+四、jersey
+      主要提供swagger接口展示层，通过启动这个模块来看到接口列表。
+五、es-persistence
+      这一层主要是持久层，根据请求版本不同包括es5和es2二个模块，作用主要包括将任务和工作流元数据保存到es中，还有就是将任务运行时数据进行保存，比如任务执行的状态，执行时间等等。
+六、mysql-persistence
+      mysql持久层，存储任务和工作流定义的元数据。
+七、redis-persistence
+      redis持久层，存储任务和工作流定义的元数据。
+八、server
+      负责conductor server端的启动、工作流任务的启动，由server层调用core层实现分布式状态机控制和任务的调度。
+九、UI
+      可视化任务管理界面，通过该界面能够看到任务和工作流定义的元数据和图形展现，以及工作流执行的状态情况。
+
+" />
+    
+    <meta name="author" content="XKZ" />
+
+    
+    <meta property="og:title" content="NetFlix Conductor源码架构!" />
+    <meta property="twitter:title" content="NetFlix Conductor源码架构!" />
+    
+  <!-- Async font loading -->
+<script>
+  window.WebFontConfig = {
+      custom: {
+          families: ['Spoqa Han Sans:100,300,400,700'],
+          urls: ['https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css']
+      },
+      timeout: 60000
+  };
+  (function(d) {
+      var wf = d.createElement('script'), s = d.scripts[0];
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+      s.parentNode.insertBefore(wf, s);
+  })(document);
+</script>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="/HelloProgrammer/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="XKZ - XKZ的博客" href="/HelloProgrammer/feed.xml" />
+  <link rel="shortcut icon" href="https://raw.githubusercontent.com/FromEndWorld/LOFFER/master/images/favicon.png">
+  <script src="https://kit.fontawesome.com/56f7faf3f4.js"></script>
+
+
+  <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+
+</head>
+  <body>
+    <div class="wrapper-sidebar">
+  <header class="sidebar clearfix">
+    <div class="site-info">
+      
+        <a href="/HelloProgrammer/" class="site-avatar"><img src="https://raw.githubusercontent.com/FromEndWorld/LOFFER/master/images/logo.png" /></a>
+       
+      <h1 class="site-name"><a href="/HelloProgrammer/">XKZ</a></h1>
+      <p class="site-description">XKZ的博客</p>
+    </div>
+  </header>
+
+  <div class="navlist">
+    <nav>
+      
+      
+      <a href="/HelloProgrammer/">首页</a>
+      
+      
+      
+      <a href="/HelloProgrammer/about">关于</a>
+      
+      
+      
+      <a href="/HelloProgrammer/archive">归档</a>
+      
+      
+      
+      <a href="/HelloProgrammer/tags">分类</a>
+      
+      
+    </nav>
+  </div>
+
+  <div class="wrapper-footer-desktop">
+    <footer class="footer">
+      <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+
+
+<p>Copyright (c) 2018 XKZ</p>
+
+    </footer>
+  </div>
+</div>
+
+    <div id="main" role="main" class="wrapper-content">
+      <article class="posts">
+  <h1>NetFlix Conductor源码架构!</h1>
+
+  <div clsss="meta">
+    <span class="date">
+      0209-07-01
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/HelloProgrammer/tags#Conductor">
+          Conductor
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <div class="entry">
+    <p><img src="https://xukaizhong188.github.io/images/2019-07-01/pic1.jpg" width="100%" height="50%" /></p>
+<h2>一、client</h2>
+<p>      和conductor通信的客户端。</p>
+<h2>二、common</h2>
+<p>      主要涉及task任务和workflow工作流的元数据和请求参数定义同时还包括一些工具类。</p>
+<h2>三、core</h2>
+<p>      核心类，包括事件、队列功能类。还包括任务类型定义。每种类型任务的具体实现逻辑和映射关系。</p>
+<h2>四、jersey</h2>
+<p>      主要提供swagger接口展示层，通过启动这个模块来看到接口列表。</p>
+<h2>五、es-persistence</h2>
+<p>      这一层主要是持久层，根据请求版本不同包括es5和es2二个模块，作用主要包括将任务和工作流元数据保存到es中，还有就是将任务运行时数据进行保存，比如任务执行的状态，执行时间等等。</p>
+<h2>六、mysql-persistence</h2>
+<p>      mysql持久层，存储任务和工作流定义的元数据。</p>
+<h2>七、redis-persistence</h2>
+<p>      redis持久层，存储任务和工作流定义的元数据。</p>
+<h2>八、server</h2>
+<p>      负责conductor server端的启动、工作流任务的启动，由server层调用core层实现分布式状态机控制和任务的调度。</p>
+<h2>九、UI</h2>
+<p>      可视化任务管理界面，通过该界面能够看到任务和工作流定义的元数据和图形展现，以及工作流执行的状态情况。</p>
+
+
+  </div>
+
+  
+<div class="comments">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+
+	    var disqus_shortname = 'loffer';
+
+	    (function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    })();
+
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+</article>
+
+<div class="pagination">
+  
+  
+    <span class="next" >
+      <a href="http://localhost:4000/HelloProgrammer/chinese-markdown-cheatsheet/">
+        下一篇 →
+      </a>
+    </span>
+  
+</div>
+    </div>
+
+    
+
+  </body>
+
+  <div class="wrapper-footer-mobile">
+    <footer class="footer">
+      <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+
+
+<p>Copyright (c) 2018 XKZ</p>
+
+    </footer>
+
+
+</html>
