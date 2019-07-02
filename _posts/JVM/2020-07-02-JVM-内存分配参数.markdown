@@ -1,0 +1,31 @@
+---
+layout: post
+title: 二、JVM内存分配参数!
+date:  2019-07-02
+Author: XKZ
+categories: jekyll update
+tags: [JVM]
+comments: true
+---
+# 基本参数
+设置最大堆内存   -Xmx   例如：-Xmx1M
+设置最小堆内存   -Xms  (JVM启动时分配的堆内存，java程序在运行过程中，会先分配这段空间，如果这段空间的内存占满，会再向操作系统申请更多的内存，但不会超过最大内存，如果超出则会抛出内存溢出异常)    -Xms1M
+设置新生代大小   -Xmn 用于设置新生代的大小，新生代的大小一般设置为整个堆内存的4分之一或者3分之一
+设置新生代初始大小： -XX:NewSize
+设置新生代最大值大小  -XX:MaxNewSize
+(通常情况下不会对NewSize 和MaxNewSize进行设置，因为这样可能导致内存震荡，从而产生不必要的系统开销)
+设置持久代(方法区，不属于堆)最大值  -XX:MaxPermSize
+设置持久代(方法区，不属于堆)初始大小  -XX:PermSize
+设置线程栈大小  -Xss  java堆也是向操作系统申请空间，所以如果堆设置的太大，会导致操作系统可用线程栈的内存减少，从而减少程序所能支持的程序数量
+![img](https://xukaizhong188.github.io/HelloProgrammer/images/209-07-02/image5.png)
+当系统由于内存不足而无法创建新的线程的时候就会抛出OOM异常
+## 堆的比例分配：
+设置新生代中eden、s0的空间 比例   -XX:SurvivorRatio=8  -XX:SurvivorRatio=eden/s0=eden/s1
+设置新生代和老年代的比例   -XX:NewRatio=1  -XX:NewRatio=老年代/新生代
+（这些参数在不同版本的jdk中实现可能会有不同，具体可以通过-XX:PrintGCDetails来打印堆的情况来实际设置）
+
+## 其他
+设置堆空间最小空闲比例  -XX:MinHeapFreeRatio 当堆空间的空闲内存小于这个数值时，JVM便会扩展堆空间
+设置堆空间最大空闲比例  -XX:MaxHeapFreeRatio 当堆空间的空闲内存大于这个数值时，JVM便会压缩堆空间，得到一个较小的堆
+设置survivior的可使用率  -XX:TargetSurvivorRatio 当survivor区的空间使用率达到这个数值时，回见对象送入老年代。
+![img](https://xukaizhong188.github.io/HelloProgrammer/images/209-07-02/image6.png)
