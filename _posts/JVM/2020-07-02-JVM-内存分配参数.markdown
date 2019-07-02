@@ -17,7 +17,7 @@ comments: true
 设置持久代(方法区，不属于堆)最大值  -XX:MaxPermSize
 设置持久代(方法区，不属于堆)初始大小  -XX:PermSize
 设置线程栈大小  -Xss  java堆也是向操作系统申请空间，所以如果堆设置的太大，会导致操作系统可用线程栈的内存减少，从而减少程序所能支持的程序数量
-![img](https://xukaizhong188.github.io/HelloProgrammer/images/209-07-02/image5.png)
+![img](https://xukaizhong188.github.io/HelloProgrammer/images/2019-07-02/image5.png)
 当系统由于内存不足而无法创建新的线程的时候就会抛出OOM异常
 ## 堆的比例分配：
 设置新生代中eden、s0的空间 比例   -XX:SurvivorRatio=8  -XX:SurvivorRatio=eden/s0=eden/s1
@@ -28,4 +28,4 @@ comments: true
 设置堆空间最小空闲比例  -XX:MinHeapFreeRatio 当堆空间的空闲内存小于这个数值时，JVM便会扩展堆空间
 设置堆空间最大空闲比例  -XX:MaxHeapFreeRatio 当堆空间的空闲内存大于这个数值时，JVM便会压缩堆空间，得到一个较小的堆
 设置survivior的可使用率  -XX:TargetSurvivorRatio 当survivor区的空间使用率达到这个数值时，回见对象送入老年代。
-![img](https://xukaizhong188.github.io/HelloProgrammer/images/209-07-02/image6.png)
+![img](https://xukaizhong188.github.io/HelloProgrammer/images/2019-07-02/image6.png)
