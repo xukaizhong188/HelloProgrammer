@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/HelloProgrammer/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/HelloProgrammer/" rel="alternate" type="text/html" /><updated>2019-07-26T15:12:18+08:00</updated><id>http://localhost:4000/HelloProgrammer/</id><title type="html">Hello Programmer ！</title><subtitle>XKZ的博客</subtitle><entry><title type="html">Spring之IOC一！</title><link href="http://localhost:4000/HelloProgrammer/Spring%E4%B9%8BIOC/" rel="alternate" type="text/html" title="Spring之IOC一！" /><published>2019-07-10T00:00:00+08:00</published><updated>2019-07-10T00:00:00+08:00</updated><id>http://localhost:4000/HelloProgrammer/Spring%E4%B9%8BIOC</id><content type="html" xml:base="http://localhost:4000/HelloProgrammer/Spring%E4%B9%8BIOC/">&lt;h2 id=&quot;理论基础&quot;&gt;理论基础&lt;/h2&gt;
-&lt;p&gt;所谓IOC，就是spring IOC容器来负责对象的生命周期和对象之间的关系。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/HelloProgrammer/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/HelloProgrammer/" rel="alternate" type="text/html" /><updated>2019-07-26T15:21:29+08:00</updated><id>http://localhost:4000/HelloProgrammer/</id><title type="html">Hello Programmer ！</title><subtitle>XKZ的博客</subtitle><entry><title type="html">Spring之IOC一！</title><link href="http://localhost:4000/HelloProgrammer/Spring%E4%B9%8BIOC/" rel="alternate" type="text/html" title="Spring之IOC一！" /><published>2019-07-10T00:00:00+08:00</published><updated>2019-07-10T00:00:00+08:00</updated><id>http://localhost:4000/HelloProgrammer/Spring%E4%B9%8BIOC</id><content type="html" xml:base="http://localhost:4000/HelloProgrammer/Spring%E4%B9%8BIOC/">&lt;h1 id=&quot;理论基础&quot;&gt;理论基础&lt;/h1&gt;
+&lt;h2 id=&quot;一ioc&quot;&gt;一、IOC&lt;/h2&gt;
+&lt;p&gt;所谓IOC，就是spring IOC容器来负责对象的生命周期和对象之间的关系,可以从以下四个方面来进行理解&lt;/p&gt;
 &lt;h3 id=&quot;1谁控制谁&quot;&gt;1、谁控制谁&lt;/h3&gt;
 &lt;p&gt;容器控制对象：对于传统的开发，当我们需要一个对象的时候是通过new一个对象的方式来获取，有了ioc,是直接由ioc容器控制对象直接将对象送过来。&lt;/p&gt;
 &lt;h3 id=&quot;2控制什么&quot;&gt;2、控制什么&lt;/h3&gt;
@@ -9,7 +10,7 @@
 &lt;h3 id=&quot;4那些方面反转了&quot;&gt;4、那些方面反转了&lt;/h3&gt;
 &lt;p&gt;所需要的对象的获取被反转了。&lt;/p&gt;
 
-&lt;h2 id=&quot;ioc和di&quot;&gt;IOC和DI&lt;/h2&gt;
+&lt;h2 id=&quot;二di&quot;&gt;二、DI&lt;/h2&gt;
 &lt;p&gt;DI即依赖注入，DI和IOC其实是同一概念的不同维度的理解，可以从具体一下四个方面来进行理解：&lt;/p&gt;
 &lt;h3 id=&quot;1谁依赖谁&quot;&gt;1、谁依赖谁&lt;/h3&gt;
 &lt;p&gt;应用程序依赖IOC容器。&lt;/p&gt;
@@ -18,7 +19,13 @@
 &lt;h3 id=&quot;3谁注入谁&quot;&gt;3、谁注入谁&lt;/h3&gt;
 &lt;p&gt;IOC容器注入应用程序需要的某个对象。&lt;/p&gt;
 &lt;h3 id=&quot;4注入了什么&quot;&gt;4、注入了什么&lt;/h3&gt;
-&lt;p&gt;注入了应用程序需要的对象。&lt;/p&gt;</content><author><name></name></author><category term="spring" /><category term="IOC" /><category term="DI" /><summary type="html">理论基础 所谓IOC，就是spring IOC容器来负责对象的生命周期和对象之间的关系。 1、谁控制谁 容器控制对象：对于传统的开发，当我们需要一个对象的时候是通过new一个对象的方式来获取，有了ioc,是直接由ioc容器控制对象直接将对象送过来。 2、控制什么 容器控制对象 3、为何是反转 当我们需要一个对象主动去创建他，这个是正转，现在是由IOC统一创建注入到我们需要的地方，这个就是反转。 4、那些方面反转了 所需要的对象的获取被反转了。 IOC和DI DI即依赖注入，DI和IOC其实是同一概念的不同维度的理解，可以从具体一下四个方面来进行理解： 1、谁依赖谁 应用程序依赖IOC容器。 2、为什么需要依赖 应用容器需要依赖IOC来提供所需对象资源。 3、谁注入谁 IOC容器注入应用程序需要的某个对象。 4、注入了什么 注入了应用程序需要的对象。</summary></entry><entry><title type="html">Spring之AOP一！</title><link href="http://localhost:4000/HelloProgrammer/Spring%E4%B9%8BAOP/" rel="alternate" type="text/html" title="Spring之AOP一！" /><published>2019-07-10T00:00:00+08:00</published><updated>2019-07-10T00:00:00+08:00</updated><id>http://localhost:4000/HelloProgrammer/Spring%E4%B9%8BAOP</id><content type="html" xml:base="http://localhost:4000/HelloProgrammer/Spring%E4%B9%8BAOP/">&lt;h2 id=&quot;核心概念&quot;&gt;核心概念&lt;/h2&gt;
+&lt;p&gt;注入了应用程序需要的对象。&lt;/p&gt;
+
+&lt;h2 id=&quot;三beanfactory&quot;&gt;三、BeanFactory&lt;/h2&gt;
+&lt;p&gt;刚刚提到了IOC的理解，这里再具体说一下，IOC容器负责实例化、定位、配置应用程序中的对象及建立这些对象的之间的依。应用程序无需通过new的形式来创建相关对象，直接由IOC容器来进行组装，在Spring中，BeanFactory就是IOC容器的实际代表者。&lt;/p&gt;
+
+&lt;h2 id=&quot;四bean&quot;&gt;四、Bean&lt;/h2&gt;
+&lt;p&gt;由IoC容器管理的那些组成应用程序的对象我们就叫它Bean，Bean就是由Spring容器初始化、装配及管理的对象，除此之外，bean就与应用程序中的其他对象没有什么区别了。&lt;/p&gt;</content><author><name></name></author><category term="spring" /><category term="IOC" /><category term="DI" /><summary type="html">理论基础 一、IOC 所谓IOC，就是spring IOC容器来负责对象的生命周期和对象之间的关系,可以从以下四个方面来进行理解 1、谁控制谁 容器控制对象：对于传统的开发，当我们需要一个对象的时候是通过new一个对象的方式来获取，有了ioc,是直接由ioc容器控制对象直接将对象送过来。 2、控制什么 容器控制对象 3、为何是反转 当我们需要一个对象主动去创建他，这个是正转，现在是由IOC统一创建注入到我们需要的地方，这个就是反转。 4、那些方面反转了 所需要的对象的获取被反转了。 二、DI DI即依赖注入，DI和IOC其实是同一概念的不同维度的理解，可以从具体一下四个方面来进行理解： 1、谁依赖谁 应用程序依赖IOC容器。 2、为什么需要依赖 应用容器需要依赖IOC来提供所需对象资源。 3、谁注入谁 IOC容器注入应用程序需要的某个对象。 4、注入了什么 注入了应用程序需要的对象。 三、BeanFactory 刚刚提到了IOC的理解，这里再具体说一下，IOC容器负责实例化、定位、配置应用程序中的对象及建立这些对象的之间的依。应用程序无需通过new的形式来创建相关对象，直接由IOC容器来进行组装，在Spring中，BeanFactory就是IOC容器的实际代表者。 四、Bean 由IoC容器管理的那些组成应用程序的对象我们就叫它Bean，Bean就是由Spring容器初始化、装配及管理的对象，除此之外，bean就与应用程序中的其他对象没有什么区别了。</summary></entry><entry><title type="html">Spring之AOP一！</title><link href="http://localhost:4000/HelloProgrammer/Spring%E4%B9%8BAOP/" rel="alternate" type="text/html" title="Spring之AOP一！" /><published>2019-07-10T00:00:00+08:00</published><updated>2019-07-10T00:00:00+08:00</updated><id>http://localhost:4000/HelloProgrammer/Spring%E4%B9%8BAOP</id><content type="html" xml:base="http://localhost:4000/HelloProgrammer/Spring%E4%B9%8BAOP/">&lt;h2 id=&quot;核心概念&quot;&gt;核心概念&lt;/h2&gt;
 
 &lt;h3 id=&quot;1横切关注点&quot;&gt;1、横切关注点&lt;/h3&gt;
 
