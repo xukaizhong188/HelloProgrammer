@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/HelloProgrammer/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/HelloProgrammer/" rel="alternate" type="text/html" /><updated>2019-07-26T14:37:35+08:00</updated><id>http://localhost:4000/HelloProgrammer/</id><title type="html">Hello Programmer ！</title><subtitle>XKZ的博客</subtitle><entry><title type="html">Spring之AOP一！</title><link href="http://localhost:4000/HelloProgrammer/Spring%E4%B9%8BAOP/" rel="alternate" type="text/html" title="Spring之AOP一！" /><published>2019-07-10T00:00:00+08:00</published><updated>2019-07-10T00:00:00+08:00</updated><id>http://localhost:4000/HelloProgrammer/Spring%E4%B9%8BAOP</id><content type="html" xml:base="http://localhost:4000/HelloProgrammer/Spring%E4%B9%8BAOP/">&lt;h2 id=&quot;核心概念&quot;&gt;核心概念&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.3">Jekyll</generator><link href="http://localhost:4000/HelloProgrammer/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/HelloProgrammer/" rel="alternate" type="text/html" /><updated>2019-07-26T15:12:18+08:00</updated><id>http://localhost:4000/HelloProgrammer/</id><title type="html">Hello Programmer ！</title><subtitle>XKZ的博客</subtitle><entry><title type="html">Spring之IOC一！</title><link href="http://localhost:4000/HelloProgrammer/Spring%E4%B9%8BIOC/" rel="alternate" type="text/html" title="Spring之IOC一！" /><published>2019-07-10T00:00:00+08:00</published><updated>2019-07-10T00:00:00+08:00</updated><id>http://localhost:4000/HelloProgrammer/Spring%E4%B9%8BIOC</id><content type="html" xml:base="http://localhost:4000/HelloProgrammer/Spring%E4%B9%8BIOC/">&lt;h2 id=&quot;理论基础&quot;&gt;理论基础&lt;/h2&gt;
+&lt;p&gt;所谓IOC，就是spring IOC容器来负责对象的生命周期和对象之间的关系。&lt;/p&gt;
+&lt;h3 id=&quot;1谁控制谁&quot;&gt;1、谁控制谁&lt;/h3&gt;
+&lt;p&gt;容器控制对象：对于传统的开发，当我们需要一个对象的时候是通过new一个对象的方式来获取，有了ioc,是直接由ioc容器控制对象直接将对象送过来。&lt;/p&gt;
+&lt;h3 id=&quot;2控制什么&quot;&gt;2、控制什么&lt;/h3&gt;
+&lt;p&gt;容器控制对象&lt;/p&gt;
+&lt;h3 id=&quot;3为何是反转&quot;&gt;3、为何是反转&lt;/h3&gt;
+&lt;p&gt;当我们需要一个对象主动去创建他，这个是正转，现在是由IOC统一创建注入到我们需要的地方，这个就是反转。&lt;/p&gt;
+&lt;h3 id=&quot;4那些方面反转了&quot;&gt;4、那些方面反转了&lt;/h3&gt;
+&lt;p&gt;所需要的对象的获取被反转了。&lt;/p&gt;
+
+&lt;h2 id=&quot;ioc和di&quot;&gt;IOC和DI&lt;/h2&gt;
+&lt;p&gt;DI即依赖注入，DI和IOC其实是同一概念的不同维度的理解，可以从具体一下四个方面来进行理解：&lt;/p&gt;
+&lt;h3 id=&quot;1谁依赖谁&quot;&gt;1、谁依赖谁&lt;/h3&gt;
+&lt;p&gt;应用程序依赖IOC容器。&lt;/p&gt;
+&lt;h3 id=&quot;2为什么需要依赖&quot;&gt;2、为什么需要依赖&lt;/h3&gt;
+&lt;p&gt;应用容器需要依赖IOC来提供所需对象资源。&lt;/p&gt;
+&lt;h3 id=&quot;3谁注入谁&quot;&gt;3、谁注入谁&lt;/h3&gt;
+&lt;p&gt;IOC容器注入应用程序需要的某个对象。&lt;/p&gt;
+&lt;h3 id=&quot;4注入了什么&quot;&gt;4、注入了什么&lt;/h3&gt;
+&lt;p&gt;注入了应用程序需要的对象。&lt;/p&gt;</content><author><name></name></author><category term="spring" /><category term="IOC" /><category term="DI" /><summary type="html">理论基础 所谓IOC，就是spring IOC容器来负责对象的生命周期和对象之间的关系。 1、谁控制谁 容器控制对象：对于传统的开发，当我们需要一个对象的时候是通过new一个对象的方式来获取，有了ioc,是直接由ioc容器控制对象直接将对象送过来。 2、控制什么 容器控制对象 3、为何是反转 当我们需要一个对象主动去创建他，这个是正转，现在是由IOC统一创建注入到我们需要的地方，这个就是反转。 4、那些方面反转了 所需要的对象的获取被反转了。 IOC和DI DI即依赖注入，DI和IOC其实是同一概念的不同维度的理解，可以从具体一下四个方面来进行理解： 1、谁依赖谁 应用程序依赖IOC容器。 2、为什么需要依赖 应用容器需要依赖IOC来提供所需对象资源。 3、谁注入谁 IOC容器注入应用程序需要的某个对象。 4、注入了什么 注入了应用程序需要的对象。</summary></entry><entry><title type="html">Spring之AOP一！</title><link href="http://localhost:4000/HelloProgrammer/Spring%E4%B9%8BAOP/" rel="alternate" type="text/html" title="Spring之AOP一！" /><published>2019-07-10T00:00:00+08:00</published><updated>2019-07-10T00:00:00+08:00</updated><id>http://localhost:4000/HelloProgrammer/Spring%E4%B9%8BAOP</id><content type="html" xml:base="http://localhost:4000/HelloProgrammer/Spring%E4%B9%8BAOP/">&lt;h2 id=&quot;核心概念&quot;&gt;核心概念&lt;/h2&gt;
 
 &lt;h3 id=&quot;1横切关注点&quot;&gt;1、横切关注点&lt;/h3&gt;
 
@@ -238,30 +258,4 @@ Java堆再Java虚拟机启动的时候创建。主要存放Java对象的实	例�
       注意一下：安装UI要求先node.js 8.0以上因为运行glup命令是需要node.js。安装完node.js需要安装gulp
 &lt;br /&gt;      安装步骤：
 &lt;br /&gt;      执行cd ui 进入ui目录，
-&lt;br /&gt;      再执行 gulp watch等待构建完成即可。&lt;/p&gt;</content><author><name></name></author><category term="Conductor" /><summary type="html">      这个系列的文章主要是老大让本人学校微服务编排，将之运用到我们现有的一个项目中，由于本人初接触，对其中的一些内容没有深入了解，所以在学习之初，先将官网的样例进行运行。下面就介绍下NetFlix Conductor官方样例搭建过程。 一、下载源码       首先我们到NetFlix Conductor的git官网将源码下载下来，下载地址：https://github.com/Netflix/conductor 二、安装Swagger API       首先进入到我们的安装路径下，运行ce server 进入server目录，接着运行../gradlew server命令开始安装过程，整个安装过程比较耗时。       注意一下：安装UI要求先node.js 8.0以上因为运行glup命令是需要node.js。安装完node.js需要安装gulp       安装步骤：       执行cd ui 进入ui目录，       再执行 gulp watch等待构建完成即可。</summary></entry><entry><title type="html">Linux学习!</title><link href="http://localhost:4000/HelloProgrammer/LInux%E5%AD%A6%E4%B9%A0/" rel="alternate" type="text/html" title="Linux学习!" /><published>2018-08-26T00:00:00+08:00</published><updated>2018-08-26T00:00:00+08:00</updated><id>http://localhost:4000/HelloProgrammer/LInux%E5%AD%A6%E4%B9%A0</id><content type="html" xml:base="http://localhost:4000/HelloProgrammer/LInux%E5%AD%A6%E4%B9%A0/">&lt;p&gt;      本篇主要记录的是Linux的文件权限和目录配置&lt;/p&gt;
-&lt;h2&gt;一、用户与用户组&lt;/h2&gt;
-&lt;p&gt;      首先Linux是一个多用户多任务的系统，所以为了考虑安全等方面，文件的所有者的角色就显得尤为重要。
-&lt;br /&gt;      用户组的存在是为了将文件共享给团队。
-&lt;br /&gt;      
-&lt;br /&gt;      
-&lt;br /&gt;      
-&lt;br /&gt;      &lt;/p&gt;
-&lt;h2&gt;二、表达式&lt;/h2&gt;
-&lt;p&gt;      1、中缀表达式：java使用的是中缀表达式，也就是一个字面量或者一个表达式，紧接着是一个运算符，再接着是字面量或者是表达式。
-&lt;br /&gt;      2、运算符的优先级：*、/、%优先于+、-；！ &amp;gt;  &amp;amp;&amp;amp;  &amp;gt;  ||&lt;/p&gt;
-&lt;h2&gt;三、类型转换&lt;/h2&gt;
-&lt;p&gt;      1、类型提升：如果不会损失信息，那么数值会被自动提升为更高级的数据类型，例如：1+1.5其中1会类型提升为1.0，所以结果为2.5。
-&lt;br /&gt;      2、浮点数转化为整型的时候是采用的截取小数部分，而不是四舍五入。&lt;/p&gt;
-&lt;h2&gt;四、原始数据类型&lt;/h2&gt;
-&lt;p&gt;      原始的数据类型：
-&lt;br /&gt;      1、8位整数：byte
-&lt;br /&gt;      2、16位整数：short
-&lt;br /&gt;      3、16位字符：char
-&lt;br /&gt;      4、32位单精度实数：float
-&lt;br /&gt;      5、32位整数：int
-&lt;br /&gt;      6、64位双精度实数：double
-&lt;br /&gt;      7、布尔类型：boolean&lt;/p&gt;
-&lt;h2&gt;四、书写&lt;/h2&gt;
-&lt;p&gt;      1、声明并初始化：可以将声明语句和赋值语句相结合，在声明（创建）一个变量的同时将他初始化。
-&lt;br /&gt;      2、隐式赋值:递增、递减运算符，复合运算符（i+=1）
-&lt;br /&gt;      3、单语句代码段:如果条件或者魂环语句的代码段只有一条语句，可以将代码段的花括号省略&lt;/p&gt;</content><author><name></name></author><category term="Linux" /><summary type="html">      本篇主要记录的是Linux的文件权限和目录配置 一、用户与用户组       首先Linux是一个多用户多任务的系统，所以为了考虑安全等方面，文件的所有者的角色就显得尤为重要。       用户组的存在是为了将文件共享给团队。                             二、表达式       1、中缀表达式：java使用的是中缀表达式，也就是一个字面量或者一个表达式，紧接着是一个运算符，再接着是字面量或者是表达式。       2、运算符的优先级：*、/、%优先于+、-；！ &amp;gt; &amp;amp;&amp;amp; &amp;gt; || 三、类型转换       1、类型提升：如果不会损失信息，那么数值会被自动提升为更高级的数据类型，例如：1+1.5其中1会类型提升为1.0，所以结果为2.5。       2、浮点数转化为整型的时候是采用的截取小数部分，而不是四舍五入。 四、原始数据类型       原始的数据类型：       1、8位整数：byte       2、16位整数：short       3、16位字符：char       4、32位单精度实数：float       5、32位整数：int       6、64位双精度实数：double       7、布尔类型：boolean 四、书写       1、声明并初始化：可以将声明语句和赋值语句相结合，在声明（创建）一个变量的同时将他初始化。       2、隐式赋值:递增、递减运算符，复合运算符（i+=1）       3、单语句代码段:如果条件或者魂环语句的代码段只有一条语句，可以将代码段的花括号省略</summary></entry></feed>
+&lt;br /&gt;      再执行 gulp watch等待构建完成即可。&lt;/p&gt;</content><author><name></name></author><category term="Conductor" /><summary type="html">      这个系列的文章主要是老大让本人学校微服务编排，将之运用到我们现有的一个项目中，由于本人初接触，对其中的一些内容没有深入了解，所以在学习之初，先将官网的样例进行运行。下面就介绍下NetFlix Conductor官方样例搭建过程。 一、下载源码       首先我们到NetFlix Conductor的git官网将源码下载下来，下载地址：https://github.com/Netflix/conductor 二、安装Swagger API       首先进入到我们的安装路径下，运行ce server 进入server目录，接着运行../gradlew server命令开始安装过程，整个安装过程比较耗时。       注意一下：安装UI要求先node.js 8.0以上因为运行glup命令是需要node.js。安装完node.js需要安装gulp       安装步骤：       执行cd ui 进入ui目录，       再执行 gulp watch等待构建完成即可。</summary></entry></feed>

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Spring之IOC一！ – Hello Programmer ！ – XKZ的博客</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="理论基础
+所谓IOC，就是spring IOC容器来负责对象的生命周期和对象之间的关系。
+1、谁控制谁
+容器控制对象：对于传统的开发，当我们需要一个对象的时候是通过new一个对象的方式来获取，有了ioc,是直接由ioc容器控制对象直接将对象送过来。
+2、控制什么
+容器控制对象
+3、为何是反转
+当我们需要一个对象主动去创建他，这个是正转，现在是由IOC统一创建注入到我们需要的地方，这个就是反转。
+4、那些方面反转了
+所需要的对象的获取被反转了。
+
+IOC和DI
+DI即依赖注入，DI和IOC其实是同一概念的不同维度的理解，可以从具体一下四个方面来进行理解：
+1、谁依赖谁
+应用程序依赖IOC容器。
+2、为什么需要依赖
+应用容器需要依赖IOC来提供所需对象资源。
+3、谁注入谁
+IOC容器注入应用程序需要的某个对象。
+4、注入了什么
+注入了应用程序需要的对象。
+" />
+    <meta property="og:description" content="理论基础
+所谓IOC，就是spring IOC容器来负责对象的生命周期和对象之间的关系。
+1、谁控制谁
+容器控制对象：对于传统的开发，当我们需要一个对象的时候是通过new一个对象的方式来获取，有了ioc,是直接由ioc容器控制对象直接将对象送过来。
+2、控制什么
+容器控制对象
+3、为何是反转
+当我们需要一个对象主动去创建他，这个是正转，现在是由IOC统一创建注入到我们需要的地方，这个就是反转。
+4、那些方面反转了
+所需要的对象的获取被反转了。
+
+IOC和DI
+DI即依赖注入，DI和IOC其实是同一概念的不同维度的理解，可以从具体一下四个方面来进行理解：
+1、谁依赖谁
+应用程序依赖IOC容器。
+2、为什么需要依赖
+应用容器需要依赖IOC来提供所需对象资源。
+3、谁注入谁
+IOC容器注入应用程序需要的某个对象。
+4、注入了什么
+注入了应用程序需要的对象。
+" />
+    
+    <meta name="author" content="Hello Programmer ！" />
+
+    
+    <meta property="og:title" content="Spring之IOC一！" />
+    <meta property="twitter:title" content="Spring之IOC一！" />
+    
+  <!-- Async font loading -->
+<script>
+  window.WebFontConfig = {
+      custom: {
+          families: ['Spoqa Han Sans:100,300,400,700'],
+          urls: ['https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css']
+      },
+      timeout: 60000
+  };
+  (function(d) {
+      var wf = d.createElement('script'), s = d.scripts[0];
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+      s.parentNode.insertBefore(wf, s);
+  })(document);
+</script>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="/HelloProgrammer/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="Hello Programmer ！ - XKZ的博客" href="/HelloProgrammer/feed.xml" />
+  <link rel="shortcut icon" href="https://xukaizhong188.github.io/HelloProgrammer/images/favicon.png">
+  <script src="https://kit.fontawesome.com/56f7faf3f4.js"></script>
+
+
+  <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+
+</head>
+  <body>
+    <div class="wrapper-sidebar">
+  <header class="sidebar clearfix">
+    <div class="site-info">
+      
+        <a href="/HelloProgrammer/" class="site-avatar"><img src="https://xukaizhong188.github.io/HelloProgrammer/images/logo.png" /></a>
+       
+      <h1 class="site-name"><a href="/HelloProgrammer/">Hello Programmer ！</a></h1>
+      <p class="site-description">XKZ的博客</p>
+    </div>
+  </header>
+
+  <div class="navlist">
+    <nav>
+      
+      
+      <a href="/HelloProgrammer/">首页</a>
+      
+      
+      
+      <a href="/HelloProgrammer/about">关于</a>
+      
+      
+      
+      <a href="/HelloProgrammer/archive">归档</a>
+      
+      
+      
+      <a href="/HelloProgrammer/tags">分类</a>
+      
+      
+    </nav>
+  </div>
+
+  <div class="wrapper-footer-desktop">
+    <footer class="footer">
+      <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+
+
+<p>Copyright (c) 2018 XKZ</p>
+
+    </footer>
+  </div>
+</div>
+
+    <div id="main" role="main" class="wrapper-content">
+      <article class="posts">
+  <h1>Spring之IOC一！</h1>
+
+  <div clsss="meta">
+    <span class="date">
+      2019-07-10
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/HelloProgrammer/tags#spring">
+          spring
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://localhost:4000/HelloProgrammer/tags#IOC">
+          IOC
+        </a>
+      </li>
+      
+      <li>
+        <a href="http://localhost:4000/HelloProgrammer/tags#DI">
+          DI
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <div class="entry">
+    <h2 id="理论基础">理论基础</h2>
+<p>所谓IOC，就是spring IOC容器来负责对象的生命周期和对象之间的关系。</p>
+<h3 id="1谁控制谁">1、谁控制谁</h3>
+<p>容器控制对象：对于传统的开发，当我们需要一个对象的时候是通过new一个对象的方式来获取，有了ioc,是直接由ioc容器控制对象直接将对象送过来。</p>
+<h3 id="2控制什么">2、控制什么</h3>
+<p>容器控制对象</p>
+<h3 id="3为何是反转">3、为何是反转</h3>
+<p>当我们需要一个对象主动去创建他，这个是正转，现在是由IOC统一创建注入到我们需要的地方，这个就是反转。</p>
+<h3 id="4那些方面反转了">4、那些方面反转了</h3>
+<p>所需要的对象的获取被反转了。</p>
+
+<h2 id="ioc和di">IOC和DI</h2>
+<p>DI即依赖注入，DI和IOC其实是同一概念的不同维度的理解，可以从具体一下四个方面来进行理解：</p>
+<h3 id="1谁依赖谁">1、谁依赖谁</h3>
+<p>应用程序依赖IOC容器。</p>
+<h3 id="2为什么需要依赖">2、为什么需要依赖</h3>
+<p>应用容器需要依赖IOC来提供所需对象资源。</p>
+<h3 id="3谁注入谁">3、谁注入谁</h3>
+<p>IOC容器注入应用程序需要的某个对象。</p>
+<h3 id="4注入了什么">4、注入了什么</h3>
+<p>注入了应用程序需要的对象。</p>
+
+  </div>
+
+  
+</article>
+
+<div class="pagination">
+  
+    <span class="prev" >
+      <a href="http://localhost:4000/HelloProgrammer/Spring%E4%B9%8BAOP/">
+        ← 上一篇
+      </a>
+    </span>
+  
+  
+</div>
+    </div>
+
+    
+
+  </body>
+
+  <div class="wrapper-footer-mobile">
+    <footer class="footer">
+      <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+
+
+<p>Copyright (c) 2018 XKZ</p>
+
+    </footer>
+
+
+</html>
