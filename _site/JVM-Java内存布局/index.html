@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>一、java内存布局! – Hello Programmer ！ – XKZ的博客</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="Java的内存布局
+
+Java虚拟机规范将Java内存布局分为，方法区、堆、Java虚拟机栈、本地方法栈以及程序计数器。其中程序计数器和Java虚拟机栈和本地方栈是线程私有的，方法区和Java堆是线程共享的。
+
+1.程序计数器：
+程序计数器指的是线程执行Java方法的行号指示器，如果执行的是Java方法，那么这里面存放的就是Java字节码地址，如果是执行的是本地方法，这里存放的就是null。
+程序计数器的内存很小，存在的原因是由于java程序是支持多线程的，如果线程数大于cpu数量的时候，线程之间来回切换争夺cpu资源，所以每一个线程都需要一个独立的程序计数器来记录下一个要运行的指令
+对了，这里是Java内存唯一一块没有任何内存溢出的区域。
+
+2.Java虚拟机栈
+Java虚拟机栈是Java方法执行的内存模型。它和java线程同时创建。Java每一个方法在执行的时候都会创建一个栈帧来存放局部变量表，操作数栈，动态链接以及方法出口灯信息，每一个方法的执行就对应相应的栈帧出栈入栈的过程。
+再说一下局部变量表，局部变量表中存放的是各种基本数据类型、对象的引用（不单单指指针，还有句柄等和Java对象相关联的信息），returnaddress(一条字节码指令的地址)
+当线程请求的栈深度大于剩余栈的剩余大小，这里就会抛出stackOverFlowError,如果Java虚拟机栈可以动态扩展，在扩展的时候无法申请到足够的内存也会抛出OutOfMemoryError。
+
+注意：-Xss 可以设置栈的大小。
+
+
+修改-Xss2M后：
+
+调优相关：在虚拟机栈调优这部分最关键的是 局部变量表，局部变量表存放了方法的入参和局部变量。在运行时，会占用此处内存。
+使用jclasslib工具可以查看class文件中每个方法所分配的最大局部变脸表的容量。
+3.本地方法栈
+本地方法栈和Java虚拟机栈类似，只不过Java虚拟机栈执行的是Java方法，而本地方法栈执行的native方法。
+4.Java堆
+Java堆是Java存放Java对象的实例的地方，是Java内存区域最大的一块，也是垃圾回收的重要区域。
+Java堆再Java虚拟机启动的时候创建。主要存放Java对象的实	例。
+（后面会详细将Java堆的分类）
+如果一个对象无法在Java堆内完成实例的内存分配将会抛出OutOfMemoryError。
+5.方法区
+Java的方法区主要存放的是已经被Java虚拟机加载的类的信息、常量、静态变量以及即使编译的代码等数据。这一部分可以不实现Java内存的回收。
+6.运行时常量池
+运行时常量池主要存放的是编译时期生成的各种字面量以及符号引用。
+这部分会抛出OutOfMemoryError
+7.直接内存
+直接内存不是Java运行时的数据区域，但是也会抛出OutOfMemoryError，Java的NIO可以使用Native函数库直接分配堆外内存，然后通过一个存储在Java队中的DirectByteBuffer对象作为这块内存的引用进行操作。
+" />
+    <meta property="og:description" content="Java的内存布局
+
+Java虚拟机规范将Java内存布局分为，方法区、堆、Java虚拟机栈、本地方法栈以及程序计数器。其中程序计数器和Java虚拟机栈和本地方栈是线程私有的，方法区和Java堆是线程共享的。
+
+1.程序计数器：
+程序计数器指的是线程执行Java方法的行号指示器，如果执行的是Java方法，那么这里面存放的就是Java字节码地址，如果是执行的是本地方法，这里存放的就是null。
+程序计数器的内存很小，存在的原因是由于java程序是支持多线程的，如果线程数大于cpu数量的时候，线程之间来回切换争夺cpu资源，所以每一个线程都需要一个独立的程序计数器来记录下一个要运行的指令
+对了，这里是Java内存唯一一块没有任何内存溢出的区域。
+
+2.Java虚拟机栈
+Java虚拟机栈是Java方法执行的内存模型。它和java线程同时创建。Java每一个方法在执行的时候都会创建一个栈帧来存放局部变量表，操作数栈，动态链接以及方法出口灯信息，每一个方法的执行就对应相应的栈帧出栈入栈的过程。
+再说一下局部变量表，局部变量表中存放的是各种基本数据类型、对象的引用（不单单指指针，还有句柄等和Java对象相关联的信息），returnaddress(一条字节码指令的地址)
+当线程请求的栈深度大于剩余栈的剩余大小，这里就会抛出stackOverFlowError,如果Java虚拟机栈可以动态扩展，在扩展的时候无法申请到足够的内存也会抛出OutOfMemoryError。
+
+注意：-Xss 可以设置栈的大小。
+
+
+修改-Xss2M后：
+
+调优相关：在虚拟机栈调优这部分最关键的是 局部变量表，局部变量表存放了方法的入参和局部变量。在运行时，会占用此处内存。
+使用jclasslib工具可以查看class文件中每个方法所分配的最大局部变脸表的容量。
+3.本地方法栈
+本地方法栈和Java虚拟机栈类似，只不过Java虚拟机栈执行的是Java方法，而本地方法栈执行的native方法。
+4.Java堆
+Java堆是Java存放Java对象的实例的地方，是Java内存区域最大的一块，也是垃圾回收的重要区域。
+Java堆再Java虚拟机启动的时候创建。主要存放Java对象的实	例。
+（后面会详细将Java堆的分类）
+如果一个对象无法在Java堆内完成实例的内存分配将会抛出OutOfMemoryError。
+5.方法区
+Java的方法区主要存放的是已经被Java虚拟机加载的类的信息、常量、静态变量以及即使编译的代码等数据。这一部分可以不实现Java内存的回收。
+6.运行时常量池
+运行时常量池主要存放的是编译时期生成的各种字面量以及符号引用。
+这部分会抛出OutOfMemoryError
+7.直接内存
+直接内存不是Java运行时的数据区域，但是也会抛出OutOfMemoryError，Java的NIO可以使用Native函数库直接分配堆外内存，然后通过一个存储在Java队中的DirectByteBuffer对象作为这块内存的引用进行操作。
+" />
+    
+    <meta name="author" content="Hello Programmer ！" />
+
+    
+    <meta property="og:title" content="一、java内存布局!" />
+    <meta property="twitter:title" content="一、java内存布局!" />
+    
+  <!-- Async font loading -->
+<script>
+  window.WebFontConfig = {
+      custom: {
+          families: ['Spoqa Han Sans:100,300,400,700'],
+          urls: ['https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css']
+      },
+      timeout: 60000
+  };
+  (function(d) {
+      var wf = d.createElement('script'), s = d.scripts[0];
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+      s.parentNode.insertBefore(wf, s);
+  })(document);
+</script>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="/HelloProgrammer/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="Hello Programmer ！ - XKZ的博客" href="/HelloProgrammer/feed.xml" />
+  <link rel="shortcut icon" href="https://xukaizhong188.github.io/HelloProgrammer/images/favicon.png">
+  <script src="https://kit.fontawesome.com/56f7faf3f4.js"></script>
+
+
+  <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+
+</head>
+  <body>
+    <div class="wrapper-sidebar">
+  <header class="sidebar clearfix">
+    <div class="site-info">
+      
+        <a href="/HelloProgrammer/" class="site-avatar"><img src="https://xukaizhong188.github.io/HelloProgrammer/images/logo.png" /></a>
+       
+      <h1 class="site-name"><a href="/HelloProgrammer/">Hello Programmer ！</a></h1>
+      <p class="site-description">XKZ的博客</p>
+    </div>
+  </header>
+
+  <div class="navlist">
+    <nav>
+      
+      
+      <a href="/HelloProgrammer/">首页</a>
+      
+      
+      
+      <a href="/HelloProgrammer/about">关于</a>
+      
+      
+      
+      <a href="/HelloProgrammer/archive">归档</a>
+      
+      
+      
+      <a href="/HelloProgrammer/tags">分类</a>
+      
+      
+    </nav>
+  </div>
+
+  <div class="wrapper-footer-desktop">
+    <footer class="footer">
+      <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+
+
+<p>Copyright (c) 2018 XKZ</p>
+
+    </footer>
+  </div>
+</div>
+
+    <div id="main" role="main" class="wrapper-content">
+      <article class="posts">
+  <h1>一、java内存布局!</h1>
+
+  <div clsss="meta">
+    <span class="date">
+      2019-07-01
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/HelloProgrammer/tags#JVM">
+          JVM
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <div class="entry">
+    <h1 id="java的内存布局">Java的内存布局</h1>
+<p><img src="https://xukaizhong188.github.io/HelloProgrammer/images/2019-07-02/image.png" alt="img" />
+Java虚拟机规范将Java内存布局分为，方法区、堆、Java虚拟机栈、本地方法栈以及程序计数器。其中程序计数器和Java虚拟机栈和本地方栈是线程私有的，方法区和Java堆是线程共享的。</p>
+
+<h2 id="1程序计数器">1.程序计数器：</h2>
+<p>程序计数器指的是线程执行Java方法的行号指示器，如果执行的是Java方法，那么这里面存放的就是Java字节码地址，如果是执行的是本地方法，这里存放的就是null。
+程序计数器的内存很小，存在的原因是由于java程序是支持多线程的，如果线程数大于cpu数量的时候，线程之间来回切换争夺cpu资源，所以每一个线程都需要一个独立的程序计数器来记录下一个要运行的指令
+对了，这里是Java内存唯一一块没有任何内存溢出的区域。</p>
+
+<h2 id="2java虚拟机栈">2.Java虚拟机栈</h2>
+<p>Java虚拟机栈是Java方法执行的内存模型。它和java线程同时创建。Java每一个方法在执行的时候都会创建一个栈帧来存放局部变量表，操作数栈，动态链接以及方法出口灯信息，每一个方法的执行就对应相应的栈帧出栈入栈的过程。
+再说一下局部变量表，局部变量表中存放的是各种基本数据类型、对象的引用（不单单指指针，还有句柄等和Java对象相关联的信息），returnaddress(一条字节码指令的地址)
+当线程请求的栈深度大于剩余栈的剩余大小，这里就会抛出stackOverFlowError,如果Java虚拟机栈可以动态扩展，在扩展的时候无法申请到足够的内存也会抛出OutOfMemoryError。
+<img src="https://xukaizhong188.github.io/HelloProgrammer/images/2019-07-02/image1.png" alt="img" />
+注意：-Xss 可以设置栈的大小。
+<img src="https://xukaizhong188.github.io/HelloProgrammer/images/2019-07-02/image2.png" alt="img" />
+<img src="https://xukaizhong188.github.io/HelloProgrammer/images/2019-07-02/image3.png" alt="img" />
+修改-Xss2M后：
+<img src="https://xukaizhong188.github.io/HelloProgrammer/images/2019-07-02/image4.png" alt="img" />
+调优相关：在虚拟机栈调优这部分最关键的是 局部变量表，局部变量表存放了方法的入参和局部变量。在运行时，会占用此处内存。
+使用jclasslib工具可以查看class文件中每个方法所分配的最大局部变脸表的容量。</p>
+<h2 id="3本地方法栈">3.本地方法栈</h2>
+<p>本地方法栈和Java虚拟机栈类似，只不过Java虚拟机栈执行的是Java方法，而本地方法栈执行的native方法。</p>
+<h2 id="4java堆">4.Java堆</h2>
+<p>Java堆是Java存放Java对象的实例的地方，是Java内存区域最大的一块，也是垃圾回收的重要区域。
+Java堆再Java虚拟机启动的时候创建。主要存放Java对象的实	例。
+（后面会详细将Java堆的分类）
+如果一个对象无法在Java堆内完成实例的内存分配将会抛出OutOfMemoryError。</p>
+<h2 id="5方法区">5.方法区</h2>
+<p>Java的方法区主要存放的是已经被Java虚拟机加载的类的信息、常量、静态变量以及即使编译的代码等数据。这一部分可以不实现Java内存的回收。</p>
+<h2 id="6运行时常量池">6.运行时常量池</h2>
+<p>运行时常量池主要存放的是编译时期生成的各种字面量以及符号引用。
+这部分会抛出OutOfMemoryError</p>
+<h2 id="7直接内存">7.直接内存</h2>
+<p>直接内存不是Java运行时的数据区域，但是也会抛出OutOfMemoryError，Java的NIO可以使用Native函数库直接分配堆外内存，然后通过一个存储在Java队中的DirectByteBuffer对象作为这块内存的引用进行操作。</p>
+
+  </div>
+
+  
+</article>
+
+<div class="pagination">
+  
+    <span class="prev" >
+      <a href="http://localhost:4000/HelloProgrammer/NetFlix-Conductor%E6%BA%90%E7%A0%81%E6%9E%B6%E6%9E%84/">
+        ← 上一篇
+      </a>
+    </span>
+  
+  
+    <span class="next" >
+      <a href="http://localhost:4000/HelloProgrammer/JVM-%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D%E5%8F%82%E6%95%B0/">
+        下一篇 →
+      </a>
+    </span>
+  
+</div>
+    </div>
+
+    
+
+  </body>
+
+  <div class="wrapper-footer-mobile">
+    <footer class="footer">
+      <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+
+
+<p>Copyright (c) 2018 XKZ</p>
+
+    </footer>
+
+
+</html>

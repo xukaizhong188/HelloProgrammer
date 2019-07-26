@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>二、JVM内存分配参数! – Hello Programmer ！ – XKZ的博客</title>
+
+      <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="基本参数
+设置最大堆内存   -Xmx   例如：-Xmx1M
+设置最小堆内存   -Xms  (JVM启动时分配的堆内存，java程序在运行过程中，会先分配这段空间，如果这段空间的内存占满，会再向操作系统申请更多的内存，但不会超过最大内存，如果超出则会抛出内存溢出异常)    -Xms1M
+设置新生代大小   -Xmn 用于设置新生代的大小，新生代的大小一般设置为整个堆内存的4分之一或者3分之一
+设置新生代初始大小： -XX:NewSize
+设置新生代最大值大小  -XX:MaxNewSize
+(通常情况下不会对NewSize 和MaxNewSize进行设置，因为这样可能导致内存震荡，从而产生不必要的系统开销)
+设置持久代(方法区，不属于堆)最大值  -XX:MaxPermSize
+设置持久代(方法区，不属于堆)初始大小  -XX:PermSize
+设置线程栈大小  -Xss  java堆也是向操作系统申请空间，所以如果堆设置的太大，会导致操作系统可用线程栈的内存减少，从而减少程序所能支持的程序数量
+
+当系统由于内存不足而无法创建新的线程的时候就会抛出OOM异常
+堆的比例分配：
+设置新生代中eden、s0的空间 比例   -XX:SurvivorRatio=8  -XX:SurvivorRatio=eden/s0=eden/s1
+设置新生代和老年代的比例   -XX:NewRatio=1  -XX:NewRatio=老年代/新生代
+（这些参数在不同版本的jdk中实现可能会有不同，具体可以通过-XX:PrintGCDetails来打印堆的情况来实际设置）
+
+其他
+设置堆空间最小空闲比例  -XX:MinHeapFreeRatio 当堆空间的空闲内存小于这个数值时，JVM便会扩展堆空间
+设置堆空间最大空闲比例  -XX:MaxHeapFreeRatio 当堆空间的空闲内存大于这个数值时，JVM便会压缩堆空间，得到一个较小的堆
+设置survivior的可使用率  -XX:TargetSurvivorRatio 当survivor区的空间使用率达到这个数值时，回见对象送入老年代。
+
+" />
+    <meta property="og:description" content="基本参数
+设置最大堆内存   -Xmx   例如：-Xmx1M
+设置最小堆内存   -Xms  (JVM启动时分配的堆内存，java程序在运行过程中，会先分配这段空间，如果这段空间的内存占满，会再向操作系统申请更多的内存，但不会超过最大内存，如果超出则会抛出内存溢出异常)    -Xms1M
+设置新生代大小   -Xmn 用于设置新生代的大小，新生代的大小一般设置为整个堆内存的4分之一或者3分之一
+设置新生代初始大小： -XX:NewSize
+设置新生代最大值大小  -XX:MaxNewSize
+(通常情况下不会对NewSize 和MaxNewSize进行设置，因为这样可能导致内存震荡，从而产生不必要的系统开销)
+设置持久代(方法区，不属于堆)最大值  -XX:MaxPermSize
+设置持久代(方法区，不属于堆)初始大小  -XX:PermSize
+设置线程栈大小  -Xss  java堆也是向操作系统申请空间，所以如果堆设置的太大，会导致操作系统可用线程栈的内存减少，从而减少程序所能支持的程序数量
+
+当系统由于内存不足而无法创建新的线程的时候就会抛出OOM异常
+堆的比例分配：
+设置新生代中eden、s0的空间 比例   -XX:SurvivorRatio=8  -XX:SurvivorRatio=eden/s0=eden/s1
+设置新生代和老年代的比例   -XX:NewRatio=1  -XX:NewRatio=老年代/新生代
+（这些参数在不同版本的jdk中实现可能会有不同，具体可以通过-XX:PrintGCDetails来打印堆的情况来实际设置）
+
+其他
+设置堆空间最小空闲比例  -XX:MinHeapFreeRatio 当堆空间的空闲内存小于这个数值时，JVM便会扩展堆空间
+设置堆空间最大空闲比例  -XX:MaxHeapFreeRatio 当堆空间的空闲内存大于这个数值时，JVM便会压缩堆空间，得到一个较小的堆
+设置survivior的可使用率  -XX:TargetSurvivorRatio 当survivor区的空间使用率达到这个数值时，回见对象送入老年代。
+
+" />
+    
+    <meta name="author" content="Hello Programmer ！" />
+
+    
+    <meta property="og:title" content="二、JVM内存分配参数!" />
+    <meta property="twitter:title" content="二、JVM内存分配参数!" />
+    
+  <!-- Async font loading -->
+<script>
+  window.WebFontConfig = {
+      custom: {
+          families: ['Spoqa Han Sans:100,300,400,700'],
+          urls: ['https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css']
+      },
+      timeout: 60000
+  };
+  (function(d) {
+      var wf = d.createElement('script'), s = d.scripts[0];
+      wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+      s.parentNode.insertBefore(wf, s);
+  })(document);
+</script>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="/HelloProgrammer/style.css" />
+  <link rel="alternate" type="application/rss+xml" title="Hello Programmer ！ - XKZ的博客" href="/HelloProgrammer/feed.xml" />
+  <link rel="shortcut icon" href="https://xukaizhong188.github.io/HelloProgrammer/images/favicon.png">
+  <script src="https://kit.fontawesome.com/56f7faf3f4.js"></script>
+
+
+  <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+
+</head>
+  <body>
+    <div class="wrapper-sidebar">
+  <header class="sidebar clearfix">
+    <div class="site-info">
+      
+        <a href="/HelloProgrammer/" class="site-avatar"><img src="https://xukaizhong188.github.io/HelloProgrammer/images/logo.png" /></a>
+       
+      <h1 class="site-name"><a href="/HelloProgrammer/">Hello Programmer ！</a></h1>
+      <p class="site-description">XKZ的博客</p>
+    </div>
+  </header>
+
+  <div class="navlist">
+    <nav>
+      
+      
+      <a href="/HelloProgrammer/">首页</a>
+      
+      
+      
+      <a href="/HelloProgrammer/about">关于</a>
+      
+      
+      
+      <a href="/HelloProgrammer/archive">归档</a>
+      
+      
+      
+      <a href="/HelloProgrammer/tags">分类</a>
+      
+      
+    </nav>
+  </div>
+
+  <div class="wrapper-footer-desktop">
+    <footer class="footer">
+      <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+
+
+<p>Copyright (c) 2018 XKZ</p>
+
+    </footer>
+  </div>
+</div>
+
+    <div id="main" role="main" class="wrapper-content">
+      <article class="posts">
+  <h1>二、JVM内存分配参数!</h1>
+
+  <div clsss="meta">
+    <span class="date">
+      2019-07-02
+    </span>
+
+    <ul class="tag">
+      
+      <li>
+        <a href="http://localhost:4000/HelloProgrammer/tags#JVM">
+          JVM
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+
+  <div class="entry">
+    <h1 id="基本参数">基本参数</h1>
+<p>设置最大堆内存   -Xmx   例如：-Xmx1M
+设置最小堆内存   -Xms  (JVM启动时分配的堆内存，java程序在运行过程中，会先分配这段空间，如果这段空间的内存占满，会再向操作系统申请更多的内存，但不会超过最大内存，如果超出则会抛出内存溢出异常)    -Xms1M
+设置新生代大小   -Xmn 用于设置新生代的大小，新生代的大小一般设置为整个堆内存的4分之一或者3分之一
+设置新生代初始大小： -XX:NewSize
+设置新生代最大值大小  -XX:MaxNewSize
+(通常情况下不会对NewSize 和MaxNewSize进行设置，因为这样可能导致内存震荡，从而产生不必要的系统开销)
+设置持久代(方法区，不属于堆)最大值  -XX:MaxPermSize
+设置持久代(方法区，不属于堆)初始大小  -XX:PermSize
+设置线程栈大小  -Xss  java堆也是向操作系统申请空间，所以如果堆设置的太大，会导致操作系统可用线程栈的内存减少，从而减少程序所能支持的程序数量
+<img src="https://xukaizhong188.github.io/HelloProgrammer/images/2019-07-02/image5.png" alt="img" />
+当系统由于内存不足而无法创建新的线程的时候就会抛出OOM异常</p>
+<h2 id="堆的比例分配">堆的比例分配：</h2>
+<p>设置新生代中eden、s0的空间 比例   -XX:SurvivorRatio=8  -XX:SurvivorRatio=eden/s0=eden/s1
+设置新生代和老年代的比例   -XX:NewRatio=1  -XX:NewRatio=老年代/新生代
+（这些参数在不同版本的jdk中实现可能会有不同，具体可以通过-XX:PrintGCDetails来打印堆的情况来实际设置）</p>
+
+<h2 id="其他">其他</h2>
+<p>设置堆空间最小空闲比例  -XX:MinHeapFreeRatio 当堆空间的空闲内存小于这个数值时，JVM便会扩展堆空间
+设置堆空间最大空闲比例  -XX:MaxHeapFreeRatio 当堆空间的空闲内存大于这个数值时，JVM便会压缩堆空间，得到一个较小的堆
+设置survivior的可使用率  -XX:TargetSurvivorRatio 当survivor区的空间使用率达到这个数值时，回见对象送入老年代。
+<img src="https://xukaizhong188.github.io/HelloProgrammer/images/2019-07-02/image6.png" alt="img" /></p>
+
+  </div>
+
+  
+</article>
+
+<div class="pagination">
+  
+    <span class="prev" >
+      <a href="http://localhost:4000/HelloProgrammer/JVM-Java%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80/">
+        ← 上一篇
+      </a>
+    </span>
+  
+  
+    <span class="next" >
+      <a href="http://localhost:4000/HelloProgrammer/Gradlew%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B8%80/">
+        下一篇 →
+      </a>
+    </span>
+  
+</div>
+    </div>
+
+    
+
+  </body>
+
+  <div class="wrapper-footer-mobile">
+    <footer class="footer">
+      <!-- Refer to https://codepen.io/ruandre/pen/howFi -->
+<ul class="svg-icon">
+
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</ul>
+
+
+
+<p>Copyright (c) 2018 XKZ</p>
+
+    </footer>
+
+
+</html>
