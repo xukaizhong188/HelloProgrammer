@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 排序算法概要!
+title: 排序算法之梳排序!
 date:  2019-07-30
 Author: XKZ
 categories: jekyll update
