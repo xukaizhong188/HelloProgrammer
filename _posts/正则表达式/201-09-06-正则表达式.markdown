@@ -1,0 +1,17 @@
+---
+layout: post
+title: 正则表达式!
+date:  2018-09-08
+Author: XKZ
+categories: jekyll update
+tags: [杂谈]
+comments: true
+---
+## 1、匹配（数量：）开始后面的数字
+        String result = "数量：1234sdaf243ds12353";
+        Pattern pattern= Pattern.compile("数量：\\d+");
+        Matcher matcher = pattern.matcher(result);
+        System.out.println(result);
+        if (matcher.find()) {
+            System.out.println(matcher.group(0)) ;
+        }
