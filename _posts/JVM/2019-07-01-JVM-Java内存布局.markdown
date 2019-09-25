@@ -7,6 +7,8 @@ categories: jekyll update
 tags: [JVM]
 comments: true
 ---
+# JVM的组成
+JVM由三部分组成：类装载子系统、运行时数据区域、字节码执行引擎。
 # Java的内存布局
 ![img](https://xukaizhong188.github.io/HelloProgrammer/images/2019-07-02/image.png)
 Java虚拟机规范将Java内存布局分为，方法区、堆、Java虚拟机栈、本地方法栈以及程序计数器。其中程序计数器和Java虚拟机栈和本地方栈是线程私有的，方法区和Java堆是线程共享的。
