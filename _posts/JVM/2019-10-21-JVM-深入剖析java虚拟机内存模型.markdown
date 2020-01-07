@@ -39,13 +39,12 @@ java调优更多的是对堆内存的调优
 
 # JVM指令集
 指令码 助记符    说明
-0x00 nop      什么都不做
-
-0x01 aconst_null 将null推送至栈顶
-0x02 iconst_m1   将int型-1推送至栈顶
-0x03 iconst_0   将int型0推送至栈顶
-0x04 iconst_1   将int型1推送至栈顶
-0x05 iconst_2   将int型2推送至栈顶
+0x00 nop      什么都不做  
+0x01 aconst_null 将null推送至栈顶  
+0x02 iconst_m1   将int型-1推送至栈顶  
+0x03 iconst_0   将int型0推送至栈顶  
+0x04 iconst_1   将int型1推送至栈顶  
+0x05 iconst_2   将int型2推送至栈顶  
 0x06 iconst_3   将int型3推送至栈顶
 0x07 iconst_4   将int型4推送至栈顶
 0x08 iconst_5   将int型5推送至栈顶
