@@ -1,0 +1,10 @@
+---
+layout: post
+title: JMM!
+date:  2020-01-07
+Author: XKZ
+categories: JAVA
+tags: [Java Thread]
+comments: true
+---
+
