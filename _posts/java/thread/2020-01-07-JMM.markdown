@@ -7,4 +7,7 @@ categories: JAVA
 tags: [Java Thread]
 comments: true
 ---
+# 什么是JMM
+JMM全称java Memory Modeljava内存模型，
+# JMM和JVM的区别
 
