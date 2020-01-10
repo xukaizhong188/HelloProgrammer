@@ -7,7 +7,7 @@ categories: jekyll update
 tags: [Conductor]
 comments: true
 ---
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这个系列的文章主要是老大让本人学校微服务编排，将之运用到我们现有的一个项目中，由于本人初接触，对其中的一些内容没有深入了解，所以在学习之初，先将官网的样例进行运行。下面就介绍下NetFlix Conductor官方样例搭建过程。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这个系列的文章主要是研究下微服务编排，将之运用到我们现有的一个项目中，由于本人初接触，对其中的一些内容没有深入了解，所以在学习之初，先将官网的样例进行运行。下面就介绍下NetFlix Conductor官方样例搭建过程。
 <h2>一、下载源码</h2>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;首先我们到NetFlix Conductor的git官网将源码下载下来，下载地址：https://github.com/Netflix/conductor
 <h2>二、安装Swagger API</h2>
