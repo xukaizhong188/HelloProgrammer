@@ -17,5 +17,6 @@ comments: true
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;安装步骤：
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;执行cd ui 进入ui目录，
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;再执行 gulp watch等待构建完成即可。
-
+## 三、安装前端环境
+UI服务启动需要安装node.js,版本8.0以上
 
