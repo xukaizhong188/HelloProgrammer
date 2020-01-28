@@ -7,36 +7,33 @@ categories: jekyll update
 tags: [Gradlew]
 comments: true
 ---
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;使用Jekyll搭建博客的详细步骤现在已经很多，所以这里不再赘述，本文主要讲解搭建博客过程中我遇到的一些问题，并提供相应的解决方式，方便大家共同交流，此文处于不断更新中。。。
-<h2>一、搭建起因</h2>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作为一名程序员，要学习的东西越来越多，对于刚刚工作的我，着实需要将自己所掌握的和所需要掌握的知识统一进行整理归纳，所以便拥有了搭建一个属于自己的博客的需求。	
-<h2>二、前期准备</h2>
-<h3>2.1、搭建博客的技术</h3>
+使用Jekyll搭建博客的详细步骤现在已经很多，所以这里不再赘述，本文主要讲解搭建博客过程中我遇到的一些问题，并提供相应的解决方式，方便大家共同交流，此文处于不断更新中。。。
+## 一、搭建起因
+作为一名程序员，要学习的东西越来越多，对于刚刚工作的我，着实需要将自己所掌握的和所需要掌握的知识统一进行整理归纳，所以便拥有了搭建一个属于自己的博客的需求。	
+## 二、前期准备
+### 2.1、搭建博客的技术
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目前实现个人博客的建设的方式有很多，对于一些懂技术的大牛来说，完全可以使用JavaWeb实现一个博客，只不过这样的实现方式相对比较麻烦，对技术的要求也比较高。而对技术了解不是很深的小白来说，便需要借助一些工具了。一个个人博客网站，其动态交互相对较少，所以我们可以借助Hexo、Jekyll等来通过解析文章自动生成一些静态页面，然后将这些静态页面托管到服务器上的方式，达到实现个人博客的目的。
-<h3>2.2、GitHub Pages</h3>
+### 2.2、GitHub Pages
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GitHub Pages是一种静态站点托管服务，旨在直接从GitHub存储库托管您的个人，组织或项目页面。可以直接从您的GitHub存储库托管。只需编辑，推送，您的更改即可生效。其他的用户只需要通过访问相应的域名，便可以直接浏览你的项目。
-<h3>2.3、Jekyll</h3>
+### 2.3、Jekyll
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jekyll是一个简单的生成静态网站的工具，通过Jekyll,可以将纯文本转化为静态网站和博客。使用Jekyll搭建的博客只需要用到MarkDown或者Textile、Liquid、Html、CSS就可以实现博客的建设，
-<h4>2.4、总结</h4>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于个人在最初对这些博客搭建的技术并不是十分了解，在做了一些了解之后，便开始了自己的搭建之旅。
-<br>
+### 2.4、总结
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;由于个人在最初对这些博客搭建的技术并不是十分了解，在做了一些了解之后，便开始了自己的搭建之旅  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我将自己的搭建过程整体分为两个步骤，第一步，首先是将博客项目在本地运行起来，这里包括环境的安装、对博客的发布编辑等的熟悉以及本地运行。第二步便是博客的发布，这里主要是将自己本地的项目发布到git上，并通过进行设置，绑定域名等，实现博客的发布。对于第一步，我们主要需要学习的就是jekyll的一些命令、配置、markdown文件的编辑以及最主要的便是项目的开发过程中，各个文件的调用以及解析等。对于博客的发布，这里主要需要关注学习的便是git命令。
-<h2>三、搭建历程</h2>
-<h3>3.1、成果展示</h3>
+## 三、搭建历程
+### 3.1、成果展示
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;废话不多说，直接上图。
 ![img](https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/pic1.jpg)
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;出于学习的目的，所以作为博客小白的我决定从零做起，不采用任何主题，后续将更新自己的博客搭建之路，让自己的博客逐渐丰富起来。
-<h3>3.2、开始搭建</h3>
+### 3.2、开始搭建
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;对于使用Jekyll搭建博客的教程，现在网上有很多，这里只介绍自己的开发及思考过程，
-<h4>3.2.1、项目分析</h4>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作为一名程序员，习惯性的先跑了一个Demo,这个项目便是Jekyll自动生成的博客，接下来便是入口的查找，在对Jekyll项目的文件目录分析，发现Jekyll正常的工程目录为：
-<br>
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_config.yml Jekyll的配置文件
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_posts  博客内容
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_layouts 网页排版模板
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_includes 被模板包含的HTML片段，可在_config.yml中修改位置
-<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assets 辅助资源 css布局 js脚本 图片等
+### 3.2.1、项目分析
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;作为一名程序员，习惯性的先跑了一个Demo,这个项目便是Jekyll自动生成的博客，接下来便是入口的查找，在对Jekyll项目的文件目录分析，发现Jekyll正常的工程目录为：  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_config.yml Jekyll的配置文件  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_posts  博客内容  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_layouts 网页排版模板  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_includes 被模板包含的HTML片段，可在_config.yml中修改位置  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;assets 辅助资源 css布局 js脚本 图片等
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_data 动态数据
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_sites  最终生成的静态网页
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index.html  博客首页
