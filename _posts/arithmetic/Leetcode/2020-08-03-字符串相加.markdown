@@ -15,7 +15,49 @@ num1 和num2 都只包含数字 0-9.
 num1 和num2 都不包含任何前导零。   
 你不能使用任何內建 BigInteger 库， 也不能直接将输入的字符串转换为整数形式。   
 ## 分析
-## 示例
+2个字符串形式的非负整数可以转化为两个数组，然后进行逐位相加   
+返回值可以利用StringBuffer的reverse方法来对结果进行导致  
+## 知识点
+### StringBuffer的reverse方法实现原理
 
-    public OrderListInfoResult() {
+## 示例
+    public static String addStrings(String num1, String num2) {
+        char[] num1str = num1.toCharArray();
+        char[] num2str = num2.toCharArray();
+        StringBuffer stringBuffer = new StringBuffer("");
+        boolean jinwei = false;
+        int i = num1str.length-1;
+        int j = num2str.length-1;
+        int a = 0;
+        int first = 0;
+        int second = 0;
+        while (i >= 0 || j>=0 || jinwei){
+            if (i < 0){
+                first = 0;
+            }else {
+                first =(int)num1str[i] - (int)('0');
+            }
+            if (j < 0){
+                second = 0;
+            }else {
+                second = (int)num2str[j] - (int)('0');
+            }
+
+            if (jinwei){
+                a = first + second +1;
+            }else {
+                a = first + second;
+            }
+            if (a >= 10){
+                stringBuffer.append(a % 10);
+                jinwei = true;
+            }else {
+                stringBuffer.append(a);
+                jinwei = false;
+            }
+            i--;
+            j--;
+        }
+
+        return stringBuffer.reverse().toString();
     }
