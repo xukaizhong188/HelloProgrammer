@@ -18,6 +18,11 @@ num1 和num2 都不包含任何前导零。
 2个字符串形式的非负整数可以转化为两个数组，然后进行逐位相加   
 返回值可以利用StringBuffer的reverse方法来对结果进行导致  
 ## 知识点
+### char类型转int类型的方法
+    方法一：
+    int i = Integer.valueOf(String.valueOf(char))
+    方法二：
+    int i = (int)char-(int)'0'
 ### StringBuffer的reverse方法实现原理
 
 ## 示例
