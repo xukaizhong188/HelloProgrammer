@@ -1,0 +1,21 @@
+---
+layout: post
+title: 常用工具!
+date:  2020-08-03
+Author: XKZ
+categories: jekyll update
+tags: [tool]
+comments: true
+---
+## FE助手
+名称:FE助手
+## 浏览器postMan插件
+名称:postMan
+## JSON解析工具插件
+名称:JSON-handle
+## 抓包工具
+软件名:charles
+## 代理工具插件
+工具名称:SwitchyOmega
+代理ip地址:http://cn-proxy.com/
+代理ip地址:http://zhimahttp.lysxby.cn/getapi/
