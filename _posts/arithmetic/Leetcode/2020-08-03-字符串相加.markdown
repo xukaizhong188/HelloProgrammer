@@ -25,7 +25,28 @@ num1 和num2 都不包含任何前导零。
     int i = (int)char-(int)'0'
     
 ### 2、reverse方法实现原理
-
+Java的reverse方法（StringBuffer和StringBuilder）在倒置的时候都是使用的前半部分和后半部分数据交换的原理，值得注意的是Java源码的乘除都是通过移位操作来提高性能。
+    
+    public AbstractStringBuilder reverse() {
+        boolean hasSurrogates = false;
+        int n = count - 1;
+        for (int j = (n-1) >> 1; j >= 0; j--) {
+            int k = n - j;
+            char cj = value[j];
+            char ck = value[k];
+            value[j] = ck;
+            value[k] = cj;
+            if (Character.isSurrogate(cj) ||
+                Character.isSurrogate(ck)) {
+                hasSurrogates = true;
+            }
+        }
+        if (hasSurrogates) {
+            reverseAllValidSurrogatePairs();
+        }
+        return this;
+    }
+    
 ## 四、示例
     public static String addStrings(String num1, String num2) {
         char[] num1str = num1.toCharArray();
