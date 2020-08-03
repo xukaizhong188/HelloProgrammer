@@ -29,7 +29,7 @@ num1 和num2 都不包含任何前导零。
     public static String addStrings(String num1, String num2) {
         char[] num1str = num1.toCharArray();
         char[] num2str = num2.toCharArray();
-        StringBuffer stringBuffer = new StringBuffer("");
+        StringBuilder stringBuffer = new StringBuilder("");
         boolean jinwei = false;
         int i = num1str.length-1;
         int j = num2str.length-1;
