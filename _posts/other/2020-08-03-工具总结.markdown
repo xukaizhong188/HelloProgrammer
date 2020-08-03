@@ -16,6 +16,6 @@ comments: true
 ## 抓包工具
 软件名:charles
 ## 代理工具插件
-工具名称:SwitchyOmega 
-代理ip地址:http://cn-proxy.com/ 
-代理ip地址:http://zhimahttp.lysxby.cn/getapi/  
+工具名称:SwitchyOmega       
+代理ip地址:http://cn-proxy.com/      
+代理ip地址:http://zhimahttp.lysxby.cn/getapi/     
