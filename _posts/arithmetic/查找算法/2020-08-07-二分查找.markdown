@@ -27,7 +27,6 @@ comments: true
                 if (s > nums[mid]){
                     lo = mid+1;
                 }
-    
             }
             return -1;
         }
