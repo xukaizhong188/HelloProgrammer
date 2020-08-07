@@ -14,19 +14,19 @@ comments: true
 二分查找会使用2个变量lo和hi,利用目标值一定在lo到hi之间，取lo和hi的中间值mid和目标值进行比较，如果相等返回mid,如果比目标值比mid大，证明目标值在mid的右侧反之在左侧，通过不断取缩小一半的方法来找到目标值，如果最终查找范围为空则代表不包含目标值返回-1.
 ### 三、示例：
      public static int rank(int[] nums,int s) {
-            int lo = 0;
-            int hi = nums.length-1;
-            while (lo <= hi){
-                int mid = (lo + hi) / 2;
-                if (s == nums[mid]){
-                    return mid;
-                }
-                if (s < nums[mid]){
-                    hi = mid-1;
-                }
-                if (s > nums[mid]){
-                    lo = mid+1;
-                }
+        int lo = 0;
+        int hi = nums.length-1;
+        while (lo <= hi){
+            int mid = (lo + hi) / 2;
+            if (s == nums[mid]){
+                return mid;
             }
-            return -1;
+            if (s < nums[mid]){
+                hi = mid-1;
+            }
+            if (s > nums[mid]){
+                lo = mid+1;
+            }
         }
+        return -1;
+    }
