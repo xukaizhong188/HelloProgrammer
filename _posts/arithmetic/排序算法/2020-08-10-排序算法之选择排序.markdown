@@ -23,7 +23,6 @@ comments: true
              int min =i;
              //比较大小，找到最小值
              for (int j = i+1 ;j<numbs.length;j++){
- 
                  if (numbs[min] >= numbs[j]){
                      min = j;
                  }
@@ -32,7 +31,6 @@ comments: true
              int tem = numbs[i];
              numbs[i] = numbs[min];
              numbs[min] = tem;
- 
          }
          return numbs;
      }
