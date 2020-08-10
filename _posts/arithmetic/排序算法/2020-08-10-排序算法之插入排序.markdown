@@ -32,7 +32,6 @@ comments: true
              int tem = numbs[i];
              numbs[i] = numbs[min];
              numbs[min] = tem;
- 
          }
          return numbs;
      }
