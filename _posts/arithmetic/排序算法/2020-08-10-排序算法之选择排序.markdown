@@ -1,0 +1,38 @@
+---
+layout: post
+title: 排序算法之选择排序!
+date:  2019-08-10
+Author: XKZ
+categories: jekyll update
+tags: [算法,排序]
+comments: true
+---
+# 注意
+此系列文章默认从小到大排序
+# 选择排序
+## 一、算法描述
+选择排序：首先先找到数组中最小的元素，然后再和数组的第一个位置进行交换，如果第一个元素就是最小，那么和他本身进行交换，然后在选择数组中剩下的元素中最小的元素，再和第二个位置交换，一次类推完成排序。
+## 二、特点
+### 1、运行时间和输入无关
+无论输入的数组是多么的复杂或者是多么简单，程序运行都会为了找到最小的元素而进行扫描，所以程序运行时间是一定的。
+### 2、数据移动最少
+每次数据的交换都是交换两个元素的位置，所以选择排序会使用n次交换，和数组的大小成线性关系，
+## 三、示例
+      private int[] sort(int[] numbs) {
+         for (int i = 0;i<numbs.length;i++){
+             int min =i;
+             //比较大小，找到最小值
+             for (int j = i+1 ;j<numbs.length;j++){
+ 
+                 if (numbs[min] >= numbs[j]){
+                     min = j;
+                 }
+             }
+             //将最小值min和当前位置进行交换
+             int tem = numbs[i];
+             numbs[i] = numbs[min];
+             numbs[min] = tem;
+ 
+         }
+         return numbs;
+     }
