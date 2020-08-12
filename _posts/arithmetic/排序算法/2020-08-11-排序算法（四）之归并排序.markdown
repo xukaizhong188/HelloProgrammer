@@ -8,7 +8,7 @@ tags: [算法,排序]
 comments: true
 ---
 # 注意
-此系列文章默认从小到大排序
+此系列文章默认从小到大排序，源码请查看[源码](https://github.com/xukaizhong188/leetcode "源码")。
 # 归并排序
 
 ## 一、算法描述及实现
