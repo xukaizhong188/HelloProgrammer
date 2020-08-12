@@ -101,6 +101,7 @@ comments: true
             System.out.println(numb[i]);
         }
     }
+
 ## 二、特点
 主要优点：能够保证任意长度的Nshu数组的时间复杂度都是NlogN成正比：；
 主要缺点：所需要的额外空间和N成正比
