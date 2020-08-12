@@ -1,0 +1,58 @@
+---
+layout: post
+title: 排序算法（四）之归并排序!
+date:  2019-08-11
+Author: XKZ
+categories: jekyll update
+tags: [算法,排序]
+comments: true
+---
+# 注意
+此系列文章默认从小到大排序
+# 归并排序
+
+## 一、算法描述
+归并：将两个有序的数组归并成一个更大的有序数组     
+归并排序：对一个数组排序，可以先将他分为2半分别排序，然后将结果归并。
+### 1、原地归并的抽象方法
+实现归并的过程最简单的就是将两个有序的数组放在第三个数组中，但是这种方式会造成申请大量的额外空间。   
+原地归并：在不使用额外空间的前提下完成归并。对于一个数组的左右两半部分都为有序将进行4次判断，在遍历时左边数据用尽时取右边数据；在右边数据用尽时取左边数据；当右边数据小于左边数据取右边数据；当右边数据大于等于左边数据取左边数据。 
+以下方法为通过原地归并来实现2个有序数组的归并操作：
+#### 示例：
+     /**
+      * 原地归并方法（在不使用额外的空间的情况下将numb进行排序）
+      * @param numb  原数组:其中lo到mid为第一个有序数组，mid+1到hi为第二个有序数组
+      * @param lo
+      * @param mid
+      * @param hi
+      * @return
+      */
+     private static int[] merge(int[] numb, int lo, int mid, int hi) {
+         int i = lo;
+         int j = mid+1;
+         //遍历数据
+         int[]  numb2= new int[numb.length];
+         for (int k = 0 ;k<numb.length;k++){
+             numb2[k] = numb[k];
+         }
+         for (int k = lo; k<numb.length;k++){
+ 
+             if (i > mid){
+                 numb[k] = numb2[j++];
+             }else if (j >=numb.length){
+                 numb[k] = numb2[i++];
+             }else if (numb2[j] < numb2[i] ){
+                 numb[k] = numb2[j++];
+             }else {
+                 numb[k] = numb2[i++];
+             }
+         }
+         return numb;
+     }
+#### 注意：
+在上述代码中会发现也使用了新创建的数组，但是这并不意味着我们新开辟了新的空间，这里只是将这种用法呈现给大家，这里新数组我们称为辅助数组，在后面的归并算法中我们会将待排序数组的一部分作为辅助数组而不是领开辟一块空间。
+## 二、特点
+主要优点：能够保证任意长度的Nshu数组的时间复杂度都是NlogN成正比：；
+主要缺点：所需要的额外空间和N成正比
+## 三、示例
+     
