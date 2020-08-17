@@ -127,6 +127,47 @@ comments: true
 ## 四、算法改进
 ### 1、切换到插入排序
 对于小数组来说，递归的性能会比较差，因此对于小数组切换排序方式是一个提升性能的共同点
+#### 示例：
+        /**
+         * 归并排序
+         * @param numb
+         * @param lo
+         * @param hi
+         */
+        private static void sort(int[] numb, int lo, int hi) {
+            。。。。。。    
+            //思考1改进,判断是小数组直接进行插入排序，
+            if (hi - lo <= 8){
+                addSort(numb,lo,hi);
+            }
+            。。。。。。
+        }
+        /**
+         * 插入排序
+         * @param numbs
+         * @return
+         */
+        private static void addSort(int[] numbs,int lo,int hi) {
+    
+            int n = hi-lo+1;
+            for (int i = lo;i<n;i++){
+                int tar = i;
+                //比较大小，找到最小值
+                for (int j = i-1 ;j>lo;j--){
+                    //如果目标值比当前值小交换位置
+                    if (numbs[tar] <= numbs[j]){
+                        //将最小值min和当前位置进行交换j
+                        int tem = numbs[tar];
+                        numbs[tar] = numbs[j];
+                        numbs[j] = tem;
+                    }else {
+                        break;
+                    }
+                    tar = j;
+                }
+            }
+        }
+
 ### 2、三取样切分
 改进快排的第二个方法就是使用子数组一部分数组元素的中位数来切分数组。但是代价就是需要计算中位数，经过计算，人们发现取消数据为3个的时候效果最好。
 >中位数：又称中值，是按照顺序排序后中间位置的数据。
