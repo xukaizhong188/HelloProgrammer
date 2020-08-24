@@ -1,0 +1,24 @@
+---
+layout: post
+title: 数据结构之栈!
+date:  2019-08-24
+Author: XKZ
+categories: jekyll update
+tags: [算法,数据结构]
+comments: true
+---
+# 注意
+源码请查看[源码](https://github.com/xukaizhong188/leetcode "源码")。
+# 栈
+## 一、描述
+栈是一种基于后进先出（LIFO）策略的集合模型
+## 二、优劣势
+### 1、优点
+栈的优点就是可以很快的找到我们感兴趣的元素，也就是栈顶元素
+### 2、缺点
+如果想获取最开始的元素，必须清空栈。
+## 实现
+### 1、Java源码分析
+在Java中，JDK帮我们实现了栈java.util.Stack。     
+Stack类继承了Vector类，而Vector类继承了AbstractList抽象类，实现了List接口，Cloneable接口，RandomAcces接口以及Serializable接口，需要指出的Vector内部还有两个内部类ListItr和Itr，Itr在继承Vector的同时实现了Iterator接口，而ListItr在继承了Itr类的同时实现了ListIterator接口。
+![img](https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2020-08-24/pic1.jpg)
