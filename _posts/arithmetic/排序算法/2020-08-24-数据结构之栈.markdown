@@ -19,9 +19,11 @@ comments: true
 如果想获取最开始的元素，必须清空栈。
 ## 实现
 ### 1、Java源码分析
+
 在Java中，JDK帮我们实现了栈java.util.Stack。     
 Stack类继承了Vector类，而Vector类继承了AbstractList抽象类，实现了List接口，Cloneable接口，RandomAcces接口以及Serializable接口，需要指出的Vector内部还有两个内部类ListItr和Itr，Itr在继承Vector的同时实现了Iterator接口，而ListItr在继承了Itr类的同时实现了ListIterator接口。
 ![img](https://xukaizhong188.github.io/HelloProgrammer/images/2020-08-24/pic1.png)
+#### 1.1、JDK提供的方法
 首先先看下JDK中为我们提供的一些方法：
 
     /**
@@ -74,6 +76,26 @@ Stack类继承了Vector类。先看下Vector的属性
      * 用来保存Stack的容量（一般情况下应该是大于elementCount）
      */
     protected int capacityIncrement;
+    /**
+     * 用来保存Stack的容量（一般情况下应该是大于elementCount）
+     */
+    protected transient int modCount = 0;
 
-不难看出，栈实现了Vector类，也就代表着Stack的底层是通过数组来实现的
+不难看出，栈实现了Vector类，也就代表着Stack的底层是通过数组来实现的。   
+#### 1.2、push方法的实现（压栈的过程）
+
+    public E push(E item) {
+        //调用Vector的压栈方法
+        addElement(item);
+        return item;
+    }
+    public synchronized void addElement(E obj) {
+        modCount++;
+        ensureCapacityHelper(elementCount + 1);
+        elementData[elementCount++] = obj;
+    }
+    
+
+
+
     
