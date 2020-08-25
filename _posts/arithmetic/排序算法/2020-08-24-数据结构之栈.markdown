@@ -182,3 +182,47 @@ Stack类继承了Vector类。先看下Vector的属性
         elementCount--;
         elementData[elementCount] = null; /* to let gc do its work */
     }
+
+#### 1.5、 empty方法，判断栈是否为空
+
+    public boolean empty() {
+        return size() == 0;
+    }
+
+#### 1.4、 search方法，返回栈中对象的位置，从1开始
+
+    // 返回栈中对象的位置，从1开始。如果对象o作为项在栈中存在，方法返回离栈顶最近的距离。
+    //栈中最顶部的项被认为距离为1。
+    public synchronized int search(Object o) {
+        //lastIndexOf返回一个指定的字符串值最后出现的位置,
+        //在一个字符串中的指定位置从后向前搜索
+        int i = lastIndexOf(o);
+ 
+        if (i >= 0) {
+            //所以离栈顶最近的距离需要相减
+            return size() - i;
+        }
+        return -1;
+    }
+ 
+    //Vector里的方法
+    public synchronized int lastIndexOf(Object o) {
+        return lastIndexOf(o, elementCount-1);
+    }
+ 
+    public synchronized int lastIndexOf(Object o, int index) {
+        if (index >= elementCount)
+            throw new IndexOutOfBoundsException(index + " >= "+ elementCount);
+ 
+        //Vector、Stack里可以放null数据
+        if (o == null) {
+            for (int i = index; i >= 0; i--)
+                if (elementData[i]==null)
+                    return i;
+        } else {
+            for (int i = index; i >= 0; i--)
+                if (o.equals(elementData[i]))
+                    return i;
+        }
+        return -1;
+    }
