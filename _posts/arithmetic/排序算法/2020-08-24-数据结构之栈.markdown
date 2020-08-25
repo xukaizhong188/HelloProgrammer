@@ -21,7 +21,7 @@ comments: true
 ### 1、Java源码分析
 在Java中，JDK帮我们实现了栈java.util.Stack。     
 Stack类继承了Vector类，而Vector类继承了AbstractList抽象类，实现了List接口，Cloneable接口，RandomAcces接口以及Serializable接口，需要指出的Vector内部还有两个内部类ListItr和Itr，Itr在继承Vector的同时实现了Iterator接口，而ListItr在继承了Itr类的同时实现了ListIterator接口。
-![img](https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2020-08-24/pic1.png)
+![img](https://xukaizhong188.github.io/HelloProgrammer/images/2020-08-24/pic1.png)
 首先先看下JDK中为我们提供的一些方法：
 
     /**
