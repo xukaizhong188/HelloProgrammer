@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 数据结构之栈!
-date:  2019-08-24
+date:  2020-08-24
 Author: XKZ
 categories: jekyll update
 tags: [算法,数据结构]
@@ -90,12 +90,42 @@ Stack类继承了Vector类。先看下Vector的属性
         return item;
     }
     public synchronized void addElement(E obj) {
+        //使用modCount参数来实现Fail-Fast机制
         modCount++;
+        //确保栈的容量大小不会使新增的数据溢出
         ensureCapacityHelper(elementCount + 1);
+        //赋值
         elementData[elementCount++] = obj;
     }
     
+    private void ensureCapacityHelper(int minCapacity) {
+        // 防止溢出。如果超出数组的可容纳的长度，需要进行扩容操作
+        if (minCapacity - elementData.length > 0)
+            grow(minCapacity);
+    }
+    private void grow(int minCapacity) {
+        // overflow-conscious code
+        int oldCapacity = elementData.length;
+        //如果是Stack的话，数组扩展为原来的两倍
+        int newCapacity = oldCapacity + ((capacityIncrement > 0) ?
+                                         capacityIncrement : oldCapacity);
+        //扩展数组后需要判断两次
+        //第1次是新数组的容量是否比elementCount + 1的小（minCapacity;
+        if (newCapacity - minCapacity < 0)
+            newCapacity = minCapacity;
+        //第2次是新数组的容量是否比指定最大限制Integer.MAX_VALUE - 8 大
+        //如果大，则minCapacity过大，需要判断下
+        if (newCapacity - MAX_ARRAY_SIZE > 0)
+            newCapacity = hugeCapacity(minCapacity);
+        //拷贝数据
+        elementData = Arrays.copyOf(elementData, newCapacity);
+    }
 
-
-
-    
+    //检查容量的int值是不是已经溢出 
+    private static int hugeCapacity(int minCapacity) {
+        if (minCapacity < 0) // overflow
+            throw new OutOfMemoryError();
+        return (minCapacity > MAX_ARRAY_SIZE) ?
+            Integer.MAX_VALUE :
+            MAX_ARRAY_SIZE;
+    }
