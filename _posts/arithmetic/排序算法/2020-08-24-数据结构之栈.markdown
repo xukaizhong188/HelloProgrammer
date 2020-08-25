@@ -83,6 +83,7 @@ Stack类继承了Vector类。先看下Vector的属性
 
 不难看出，栈实现了Vector类，也就代表着Stack的底层是通过数组来实现的。   
 #### 1.2、push方法的实现（压栈的过程）
+
     public E push(E item) {
         //调用Vector的压栈方法
         addElement(item);
@@ -128,7 +129,9 @@ Stack类继承了Vector类。先看下Vector的属性
             Integer.MAX_VALUE :
             MAX_ARRAY_SIZE;
     }
+    
 #### 1.3、 peek方法查找栈顶对象，而不从栈中移走
+
     //查找栈顶对象，而不从栈中移走。
     public synchronized E peek() {
         int len = size();
@@ -148,4 +151,34 @@ Stack类继承了Vector类。先看下Vector的属性
     //返回数据下标为index的值
         return elementData(index);
     }
-#### 1.3、 peek方法查找栈顶对象，而不从栈中移走
+    
+#### 1.4、 pop方法，移走栈顶对象，将该对象作为函数值返回
+
+    //移走栈顶对象，将该对象作为函数值返回
+    public synchronized E pop() {
+        E obj;
+        int len = size();
+ 
+        obj = peek();
+        //len-1的得到值就是数组最后一个数的下标
+        removeElementAt(len - 1);
+        return obj;
+    }
+    //Vector里的方法
+    public synchronized void removeElementAt(int index) {
+        modCount++;
+        //数组下标越界异常出现的情况
+        if (index >= elementCount) {
+            throw new ArrayIndexOutOfBoundsException(index + " >= " + elementCount);
+        } else if (index < 0) {
+            throw new ArrayIndexOutOfBoundsException(index);
+        }
+        //数组中index以后的元素个数，由于Stack调用的该方法，j始终为0
+        int j = elementCount - index - 1;
+        if (j > 0) {
+        // 数组中index以后的元素，整体前移，（这个方法挺有用的！！）  
+            System.arraycopy(elementData, index + 1, elementData, index, j);
+        }
+        elementCount--;
+        elementData[elementCount] = null; /* to let gc do its work */
+    }
