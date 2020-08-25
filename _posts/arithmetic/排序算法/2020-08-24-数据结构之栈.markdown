@@ -17,7 +17,7 @@ comments: true
 栈的优点就是可以很快的找到我们感兴趣的元素，也就是栈顶元素
 ### 2、缺点
 如果想获取最开始的元素，必须清空栈。
-## 实现
+## 三、实现
 ### 1、Java源码分析
 
 在Java中，JDK帮我们实现了栈java.util.Stack。     
@@ -190,9 +190,7 @@ Stack类继承了Vector类。先看下Vector的属性
     }
 
 #### 1.4、 search方法，返回栈中对象的位置，从1开始
-<details>
-<summary>展开查看</summary>
-<pre><code>
+region { 这是折叠区标题的头
 
     // 返回栈中对象的位置，从1开始。如果对象o作为项在栈中存在，方法返回离栈顶最近的距离。
     //栈中最顶部的项被认为距离为1。
@@ -230,6 +228,7 @@ Stack类继承了Vector类。先看下Vector的属性
         return -1;
     }
 
-</code></pre>
-</details>
+} region
     
+    
+### 2、个人实现
