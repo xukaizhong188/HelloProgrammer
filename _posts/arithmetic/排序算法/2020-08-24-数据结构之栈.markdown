@@ -176,7 +176,7 @@ Stack类继承了Vector类。先看下Vector的属性
         //数组中index以后的元素个数，由于Stack调用的该方法，j始终为0
         int j = elementCount - index - 1;
         if (j > 0) {
-        // 数组中index以后的元素，整体前移，（这个方法挺有用的！！）  
+            // 数组中index以后的元素，整体前移，（这个方法挺有用的！！）  
             System.arraycopy(elementData, index + 1, elementData, index, j);
         }
         elementCount--;
