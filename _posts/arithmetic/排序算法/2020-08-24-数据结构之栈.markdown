@@ -70,7 +70,9 @@ Stack类继承了Vector类。先看下Vector的属性
      * 用于动态的保存元素的个数，即实际元素个数
      */
     protected int elementCount;
-    用来保存Stack的容量（一般情况下应该是大于elementCount）
+    /**
+     * 用来保存Stack的容量（一般情况下应该是大于elementCount）
+     */
     protected int capacityIncrement;
 
 不难看出，栈实现了Vector类，也就代表着Stack的底层是通过数组来实现的
