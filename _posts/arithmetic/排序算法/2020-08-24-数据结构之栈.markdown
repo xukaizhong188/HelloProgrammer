@@ -21,4 +21,57 @@ comments: true
 ### 1、Java源码分析
 在Java中，JDK帮我们实现了栈java.util.Stack。     
 Stack类继承了Vector类，而Vector类继承了AbstractList抽象类，实现了List接口，Cloneable接口，RandomAcces接口以及Serializable接口，需要指出的Vector内部还有两个内部类ListItr和Itr，Itr在继承Vector的同时实现了Iterator接口，而ListItr在继承了Itr类的同时实现了ListIterator接口。
-![img](https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2020-08-24/pic1.jpg)
+![img](https://xukaizhong188.github.io/xukaizhong.github.io/assets/postImages/2020-08-24/pic1.png)
+首先先看下JDK中为我们提供的一些方法：
+
+    /**
+     * 无参的构造方法，创建一个空栈
+     */
+    public Stack() {
+    }
+
+    /**
+     * 向栈顶压入一个元素
+     */
+    public E push(E item) {
+    }
+
+    /**
+     * 移走栈顶对象，将该对象作为函数值返回
+     */
+    public synchronized E pop() {
+    }
+
+    /**
+     * 查找栈顶对象，而不从栈中移走。
+     */
+    public synchronized E peek() {
+    }
+
+    /**
+     * 判断栈是否为空.
+     */
+    public boolean empty() {
+    }
+
+    /**
+     *  返回栈中对象的位置，从1开始。
+     */
+    public synchronized int search(Object o) {
+    }
+
+Stack类继承了Vector类。先看下Vector的属性
+
+    /**
+     * 用于保存Stack中的每个元素
+     */
+    protected Object[] elementData;
+    /**
+     * 用于动态的保存元素的个数，即实际元素个数
+     */
+    protected int elementCount;
+    用来保存Stack的容量（一般情况下应该是大于elementCount）
+    protected int capacityIncrement;
+
+不难看出，栈实现了Vector类，也就代表着Stack的底层是通过数组来实现的
+    
