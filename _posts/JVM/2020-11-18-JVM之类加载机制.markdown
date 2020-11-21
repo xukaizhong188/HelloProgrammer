@@ -180,8 +180,28 @@ protected Class<?> loadClass(String name, boolean resolve)
 - webr容器也有自己的类库，不能与应用程序类库混淆
 - jsp要支持jsp的修改，要支持热修复。
 ## 2、考虑如果使用jdk默认的双亲委派模式加载类是否可以解决以上问题
+第一个问题双亲委派无法结局，无法保证每一个应用程序都使用自己的类，默认加载只关心类的全限定名   
+第二个问题默认的加载方式是可以实现的，因为只有一份，保证了唯一性   
+第三个问题和第一个问题是一样的  
+第四个问题不会完成，因为jsp文件本身也会生成一个classwen文件，及时修改了，但是全限定名还是一样的，会默认进行了加载也就不会重新加载替换，  
+## 3、如何来实现jsp的热修复
+对每一个jsp都对应一个类加载器，那么在一个jsp文件被修改后，要对这个加载器进行卸载，再重新生成一个加载器进行加载，保证每一次修改都能重新加载。
+## 3、tomcat主要的几个类加载器：
+commonLoader:Tomcat最基本的类加载器，加载路径中的class可以被Tomcat容器本身以及各个Webapp访问;  
+catalinaLoader:Tomcat容器私有的类加载器，加载路径中的class对于Webapp不可见;   
+sharedLoader:各个Webapp共享的类加载器，加载路径中的class对于所有
+Webapp可见，但是对于Tomcat容器不可见;   
+WebappClassLoader:各个Webapp私有的类加载器，加载路径中的class只对当前Webapp可见，比如加载war包里相关的类，每个war包应用都有自己的WebappClassLoader，实现相互隔离，比如不同war包应用引入了不同的spring版本， 这样实现就能加载各自的spring版本;  
+JsperLoader:加载jsp文件的class。
+
+从图中的委派关系中可以看出: CommonClassLoader能加载的类都可以被CatalinaClassLoader和SharedClassLoader使用， 从而实现了公有类库的共用，   
+而CatalinaClassLoader和SharedClassLoader自己能加载的类则 与对方相互隔离。   
+WebAppClassLoader可以使用SharedClassLoader加载到的类，但各个WebAppClassLoader 实例之间相互隔离。  
+而JasperLoader的加载范围仅仅是这个JSP文件所编译出来的那一个.Class文件，它出现的目的就是为了被丢弃:  
+当Web容器检测到JSP文件被修改时，会替换掉目前的JasperLoader的实例， 
+并通过再建立一个新的Jsp类加载器来实现JSP文件的热加载功能。
 
 # 五、手写Tomcat类加载器实现多版本代码共存隔离
-
+同实现打破双亲委派类似，对wab应用进行包的区分来完成代码的隔离。
 # 六、附录
 Javap -v xx.class
