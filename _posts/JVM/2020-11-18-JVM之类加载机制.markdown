@@ -12,8 +12,6 @@ comments: true
 一个类在windows下会先创建Java虚拟机；   
 然后会创建一个引导类加载器实例；   
 C++会调用Java代码创建JVM启动器实例sun.misc.Launcher（引导类加载器负责加载创建其他类加载器）；   
-
-
 ## 1、类加载的过程：  
 加载  验证  准备   解析  初始化   使用  卸载
 ### 1.1、加载
@@ -29,15 +27,10 @@ C++会调用Java代码创建JVM启动器实例sun.misc.Launcher（引导类加�
 ### 1.5、初始化
 对静态变量初始化为指定的值，执行静态代码块
 ### 1.6、使用
-
 ### 1.7、卸载：
-
-
 类被加载到方法区后主要包含运行时常量池、类型信息、字段信息、方法信息、类加载器的引用、对应class实例的引用等信息  
-
 类加载是一种懒加载（只有在用到的时候才会加载）
-
-## 2、类加载器classloader
+## 2、类加载器classloader有那些
 引导类：负责加载支撑JVM运行的位于JRE的lib目录下的核心类库，比如 rt.jar、charsets.jar等  
 扩展类：负责加载支撑JVM运行的位于JRE的lib目录下的ext扩展目录中的JAR 类包  
 应用程序类：负责加载ClassPath路径下的类包，主要就是加载你自己写的那 些类  
@@ -47,10 +40,10 @@ C++会调用Java代码创建JVM启动器实例sun.misc.Launcher（引导类加�
 
 ### 3.1、什么是双亲委派机制
 在加载一个类的时候，会先使用他的上级加载器加载此类，进行向上委托，父加载器加载失败会交给子加载器。
-### 3.2、为什么从应用程序类加载而不是从引导类开始  
+### 3.2、双亲委派为什么从应用程序类加载而不是从引导类开始  
 launcher类会调用getClassLoader 返回load,这个在初始化的时候 会最先返回appclassLoad,JVM源码就是这样实现的  
 其实在实际运用过程中95%的类都是自己开发的类，那么在第一次加载的时候，利用双亲委派即可加载到所有的类的，这样在后续使用过程中直接使用即可，如果从引导类开始加载，那么每次都需要从引导类开始。
-### 3.3、加载的过程
+### 3.3、双亲委派加载的过程（可参考下方的源码）
 先判断此类是否加载过findLoaderClass,如果加载过直接返回，不再进行加载；
 如果为空则会判断父加载器是否为空，如果不为空委派给父加载器，直到父加载器为空，会调用引导类加载器加载此类，
 当引导类加载器能加载到此类，则返回，
@@ -58,22 +51,143 @@ launcher类会调用getClassLoader 返回load,这个在初始化的时候 会最
 ### 3.4、为什么要设计双亲委派机制
 沙箱安全机制：自己实现的jdk源码的核心类库，是无法被加载的，保证核心类库不被篡改；   
 避免类的重复加载:当父加载器加载了类后，就没必要交由子加载器加载,保证加载过程的唯一性。
-
-双亲委派核心实现在ClassLoader中的loadClass方法
-
 ## 4、全盘负责委托机制
 当一个加载器加载一个类的时候，除非是显示的使用另一种加载器，否则的话这个类所依赖的类也会用同一个加载器去加载，比如自定义一个Main类，在加载这个类的时候回使用AppClassLoad，同时Main类依赖了
 User类，那么在加载User类时也会使用AppClassLoad加载完成。
 ## 5、自定义加载器示例：
 自定义类加载器只需要继承 java.lang.ClassLoader 类，该类有两个核心方法，一个是 loadClass(String, boolean)，实现了双亲委派机制，还有一个方法是findClass，默认实现是空 方法，
 所以我们自定义类加载器主要是重写 方法。
+### 自定义加载器默认父加载器为应用程序类加载器
+继承ClassLoad类，该类的构造方法的会进行赋值，会调用initSystemClassLoad，该方法获取的即为appClassLoad，这样保证了双亲委派机制。
 ````
-
+待补充
 ````
 
 # 二、从JDK源码级别剖析JVM核心类加载器
-# 三、手写自定义类加载器打破双亲委派机制
+类加载器的核心方法
+````
+protected Class<?> loadClass(String name, boolean resolve)
+        throws ClassNotFoundException
+{
+    synchronized (getClassLoadingLock(name)) {
+        // First, check if the class has already been loaded
+        Class<?> c = findLoadedClass(name); //检查该类是否加载过了
+        if (c == null) {
+            //没加载到
+            long t0 = System.nanoTime();
+            //双亲委派实现
+            try {
+                if (parent != null) {//判断父加载器是否为空，委派过程
+                    c = parent.loadClass(name, false);
+                } else {
+                    c = findBootstrapClassOrNull(name);//如果父加载器为空，此时为引导类加载器，判断引导类加载器是否有该类。
+                }
+            } catch (ClassNotFoundException e) {
+                // ClassNotFoundException thrown if class not found
+                // from the non-null parent class loader
+            }
+
+            if (c == null) {
+                // If still not found, then invoke findClass in order
+                // to find the class.
+                long t1 = System.nanoTime();
+                c = findClass(name);//通过一系列方法，调用到了URLclassLoader的findClass实现
+
+                // this is the defining class loader; record the stats
+                sun.misc.PerfCounter.getParentDelegationTime().addTime(t1 - t0);
+                sun.misc.PerfCounter.getFindClassTime().addElapsedTimeFrom(t1);
+                sun.misc.PerfCounter.getFindClasses().increment();
+            }
+        }
+        if (resolve) {
+            resolveClass(c);
+        }
+        return c;
+    }
+}
+````
+以下为URLClassLoad的finderclass实现
+````
+protected Class<?> findClass(final String name)
+        throws ClassNotFoundException
+{
+    final Class<?> result;
+    try {
+        result = AccessController.doPrivileged(
+            new PrivilegedExceptionAction<Class<?>>() {
+                public Class<?> run() throws ClassNotFoundException {
+                    String path = name.replace('.', '/').concat(".class");
+                    Resource res = ucp.getResource(path, false);
+                    if (res != null) {
+                        try {
+                            return defineClass(name, res);//此方法即进行加载的全部过程
+                        } catch (IOException e) {
+                            throw new ClassNotFoundException(name, e);
+                        }
+                    } else {
+                        return null;
+                    }
+                }
+            }, acc);
+    } catch (java.security.PrivilegedActionException pae) {
+        throw (ClassNotFoundException) pae.getException();
+    }
+    if (result == null) {
+        throw new ClassNotFoundException(name);
+    }
+    return result;
+}
+````
+# 三、手写自定义类加载器及打破双亲委派机制
+在加载过程中不在委派父加载器即可，
+````
+protected Class<?> loadClass(String name, boolean resolve)
+        throws ClassNotFoundException
+{
+    synchronized (getClassLoadingLock(name)) {
+        // First, check if the class has already been loaded
+        Class<?> c = findLoadedClass(name); //检查该类是否加载过了
+        if (c == null) {
+            //没加载到
+            long t0 = System.nanoTime();
+            try {
+                if (parent != null) {//判断父加载器是否为空，委派过程
+                    c = parent.loadClass(name, false);
+                } else {
+                    c = findBootstrapClassOrNull(name);//如果父加载器为空，此时为引导类加载器，判断引导类加载器是否有该类。
+                }
+            } catch (ClassNotFoundException e) {
+                // ClassNotFoundException thrown if class not found
+                // from the non-null parent class loader
+            }
+
+            if (c == null) {
+                // If still not found, then invoke findClass in order
+                // to find the class.
+                long t1 = System.nanoTime();
+                c = findClass(name);//通过一系列方法，调用到了URLclassLoader的findClass实现
+
+                // this is the defining class loader; record the stats
+                sun.misc.PerfCounter.getParentDelegationTime().addTime(t1 - t0);
+                sun.misc.PerfCounter.getFindClassTime().addElapsedTimeFrom(t1);
+                sun.misc.PerfCounter.getFindClasses().increment();
+            }
+        }
+        if (resolve) {
+            resolveClass(c);
+        }
+        return c;
+    }
+}
+````
 # 四、Tomcat类加载机制深度剖析
+## 1、思考tomcat在设计过程中要注意哪些点
+- tomcat容器部署多个应用程序的情况，每一个应用程序可能会依赖不同版本的第三方库，需要保证，每个应用程序使用自己的类加载器加载自己的所需要的类。
+- 部署在同一个web容器中的相同类库的相同版本要共享，否则如果服务器有10个应用程序，那么对于这种相同类库就会有10份加载到内存中
+- webr容器也有自己的类库，不能与应用程序类库混淆
+- jsp要支持jsp的修改，要支持热修复。
+## 2、考虑如果使用jdk默认的双亲委派模式加载类是否可以解决以上问题
+
 # 五、手写Tomcat类加载器实现多版本代码共存隔离
 
 # 六、附录
