@@ -8,16 +8,16 @@ tags: [JVM]
 comments: true
 ---
 # 一、JDK体系结构
-![img](https://xukaizhong188.github.io/HelloProgrammer/images/2020-11-18/p3.png)
+![img](https://xukaizhong188.github.io/HelloProgrammer/images/2020-11-21/p3.png)
 # 二、Java语言的跨平台性
-![img](https://xukaizhong188.github.io/HelloProgrammer/images/2020-11-18/p4.png)
+![img](https://xukaizhong188.github.io/HelloProgrammer/images/2020-11-21/p4.png)
 # 三、JVM整体结构及内存模型
-![img](https://xukaizhong188.github.io/HelloProgrammer/images/2020-11-18/p7.png)
+![img](https://xukaizhong188.github.io/HelloProgrammer/images/2020-11-21/p7.jpeg)
 ## 1、JVM的组成
 java虚拟机由类加载子系统、运行时数据区域（内存模型）、字节码执行引擎三部分组成。其中运行时数据区域包含：堆、方法区、程序计数器、java虚拟机栈、本地方法栈。   
 当一个类运行时，首先会由类加载子系统将类加载到运行时数据区域，然后会通过字节码执行引擎进行系统的运算执行。
 ## 2、Java运行时数据区域
-![img](https://xukaizhong188.github.io/HelloProgrammer/images/2020-11-18/p5.png)
+![img](https://xukaizhong188.github.io/HelloProgrammer/images/2020-11-21/p5.png)
 ### 2.1、堆
 new的对象一般都是放在堆中，
 java调优更多的是对堆内存的调优
@@ -48,7 +48,7 @@ java 在调用本地方法的时候分配的内存空间。
 程序运行的行号指示器
 
     
-![img](https://xukaizhong188.github.io/HelloProgrammer/images/2020-11-18/p6.png)
+![img](https://xukaizhong188.github.io/HelloProgrammer/images/2020-11-21/p6.png)
 
 
 
