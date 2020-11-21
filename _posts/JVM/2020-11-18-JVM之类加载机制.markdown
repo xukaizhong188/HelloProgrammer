@@ -174,7 +174,8 @@ protected Class<?> loadClass(String name, boolean resolve)
 ````
 # 四、Tomcat类加载机制深度剖析
 ![img](https://xukaizhong188.github.io/HelloProgrammer/images/2020-11-21/p2.png)
-
+注意：  
+tomcat7以后合并了common、server、shared文件，实际这三个类加载器是同一个实例
 ## 1、思考tomcat在设计过程中要注意哪些点
 - tomcat容器部署多个应用程序的情况，每一个应用程序可能会依赖不同版本的第三方库，需要保证，每个应用程序使用自己的类加载器加载自己的所需要的类。
 - 部署在同一个web容器中的相同类库的相同版本要共享，否则如果服务器有10个应用程序，那么对于这种相同类库就会有10份加载到内存中
