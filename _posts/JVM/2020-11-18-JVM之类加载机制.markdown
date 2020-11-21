@@ -10,8 +10,9 @@ comments: true
 # 一、从java.exe开始认识Java类加载运行全过程
 ![img](https://xukaizhong188.github.io/HelloProgrammer/images/2020-11-18/p1.png)
 一个类在windows下会先创建Java虚拟机；   
-然后会创建一个引导类加载器实例；   
-C++会调用Java代码创建JVM启动器实例sun.misc.Launcher（引导类加载器负责加载创建其他类加载器）；   
+C++会调用Java代码创建JVM启动器实例sun.misc.Launcher（引导类加载器负责加载创建其他类加载器）；  
+然后会创建一个引导类加载器实例，该实例会加载及创建其他类加载器；   
+通过创建的appClassLoader会加载程勋运行的类  
 ## 1、类加载的过程：  
 加载  验证  准备   解析  初始化   使用  卸载
 ### 1.1、加载
