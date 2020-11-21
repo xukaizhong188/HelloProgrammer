@@ -148,30 +148,21 @@ protected Class<?> loadClass(String name, boolean resolve)
         // First, check if the class has already been loaded
         Class<?> c = findLoadedClass(name); //检查该类是否加载过了
         if (c == null) {
-            //没加载到
-            long t0 = System.nanoTime();
-            try {
-                if (parent != null) {//判断父加载器是否为空，委派过程
-                    c = parent.loadClass(name, false);
-                } else {
-                    c = findBootstrapClassOrNull(name);//如果父加载器为空，此时为引导类加载器，判断引导类加载器是否有该类。
-                }
-            } catch (ClassNotFoundException e) {
-                // ClassNotFoundException thrown if class not found
-                // from the non-null parent class loader
-            }
-
-            if (c == null) {
+            //对指定类打破双亲委派
+            if(!name.equals("xxx")){
+                parent.loadClass(name, false);
+            }else{
                 // If still not found, then invoke findClass in order
                 // to find the class.
                 long t1 = System.nanoTime();
                 c = findClass(name);//通过一系列方法，调用到了URLclassLoader的findClass实现
-
+        
                 // this is the defining class loader; record the stats
                 sun.misc.PerfCounter.getParentDelegationTime().addTime(t1 - t0);
                 sun.misc.PerfCounter.getFindClassTime().addElapsedTimeFrom(t1);
                 sun.misc.PerfCounter.getFindClasses().increment();
             }
+            
         }
         if (resolve) {
             resolveClass(c);
