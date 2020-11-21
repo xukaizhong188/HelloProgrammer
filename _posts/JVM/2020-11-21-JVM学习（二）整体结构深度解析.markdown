@@ -59,5 +59,7 @@ d、对象组成部分：
     
 ![img](https://xukaizhong188.github.io/HelloProgrammer/images/2020-11-21/p6.png)
 
+思考：为什么分代年龄最大是15？   
+在对象头中分代年龄只占4字节最大为15
 
 
