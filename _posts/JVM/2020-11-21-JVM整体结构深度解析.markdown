@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 2020-11-21-JVM整体结构深度解析
+title: JVM学习（二）整体结构深度解析
 date:  2020-11-21
 Author: XKZ
 categories: jekyll update
