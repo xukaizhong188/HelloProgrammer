@@ -1,0 +1,14 @@
+---
+layout: post
+title: JVM学习（四）垃圾收集算法
+date:  2020-11-24
+Author: XKZ
+categories: jekyll update
+tags: [JVM]
+comments: true
+---
+# 一、垃圾收集算法
+## 1.1、分代收集理论
+## 1.2、复制算法
+## 1.3、标记整理法
+## 1.4、标记清理法
