@@ -8,3 +8,15 @@ tags: [JVM]
 comments: true
 ---
 # 垃圾收集算法
+![img](https://xukaizhong188.github.io/HelloProgrammer/images/2020-11-30/p1.jpg)
+垃圾收集器就是垃圾收集算法的具体实现
+## 1、Serial收集器(-XX:+UseSerialGC -XX:+UseSerialOldGC)
+![img](https://xukaizhong188.github.io/HelloProgrammer/images/2020-11-30/p2.jpg)
+可使用于年轻代和老年代
+使用的收集算法：
+使用方法：
+问题：
+Serial Old
+优点：
+## 2、Parallel Scavenge收集器(-XX:+UseParallelGC(年轻代),-XX:+UseParallelOldGC(老年代))
+![img](https://xukaizhong188.github.io/HelloProgrammer/images/2020-11-30/p3.jpg)
