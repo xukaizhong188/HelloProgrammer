@@ -1,7 +1,7 @@
 ---
 layout: post
 title: JVM学习（五）垃圾收集器
-date:  2020-11-24
+date:  2020-11-30
 Author: XKZ
 categories: jekyll update
 tags: [JVM]
