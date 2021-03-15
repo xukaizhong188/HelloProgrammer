@@ -128,4 +128,5 @@ comments: true
         }
     }
  
-[参考：设计模式-工厂模式](http://c.biancheng.net/view/8385.html "工厂模式").
+[参考：设计模式-简单工厂模式](http://c.biancheng.net/view/8385.html "简单工厂模式").
+[参考：设计模式-工厂方法模式](http://c.biancheng.net/view/1348.html "工厂方法模式").
