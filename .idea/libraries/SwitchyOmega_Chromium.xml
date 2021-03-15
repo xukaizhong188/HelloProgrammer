@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SwitchyOmega_Chromium">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/_posts/toolPackage/SwitchyOmega_Chromium.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
