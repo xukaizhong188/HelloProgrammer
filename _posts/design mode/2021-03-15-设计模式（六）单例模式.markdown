@@ -1,0 +1,10 @@
+---
+layout: post
+title: 设计模式（五）原型模式!
+date:  2021-03-15
+Author: XKZ
+categories: jekyll update
+tags: [设计模式]
+comments: true
+---
+[参考：设计模式-建造者模式](http://c.biancheng.net/view/1354.html "建造者模式").

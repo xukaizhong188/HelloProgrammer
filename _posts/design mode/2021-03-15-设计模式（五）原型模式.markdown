@@ -58,4 +58,4 @@ clone 方法位于类的内部，当对已有类进行改造的时候，需要�
 ## 7、扩展
 原型模式可扩展为带原型管理器的原型模式，它在原型模式的基础上增加了一个原型管理器 PrototypeManager 类。该类用 HashMap 保存多个复制的原型，Client 类可以通过管理器的 get(String id) 方法从中获取复制的原型
 
-[参考：设计模式-建造者模式](http://c.biancheng.net/view/1354.html "建造者模式").
+[参考：设计模式-原型模式](http://c.biancheng.net/view/1343.html "原型模式").
