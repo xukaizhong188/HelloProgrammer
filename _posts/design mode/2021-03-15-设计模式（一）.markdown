@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 设计模式（一）!
-date:  2018-09-20
+date:  2021-03-15
 Author: XKZ
 categories: jekyll update
 tags: [设计模式]

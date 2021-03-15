@@ -1,0 +1,10 @@
+---
+layout: post
+title: 设计模式（二）工厂模式!
+date:  2021-03-15
+Author: XKZ
+categories: jekyll update
+tags: [设计模式]
+comments: true
+---
+# 简介
