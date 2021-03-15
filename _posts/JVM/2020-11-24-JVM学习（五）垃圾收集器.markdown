@@ -22,3 +22,13 @@ Serial Old
 ![img](https://xukaizhong188.github.io/HelloProgrammer/images/2020-11-30/p3.png)
 ## 3、ParNew收集器(-XX:+UseParNewGC)
 ![img](https://xukaizhong188.github.io/HelloProgrammer/images/2020-11-30/p4.png)
+ParNew收集器和Parallel类似，主要区别是可以和CMS一起使用
+## 4、CMS(-XX:+UseConcMarkSweepGC(old))
+CSM是一种以获取最短停顿时间为目标的垃圾收集器，符合注重在用户体验上的的应用使用，它第一次实现了让垃圾收集线程与用户线程 (基本上)同时工作。   
+实现算法：标记清除
+![img](https://xukaizhong188.github.io/HelloProgrammer/images/2020-12-29/p1.jpg)
+初始标记：stw,并记录下gc roots直接能引用的对象，速度很快。
+并发标记：并发标记阶段就是从GC Roots的直接关联对象开始遍历整个对象图的过程， 这个过程耗时较长但 是不需要停顿用户线程， 可以与垃圾收集线程一起并发运行。因为用户程序继续运行，可能会有导致已经标记过的 对象状态发生改变。
+重新标记：
+并发清理：
+并发重置：

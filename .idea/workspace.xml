@@ -1,0 +1,1054 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="77c556c3-53bb-4355-b949-1891935d585c" name="Default" comment="** 类加载器面试题增加">
+      <change beforePath="$PROJECT_DIR$/_posts/JVM/05-VIP-垃圾收集器ParNew&amp;CMS与底层三色标记算法详解.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/JVM/05-VIP-垃圾收集器ParNew&amp;CMS与底层三色标记算法详解.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/JVM/2020-11-24-JVM学习（五）垃圾收集器.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/JVM/2020-11-24-JVM学习（五）垃圾收集器.markdown" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="$USER_HOME$/.m2/settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1dMHxRxnlIFoX1zH78bAcNSHPN3" />
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Abstraction issuesJava</id>
+          </State>
+          <State>
+            <id>Android</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Accessibility</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Correctness</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Correctness &gt; Messages</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Internationalization</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Lint</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Performance</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Security</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Usability</id>
+          </State>
+          <State>
+            <id>Android &gt; Lint &gt; Usability &gt; Icons</id>
+          </State>
+          <State>
+            <id>Android Lint for Kotlin</id>
+          </State>
+          <State>
+            <id>Assignment issuesGroovy</id>
+          </State>
+          <State>
+            <id>Assignment issuesJava</id>
+          </State>
+          <State>
+            <id>Assignment issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Bitwise operation issuesJava</id>
+          </State>
+          <State>
+            <id>Bitwise operation issuesJavaScript</id>
+          </State>
+          <State>
+            <id>CDI(Contexts and Dependency Injection) issues</id>
+          </State>
+          <State>
+            <id>CSS</id>
+          </State>
+          <State>
+            <id>Class structureJava</id>
+          </State>
+          <State>
+            <id>Code maturity issuesJava</id>
+          </State>
+          <State>
+            <id>Code quality toolsJavaScript</id>
+          </State>
+          <State>
+            <id>Code style issuesJava</id>
+          </State>
+          <State>
+            <id>CodeSpring CoreSpring</id>
+          </State>
+          <State>
+            <id>CoffeeScript</id>
+          </State>
+          <State>
+            <id>Control flow issuesGroovy</id>
+          </State>
+          <State>
+            <id>Control flow issuesJava</id>
+          </State>
+          <State>
+            <id>Control flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>DOM issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Declaration redundancyJava</id>
+          </State>
+          <State>
+            <id>ECMAScript 6 migration aidsJavaScript</id>
+          </State>
+          <State>
+            <id>Error handlingJavaScript</id>
+          </State>
+          <State>
+            <id>FreeMarker inspections</id>
+          </State>
+          <State>
+            <id>GPathGroovy</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>GeneralJava</id>
+          </State>
+          <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
+            <id>Google App Engine</id>
+          </State>
+          <State>
+            <id>Groovy</id>
+          </State>
+          <State>
+            <id>Guice Inspections</id>
+          </State>
+          <State>
+            <id>HTML</id>
+          </State>
+          <State>
+            <id>Initialization issuesJava</id>
+          </State>
+          <State>
+            <id>Internationalization issuesJava</id>
+          </State>
+          <State>
+            <id>J2ME issuesJava</id>
+          </State>
+          <State>
+            <id>JUnit issuesJava</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Java 5Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java 8Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java interop issuesKotlin</id>
+          </State>
+          <State>
+            <id>Java language level issuesJava</id>
+          </State>
+          <State>
+            <id>Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Javadoc issuesJava</id>
+          </State>
+          <State>
+            <id>Kotlin</id>
+          </State>
+          <State>
+            <id>Logging issuesJava</id>
+          </State>
+          <State>
+            <id>Memory issuesJava</id>
+          </State>
+          <State>
+            <id>Naming conventionsGroovy</id>
+          </State>
+          <State>
+            <id>Naming conventionsJava</id>
+          </State>
+          <State>
+            <id>Naming conventionsJavaScript</id>
+          </State>
+          <State>
+            <id>Naming conventionsKotlin</id>
+          </State>
+          <State>
+            <id>Numeric issuesJava</id>
+          </State>
+          <State>
+            <id>Other problemsKotlin</id>
+          </State>
+          <State>
+            <id>Performance issuesJava</id>
+          </State>
+          <State>
+            <id>Portability issuesJava</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsGroovy</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsJavaScript</id>
+          </State>
+          <State>
+            <id>Probable bugsCSS</id>
+          </State>
+          <State>
+            <id>Probable bugsCoffeeScript</id>
+          </State>
+          <State>
+            <id>Probable bugsGroovy</id>
+          </State>
+          <State>
+            <id>Probable bugsJava</id>
+          </State>
+          <State>
+            <id>Probable bugsJavaScript</id>
+          </State>
+          <State>
+            <id>Probable bugsKotlin</id>
+          </State>
+          <State>
+            <id>Properties Files</id>
+          </State>
+          <State>
+            <id>RELAX NG</id>
+          </State>
+          <State>
+            <id>Redundant constructsKotlin</id>
+          </State>
+          <State>
+            <id>Reflective access issuesJava</id>
+          </State>
+          <State>
+            <id>SQL</id>
+          </State>
+          <State>
+            <id>Security issuesJava</id>
+          </State>
+          <State>
+            <id>Spring</id>
+          </State>
+          <State>
+            <id>Spring CoreSpring</id>
+          </State>
+          <State>
+            <id>Struts</id>
+          </State>
+          <State>
+            <id>Struts 1Struts</id>
+          </State>
+          <State>
+            <id>Struts 2Struts</id>
+          </State>
+          <State>
+            <id>Style issuesKotlin</id>
+          </State>
+          <State>
+            <id>StyleGroovy</id>
+          </State>
+          <State>
+            <id>Threading issuesJava</id>
+          </State>
+          <State>
+            <id>UI Form Problems</id>
+          </State>
+          <State>
+            <id>Velocity inspections</id>
+          </State>
+          <State>
+            <id>Visibility issuesJava</id>
+          </State>
+          <State>
+            <id>WebSocket issues</id>
+          </State>
+          <State>
+            <id>XPath</id>
+          </State>
+          <State>
+            <id>XSLT</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SearchEverywhereHistoryKey" value="模型&#9;null&#9;null" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images/2020-12-29" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images/2020-12-29" />
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$/_posts/gavua" />
+      <recent name="$PROJECT_DIR$/_posts/JVM" />
+      <recent name="$PROJECT_DIR$/images/2020-11-24" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images/2020-11-30" />
+      <recent name="$PROJECT_DIR$/_posts/JVM" />
+      <recent name="$PROJECT_DIR$/images/2020-11-18" />
+      <recent name="$PROJECT_DIR$/_posts/arithmetic/数据结构" />
+      <recent name="$PROJECT_DIR$/images/2019-08-24" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="77c556c3-53bb-4355-b949-1891935d585c" name="Default" comment="" />
+      <created>1578447816693</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1578447816693</updated>
+      <workItem from="1578447818234" duration="6280000" />
+      <workItem from="1578533050291" duration="2715000" />
+      <workItem from="1578619587611" duration="6829000" />
+      <workItem from="1578881419648" duration="712000" />
+      <workItem from="1578918505689" duration="6000" />
+      <workItem from="1580027078113" duration="4482000" />
+      <workItem from="1580261261651" duration="518000" />
+      <workItem from="1580263515136" duration="4230000" />
+      <workItem from="1580349554313" duration="1952000" />
+      <workItem from="1580437415973" duration="597000" />
+      <workItem from="1580543602359" duration="815000" />
+      <workItem from="1580657124908" duration="101000" />
+      <workItem from="1580714986083" duration="3018000" />
+      <workItem from="1580865510812" duration="1211000" />
+      <workItem from="1580971746178" duration="4675000" />
+      <workItem from="1581129833980" duration="195000" />
+      <workItem from="1581296713746" duration="598000" />
+      <workItem from="1592228291755" duration="472000" />
+      <workItem from="1592270287374" duration="1764000" />
+      <workItem from="1592357450434" duration="1294000" />
+      <workItem from="1596446094043" duration="4008000" />
+      <workItem from="1596450473413" duration="2547000" />
+      <workItem from="1596506666372" duration="2619000" />
+      <workItem from="1596536644429" duration="1195000" />
+      <workItem from="1596590907270" duration="3350000" />
+      <workItem from="1596677395776" duration="2394000" />
+      <workItem from="1596767121752" duration="7839000" />
+      <workItem from="1597023576606" duration="435000" />
+      <workItem from="1597024046867" duration="12702000" />
+      <workItem from="1597055701417" duration="4403000" />
+      <workItem from="1597067460931" duration="488000" />
+      <workItem from="1597108866403" duration="298000" />
+      <workItem from="1597109208478" duration="13065000" />
+      <workItem from="1597195898346" duration="2794000" />
+      <workItem from="1597228456573" duration="598000" />
+      <workItem from="1597233680457" duration="4588000" />
+      <workItem from="1597283903184" duration="2053000" />
+      <workItem from="1597369512293" duration="1142000" />
+      <workItem from="1597388877423" duration="1200000" />
+      <workItem from="1597628494527" duration="282000" />
+      <workItem from="1597628841950" duration="4272000" />
+      <workItem from="1597667623106" duration="4327000" />
+      <workItem from="1597715055053" duration="3894000" />
+      <workItem from="1597801500041" duration="1682000" />
+      <workItem from="1597820326049" duration="597000" />
+      <workItem from="1597887504791" duration="1196000" />
+      <workItem from="1597975471790" duration="395000" />
+      <workItem from="1597976000315" duration="600000" />
+      <workItem from="1597981163241" duration="598000" />
+      <workItem from="1597982350309" duration="598000" />
+      <workItem from="1598234898972" duration="1222000" />
+      <workItem from="1598276375996" duration="3789000" />
+      <workItem from="1598320038189" duration="598000" />
+      <workItem from="1598324570150" duration="547000" />
+      <workItem from="1598325151990" duration="4784000" />
+      <workItem from="1598406363404" duration="2318000" />
+      <workItem from="1598493191633" duration="597000" />
+      <workItem from="1598580381710" duration="598000" />
+      <workItem from="1598618221795" duration="646000" />
+      <workItem from="1598682514159" duration="15000" />
+      <workItem from="1598682606752" duration="1186000" />
+      <workItem from="1598750367015" duration="602000" />
+      <workItem from="1598794326971" duration="1196000" />
+      <workItem from="1598838158982" duration="2717000" />
+      <workItem from="1598927256226" duration="597000" />
+      <workItem from="1598941730822" duration="636000" />
+      <workItem from="1598966889445" duration="598000" />
+      <workItem from="1599012464464" duration="598000" />
+      <workItem from="1599115838417" duration="598000" />
+      <workItem from="1599186728732" duration="1195000" />
+      <workItem from="1599277006615" duration="598000" />
+      <workItem from="1599371869124" duration="260000" />
+      <workItem from="1599442230611" duration="779000" />
+      <workItem from="1599472153770" duration="648000" />
+      <workItem from="1599531657281" duration="1603000" />
+      <workItem from="1599617160100" duration="598000" />
+      <workItem from="1599619063089" duration="1262000" />
+      <workItem from="1599700657661" duration="1183000" />
+      <workItem from="1599810500092" duration="598000" />
+      <workItem from="1599886358422" duration="640000" />
+      <workItem from="1600046602225" duration="3337000" />
+      <workItem from="1600134724043" duration="1232000" />
+      <workItem from="1600227784055" duration="279000" />
+      <workItem from="1600228114115" duration="1220000" />
+      <workItem from="1600270474278" duration="598000" />
+      <workItem from="1600325139572" duration="598000" />
+      <workItem from="1600392413720" duration="599000" />
+      <workItem from="1600670851424" duration="596000" />
+      <workItem from="1600738603795" duration="602000" />
+      <workItem from="1600857729810" duration="1848000" />
+      <workItem from="1600916669070" duration="11409000" />
+      <workItem from="1600998161155" duration="312000" />
+      <workItem from="1601000790722" duration="1204000" />
+      <workItem from="1601046552463" duration="179000" />
+      <workItem from="1601189042104" duration="1198000" />
+      <workItem from="1601257243031" duration="1200000" />
+      <workItem from="1601287302531" duration="599000" />
+      <workItem from="1601307527837" duration="653000" />
+      <workItem from="1602166970119" duration="1287000" />
+      <workItem from="1602168290983" duration="68000" />
+      <workItem from="1602225106413" duration="56000" />
+      <workItem from="1602225365286" duration="598000" />
+      <workItem from="1602316394758" duration="20000" />
+      <workItem from="1602316613184" duration="597000" />
+      <workItem from="1602473339288" duration="623000" />
+      <workItem from="1602509793087" duration="1198000" />
+      <workItem from="1602572398863" duration="624000" />
+      <workItem from="1602589200117" duration="598000" />
+      <workItem from="1602641775285" duration="1196000" />
+      <workItem from="1602725536423" duration="2394000" />
+      <workItem from="1602845337841" duration="673000" />
+      <workItem from="1602854015382" duration="598000" />
+      <workItem from="1603078220916" duration="598000" />
+      <workItem from="1603174108101" duration="1198000" />
+      <workItem from="1603267626397" duration="599000" />
+      <workItem from="1603358300113" duration="848000" />
+      <workItem from="1603363840988" duration="980000" />
+      <workItem from="1603419319368" duration="1199000" />
+      <workItem from="1603612004905" duration="617000" />
+      <workItem from="1603678420063" duration="259000" />
+      <workItem from="1603733880742" duration="598000" />
+      <workItem from="1603809967157" duration="597000" />
+      <workItem from="1603871644644" duration="1197000" />
+      <workItem from="1603887368844" duration="597000" />
+      <workItem from="1603937629442" duration="2165000" />
+      <workItem from="1603965475934" duration="598000" />
+      <workItem from="1604040542177" duration="2937000" />
+      <workItem from="1604052376025" duration="598000" />
+      <workItem from="1604054969558" duration="1202000" />
+      <workItem from="1604139392203" duration="824000" />
+      <workItem from="1604140255710" duration="1197000" />
+      <workItem from="1604223226339" duration="597000" />
+      <workItem from="1604282821048" duration="1855000" />
+      <workItem from="1604368091910" duration="1198000" />
+      <workItem from="1604404458957" duration="597000" />
+      <workItem from="1604412889326" duration="598000" />
+      <workItem from="1604454984061" duration="603000" />
+      <workItem from="1604665603082" duration="2290000" />
+      <workItem from="1604889309575" duration="3018000" />
+      <workItem from="1604973605337" duration="1325000" />
+      <workItem from="1605060283524" duration="1285000" />
+      <workItem from="1605079440164" duration="1196000" />
+      <workItem from="1605163067001" duration="597000" />
+      <workItem from="1605167182130" duration="598000" />
+      <workItem from="1605234220209" duration="734000" />
+      <workItem from="1605493156891" duration="787000" />
+      <workItem from="1605494002413" duration="2254000" />
+      <workItem from="1605580902965" duration="1354000" />
+      <workItem from="1605605127421" duration="598000" />
+      <workItem from="1605665593366" duration="7748000" />
+      <workItem from="1605698625319" duration="1711000" />
+      <workItem from="1605774273180" duration="1198000" />
+      <workItem from="1605840607864" duration="598000" />
+      <workItem from="1605924230510" duration="18198000" />
+      <workItem from="1606064376837" duration="371000" />
+      <workItem from="1606097681263" duration="13523000" />
+      <workItem from="1606183052035" duration="6309000" />
+      <workItem from="1606305531379" duration="598000" />
+      <workItem from="1606356084970" duration="598000" />
+      <workItem from="1606463374940" duration="643000" />
+      <workItem from="1606547847507" duration="217000" />
+      <workItem from="1606703193546" duration="11370000" />
+      <workItem from="1606787541149" duration="1224000" />
+      <workItem from="1606825024942" duration="3514000" />
+      <workItem from="1606873781698" duration="449000" />
+      <workItem from="1606874274025" duration="3261000" />
+      <workItem from="1606960664864" duration="1196000" />
+      <workItem from="1606991313103" duration="1992000" />
+      <workItem from="1607049913062" duration="598000" />
+      <workItem from="1607052821566" duration="596000" />
+      <workItem from="1607081023016" duration="608000" />
+      <workItem from="1607163624070" duration="544000" />
+      <workItem from="1607164203528" duration="1196000" />
+      <workItem from="1607308930708" duration="1281000" />
+      <workItem from="1607393272810" duration="1794000" />
+      <workItem from="1607479281958" duration="1626000" />
+      <workItem from="1607565486211" duration="598000" />
+      <workItem from="1607606562766" duration="633000" />
+      <workItem from="1607653924420" duration="1197000" />
+      <workItem from="1607706843405" duration="100000" />
+      <workItem from="1607709479883" duration="598000" />
+      <workItem from="1607910990637" duration="607000" />
+      <workItem from="1607911969436" duration="1221000" />
+      <workItem from="1607933377414" duration="598000" />
+      <workItem from="1608000913732" duration="597000" />
+      <workItem from="1608005810377" duration="1681000" />
+      <workItem from="1608013573035" duration="1199000" />
+      <workItem from="1608034695561" duration="6000" />
+      <workItem from="1608034725300" duration="598000" />
+      <workItem from="1608086949921" duration="3622000" />
+      <workItem from="1608105391716" duration="598000" />
+      <workItem from="1608106734448" duration="69000" />
+      <workItem from="1608107087726" duration="35000" />
+      <workItem from="1608107144763" duration="468000" />
+      <workItem from="1608108398442" duration="116000" />
+      <workItem from="1608108747304" duration="11000" />
+      <workItem from="1609224935486" duration="6260000" />
+      <workItem from="1609293544556" duration="1738000" />
+      <workItem from="1609384264366" duration="1517000" />
+      <workItem from="1609766505851" duration="381000" />
+      <workItem from="1609811627565" duration="1094000" />
+      <workItem from="1614159558129" duration="730000" />
+      <workItem from="1614217449365" duration="596000" />
+      <workItem from="1614303594541" duration="1649000" />
+      <workItem from="1614395737961" duration="339000" />
+      <workItem from="1614396138543" duration="598000" />
+    </task>
+    <task id="LOCAL-00105" summary="** 类加载机制">
+      <created>1605927685527</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1605927685528</updated>
+    </task>
+    <task id="LOCAL-00106" summary="** 类加载机制">
+      <created>1605930729295</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1605930729295</updated>
+    </task>
+    <task id="LOCAL-00107" summary="** 类加载机制">
+      <created>1605930901632</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1605930901632</updated>
+    </task>
+    <task id="LOCAL-00108" summary="** 类加载机制">
+      <created>1605931015883</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1605931015883</updated>
+    </task>
+    <task id="LOCAL-00109" summary="** 类加载机制">
+      <created>1605931804009</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1605931804009</updated>
+    </task>
+    <task id="LOCAL-00110" summary="** 类加载机制">
+      <created>1605932082719</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1605932082719</updated>
+    </task>
+    <task id="LOCAL-00111" summary="** 类加载机制">
+      <created>1605932335356</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1605932335356</updated>
+    </task>
+    <task id="LOCAL-00112" summary="** 类加载机制">
+      <created>1605932699523</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1605932699523</updated>
+    </task>
+    <task id="LOCAL-00113" summary="** 类加载机制">
+      <created>1605934300659</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1605934300659</updated>
+    </task>
+    <task id="LOCAL-00114" summary="**JVM整体结构解析">
+      <created>1605934380042</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1605934380042</updated>
+    </task>
+    <task id="LOCAL-00115" summary="**JVM整体结构解析">
+      <created>1605934480165</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1605934480165</updated>
+    </task>
+    <task id="LOCAL-00116" summary="**JVM整体结构解析">
+      <created>1605934520288</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1605934520288</updated>
+    </task>
+    <task id="LOCAL-00117" summary="**JVM整体结构解析">
+      <created>1605934568843</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1605934568843</updated>
+    </task>
+    <task id="LOCAL-00118" summary="**JVM整体结构解析">
+      <created>1605934760022</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1605934760022</updated>
+    </task>
+    <task id="LOCAL-00119" summary="**JVM整体结构解析">
+      <created>1605934827590</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1605934827590</updated>
+    </task>
+    <task id="LOCAL-00120" summary="**JVM整体结构解析">
+      <created>1605935453140</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1605935453140</updated>
+    </task>
+    <task id="LOCAL-00121" summary="**JVM整体结构解析">
+      <created>1605935536151</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1605935536152</updated>
+    </task>
+    <task id="LOCAL-00122" summary="**JVM整体结构解析">
+      <created>1605935671082</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1605935671082</updated>
+    </task>
+    <task id="LOCAL-00123" summary="**JVM整体结构解析">
+      <created>1605935687527</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1605935687527</updated>
+    </task>
+    <task id="LOCAL-00124" summary="**JVM整体结构解析">
+      <created>1605935719407</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1605935719407</updated>
+    </task>
+    <task id="LOCAL-00125" summary="**JVM整体结构解析">
+      <created>1605935746182</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1605935746182</updated>
+    </task>
+    <task id="LOCAL-00126" summary="**JVM整体结构解析">
+      <created>1605935828597</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1605935828597</updated>
+    </task>
+    <task id="LOCAL-00127" summary="**JVM整体结构解析">
+      <created>1605937122803</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1605937122803</updated>
+    </task>
+    <task id="LOCAL-00128" summary="**JVM整体结构解析">
+      <created>1605937289833</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1605937289833</updated>
+    </task>
+    <task id="LOCAL-00129" summary="**JVM整体结构解析">
+      <created>1605937805204</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1605937805204</updated>
+    </task>
+    <task id="LOCAL-00130" summary="**JVM整体结构解析">
+      <created>1605938129380</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1605938129380</updated>
+    </task>
+    <task id="LOCAL-00131" summary="**JVM整体结构解析">
+      <created>1605938538207</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1605938538207</updated>
+    </task>
+    <task id="LOCAL-00132" summary="**JVM整体结构解析">
+      <created>1605938581110</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1605938581110</updated>
+    </task>
+    <task id="LOCAL-00133" summary="**JVM整体结构解析">
+      <created>1605939096253</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1605939096253</updated>
+    </task>
+    <task id="LOCAL-00134" summary="**JVM整体结构解析">
+      <created>1605940058686</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1605940058686</updated>
+    </task>
+    <task id="LOCAL-00135" summary="**JVM整体结构解析">
+      <created>1605940382882</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1605940382882</updated>
+    </task>
+    <task id="LOCAL-00136" summary="**JVM整体结构解析">
+      <created>1605943281705</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1605943281706</updated>
+    </task>
+    <task id="LOCAL-00137" summary="**JVM整体结构解析">
+      <created>1606116454537</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1606116454537</updated>
+    </task>
+    <task id="LOCAL-00138" summary="**JVM整体结构解析">
+      <created>1606116554300</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1606116554300</updated>
+    </task>
+    <task id="LOCAL-00139" summary="**JVM整体结构解析">
+      <created>1606119728368</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1606119728368</updated>
+    </task>
+    <task id="LOCAL-00140" summary="**JVM整体结构解析">
+      <created>1606119740092</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1606119740092</updated>
+    </task>
+    <task id="LOCAL-00141" summary="**JVM整体结构解析">
+      <created>1606119908998</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1606119908998</updated>
+    </task>
+    <task id="LOCAL-00142" summary="**JVM整体结构解析">
+      <created>1606136987747</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1606136987747</updated>
+    </task>
+    <task id="LOCAL-00143" summary="**JVM整体结构解析">
+      <created>1606137870825</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1606137870825</updated>
+    </task>
+    <task id="LOCAL-00144" summary="**JVM整体结构解析">
+      <created>1606206455818</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1606206455819</updated>
+    </task>
+    <task id="LOCAL-00145" summary="** 垃圾收集器">
+      <created>1606207542706</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1606207542706</updated>
+    </task>
+    <task id="LOCAL-00146" summary="** 垃圾收集算法">
+      <created>1606726345469</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1606726345469</updated>
+    </task>
+    <task id="LOCAL-00147" summary="** 垃圾收集算法">
+      <created>1606733202250</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1606733202250</updated>
+    </task>
+    <task id="LOCAL-00148" summary="** 垃圾收集算法">
+      <created>1606733226481</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1606733226481</updated>
+    </task>
+    <task id="LOCAL-00149" summary="** 垃圾收集算法">
+      <created>1606739539764</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1606739539764</updated>
+    </task>
+    <task id="LOCAL-00150" summary="** 垃圾收集算法">
+      <created>1606739718780</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1606739718780</updated>
+    </task>
+    <task id="LOCAL-00151" summary="** 垃圾收集算法">
+      <created>1606740122617</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1606740122617</updated>
+    </task>
+    <task id="LOCAL-00152" summary="** 类加载器面试题增加">
+      <created>1606831104426</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1606831104427</updated>
+    </task>
+    <task id="LOCAL-00153" summary="** 类加载器面试题增加">
+      <created>1609232210834</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1609232210835</updated>
+    </task>
+    <option name="localTasksCounter" value="154" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="** 在线工具" />
+    <MESSAGE value="** leetcode" />
+    <MESSAGE value="** 字符串相加LeetCode" />
+    <MESSAGE value="** 二分查找" />
+    <MESSAGE value="** 泛型" />
+    <MESSAGE value="** 选择排序" />
+    <MESSAGE value="** 插入排序" />
+    <MESSAGE value="** 补充选择排序时间复杂度" />
+    <MESSAGE value="** 改进" />
+    <MESSAGE value="** 接活平台" />
+    <MESSAGE value="** 希尔排序" />
+    <MESSAGE value="** 文件修改" />
+    <MESSAGE value="** 原地归并" />
+    <MESSAGE value="** 自顶向下的归并排序（递归实现）" />
+    <MESSAGE value="** 快速排序" />
+    <MESSAGE value="** 优先队列" />
+    <MESSAGE value="** 面试题一" />
+    <MESSAGE value="** 面试题" />
+    <MESSAGE value="** 栈" />
+    <MESSAGE value="** 数据结构" />
+    <MESSAGE value="** 类加载机制" />
+    <MESSAGE value="**JVM整体结构解析" />
+    <MESSAGE value="** 垃圾收集器" />
+    <MESSAGE value="** 垃圾收集算法" />
+    <MESSAGE value="** 类加载器面试题增加" />
+    <option name="LAST_COMMIT_MESSAGE" value="** 类加载器面试题增加" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

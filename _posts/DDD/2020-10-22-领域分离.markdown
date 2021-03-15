@@ -1,0 +1,10 @@
+---
+layout: post
+title: 领域分离!
+date:  2020-10-22
+Author: XKZ
+categories: jekyll update
+tags: [DDD]
+comments: true
+---
+## 
