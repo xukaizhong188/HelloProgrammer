@@ -1,0 +1,11 @@
+---
+layout: post
+title: 设计模式（三）结构型之代理模式!
+date:  2021-03-16
+Author: XKZ
+categories: jekyll update
+tags: [设计模式]
+comments: true
+---   
+
+[参考：设计模式-代理模式](http://c.biancheng.net/view/1359.html "代理模式").
