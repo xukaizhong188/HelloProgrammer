@@ -8,8 +8,10 @@ tags: [数据结构,算法，树]
 comments: true
 ---
 ## 1、树的概念
-### 1.1、节点的度和层次
+### 1.1、节点的度
 对于一个结点，拥有的子树数（结点有多少分支）称为结点的度（Degree）
+### 1.2、树的层次（深度）
+一棵树的深度（高度）是树中结点所在的最大的层次
 ## 2、树的节点表示（实现）
 ### 2.1、拉链法
 此方法存放的是树的左右节点
@@ -48,18 +50,226 @@ comments: true
 二叉树的情况就是将根节点删除
 ### 3.5、获取二叉树的高度
 获取二叉树的高度的本质就是各个节点度的最大值
-## 2、树的遍历
+### 3.6、获取二叉树的节点数
+获得二叉树的节点数，需要遍历所有子树，然后加上总和
+### 3.7 获取某个节点的父节点
+需要从上而下遍历二叉树来判断子节点是否为目标节点
+
+## 4、树的遍历
 树的遍历方式分为前、中、后序遍历以及层序遍历
 ![img](https://xukaizhong188.github.io/HelloProgrammer/images/2021-03-18/树.png)
-### 2.1、前序遍历
+### 4.1、前序遍历
 前序遍历首先访问根节点，然后遍历左子树，最后遍历右子树。
 前序遍历结果：FBADCEGIH
-### 2.2、中序遍历
+### 4.2、中序遍历
 中序遍历是先遍历左子树，然后访问根节点，然后遍历右子树。
 前序遍历结果：ABCDEFGHI
-### 2.3、后续遍历
+### 4.3、后续遍历
 后序遍历是先遍历左子树，然后遍历右子树，最后访问树的根节点。
 后序遍历结果：ACEDBHIGF
 
+## 5、示例
+    public class Tree {
+    /**
+    * 根节点
+    */
+    private TreeNode rootTreeNode;
+    
+        public TreeNode getRootTreeNode() {
+            return rootTreeNode;
+        }
+    
+        public void setRootTreeNode(TreeNode rootTreeNode) {
+            this.rootTreeNode = rootTreeNode;
+        }
+    
+        /**
+         * 判断是否为空二叉树
+         * @return
+         */
+        private boolean checkTreeIsEmty(){
+            if (null == rootTreeNode){
+                return false;
+            }
+            return true;
+        }
+    
+        /**
+         * 添加右节点
+         * @param childNode
+         */
+        private void insertRihtTreeNode(TreeNode childNode){
+            if (checkTreeIsEmty()) {
+                rootTreeNode.setRightNode(childNode);
+            }
+        }
+    
+        /**
+         * 添加左节点
+         * @param childNode
+         */
+        private void insertLeftTreeNode(TreeNode childNode){
+            if (checkTreeIsEmty()) {
+                rootTreeNode.setLeftNode(childNode);
+            }
+        }
+        /**
+         * 删除节点，使用递归将左右子树进行删除
+         * @param treeNode
+         */
+        private void deleNode(TreeNode treeNode){
+    
+            if (null == treeNode){
+                return;
+            }
+            deleNode(treeNode.getLeftNode());
+            deleNode(treeNode.getRightNode());
+            treeNode = null;
+        }
+    
+        /**
+         * 清空二叉树
+         */
+        private void clear(){
+            if (null == rootTreeNode){
+                return;
+            }
+            deleNode(rootTreeNode);
+        }
+    
+        /**
+         * 获取树的深度
+         * @return
+         */
+        private int getTreeHight(){
+            return getHight(rootTreeNode);
+        }
+    
+        /**
+         * 获取某个接节点的度
+         * @param treeNode
+         * @return
+         */
+        private int getHight(TreeNode treeNode){
+            if (null == treeNode){
+                return 0;
+            }
+            int rightHight = getHight(treeNode.getRightNode());
+            int leftHight = getHight(treeNode.getLeftNode());
+            int max = Math.max(rightHight,leftHight);
+            return max+1;
+        }
+    
+        /**
+         * 获取二叉树的节点数
+         * @return
+         */
+        private int getTreeNum(){
+            return getNodeNum(rootTreeNode);
+        }
+    
+        /**
+         * 获取指定节点的节点数
+         * @param treeNode
+         * @return
+         */
+        private int getNodeNum(TreeNode treeNode){
+            if (null == treeNode){
+                return 0;
+            }
+            int leftNodeNum = getNodeNum(treeNode.getLeftNode());
+            int rightNodeNum = getNodeNum(treeNode.getRightNode());
+            return leftNodeNum +rightNodeNum+1;
+        }
+    
+        /**
+         * 获取指定节点的父节点
+         * @param treeNode
+         * @return
+         */
+        private TreeNode getParentNode(TreeNode treeNode){
+    
+            if (null == rootTreeNode || treeNode == rootTreeNode){
+                return null;
+            }
+            return getParentNode(treeNode,rootTreeNode);
+        }
+    
+        /**
+         * 递归遍历子节点和目标节点是否一致
+         * @param targetNode
+         * @param childNode
+         * @return
+         */
+        private TreeNode getParentNode(TreeNode targetNode,TreeNode childNode){
+            if (null == childNode){
+                return null;
+            }
+            if (childNode.getLeftNode() == targetNode || childNode.getRightNode() == targetNode){
+                return childNode;
+            }
+            if (null != getParentNode(targetNode,childNode.getLeftNode())) {
+                return getParentNode(targetNode,childNode.getLeftNode());
+            }else {
+                return getParentNode(targetNode,childNode.getRightNode());
+            }
+        }
+    
+        /**
+         * 打印节点值
+         * @param treeNode
+         */
+        private void op(TreeNode treeNode){
+            if (null != treeNode){
+                System.out.println(treeNode.getValue());
+            }
+        }
+    
+        /**
+         * 先序遍历 根 左 右
+         * @param treeNode
+         */
+        private void iterateFirstOrder(TreeNode treeNode){
+            if (null == treeNode){
+                return;
+            }
+            op(treeNode);
+            insertLeftTreeNode(treeNode.getLeftNode());
+            insertLeftTreeNode(treeNode.getRightNode());
+        }
+    
+        /**
+         * 中序遍历 左 根 右
+         * @param treeNode
+         */
+        private void iterateMediumOrder(TreeNode treeNode){
+            if (null == treeNode){
+                return;
+            }
+    
+            iterateMediumOrder(treeNode.getLeftNode());
+            op(treeNode);
+            iterateMediumOrder(treeNode.getRightNode());
+        }
+    
+        /**
+         * 后序遍历  左右根
+         * @param treeNode
+         */
+        private void iterateLastOrder(TreeNode treeNode){
+            if (null == treeNode){
+                return;
+            }
+    
+            iterateMediumOrder(treeNode.getLeftNode());
+            iterateMediumOrder(treeNode.getRightNode());
+            op(treeNode);
+        }
+    
+    
+        public static void main(String[] args) {
+    
+        }
+    }
 
 
