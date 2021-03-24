@@ -58,6 +58,8 @@ comments: true
 ## 4、树的遍历
 树的遍历方式分为前、中、后序遍历以及层序遍历
 ![img](https://xukaizhong188.github.io/HelloProgrammer/images/2021-03-18/树.png)
+树的遍历通常都使用递归算法来实现，但是也要掌握非递归方法（迭代）      
+任何递归算法都有非递归的实现，因为函数递归调用其实质就是压栈的过程，那么我们完全可以使用堆栈来模拟这个过程。函数调用就是压栈，函数求解就是出栈的过程。
 ### 4.1、前序遍历
 前序遍历首先访问根节点，然后遍历左子树，最后遍历右子树。
 前序遍历结果：FBADCEGIH
@@ -236,6 +238,25 @@ comments: true
             op(treeNode);
             insertLeftTreeNode(treeNode.getLeftNode());
             insertLeftTreeNode(treeNode.getRightNode());
+        }
+        /**
+        * 前序遍历迭代方法
+        * @param treeNode
+        */
+        public List<Integer> preorderTraversal(TreeNode treeNode) {
+            List<Integer> preOrderList = new ArrayList<Integer>(); //存放访问顺序
+            Stack<TreeNode> stack = new Stack<TreeNode>();  //存放结点，用于回溯
+            while(treeNode != null || !stack.empty()) {     //迭代遍历二叉树
+                while(treeNode != null) {   //使root指向当前子二叉树的最左结点
+                    stack.push(treeNode);
+                    preOrderList.add(treeNode.getValue()); //将当前子二叉树的根节点入栈，并访问
+                    treeNode = treeNode.getLeftNode();
+                }
+                while(treeNode == null && !stack.empty()) {
+                    treeNode = stack.pop().getRightNode();   //自底向上找到栈中跟结点第一个非空右孩子
+                }
+            }
+            return preOrderList;
         }
     
         /**
