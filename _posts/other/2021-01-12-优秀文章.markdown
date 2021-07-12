@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 接活平台!
+title: 优秀文章!
 date:  2021-07-12
 Author: XKZ
 categories: jekyll update
