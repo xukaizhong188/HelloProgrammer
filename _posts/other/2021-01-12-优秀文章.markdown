@@ -1,0 +1,16 @@
+---
+layout: post
+title: 接活平台!
+date:  2020-08-03
+Author: XKZ
+categories: jekyll update
+tags: [tool]
+comments: true
+---
+## 1.[并发内容](https://github.com/CL0610/Java-concurrency "并发内容")
+## 2.[安琪拉](https://blog.csdn.net/zhengwangzw/category_9827338.html "安琪拉")
+## 3.[动力节点](http://www.bjpowernode.com/tutorial_baseinterviewquestions/242.html "动力节点")
+## 4.[b站基础学习](https://www.bilibili.com/read/cv3560825 "b站基础学习")
+## 5.[芋道源码](http://svip.iocoder.cn/index/ "芋道源码")
+账号：yudaoyuanma
+## 6.[面试题](https://github.com/JavaInterviewHub/JavaInterview.git "面试题")
